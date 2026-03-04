@@ -1,0 +1,164 @@
+2026-02-19 13:02:44,333 - root - INFO - ======================================================================
+2026-02-19 13:02:44,333 - root - INFO - Logging initialized: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\logs\20260219_130243\freightinfo_marad_20260219_130243.log
+2026-02-19 13:02:44,333 - root - INFO - ======================================================================
+2026-02-19 13:02:44,334 - __main__ - INFO - ======================================================================
+2026-02-19 13:02:44,334 - __main__ - INFO - STEP 1: Checking Master Data
+2026-02-19 13:02:44,334 - __main__ - INFO - ======================================================================
+2026-02-19 13:02:44,335 - parser - INFO - Loaded master: 52 data rows
+2026-02-19 13:02:44,335 - parser - INFO -   Date range: 2025-01 to 2026-08
+2026-02-19 13:02:44,336 - __main__ - INFO - Last week in master: 2026-08
+2026-02-19 13:02:44,336 - __main__ - INFO - ======================================================================
+2026-02-19 13:02:44,336 - __main__ - INFO - STEP 2: Fetching Week Mapping Data
+2026-02-19 13:02:44,336 - __main__ - INFO - ======================================================================
+2026-02-19 13:02:44,337 - scraper - INFO - Week mapping cache is up to date
+2026-02-19 13:02:44,337 - scraper - INFO - Using cached week mapping data
+2026-02-19 13:02:44,338 - parser - INFO - Loaded week mapping: 3 years, 157 weeks total
+2026-02-19 13:02:44,339 - __main__ - INFO - ======================================================================
+2026-02-19 13:02:44,339 - __main__ - INFO - STEP 3: Fetching Chart Data from BTS
+2026-02-19 13:02:44,339 - __main__ - INFO - ======================================================================
+2026-02-19 13:02:44,339 - scraper - INFO - ======================================================================
+2026-02-19 13:02:44,339 - scraper - INFO - Fetching chart data from BTS Tableau...
+2026-02-19 13:02:44,339 - scraper - INFO - URL: https://www.bts.gov/freight-indicators#anchored-offshore
+2026-02-19 13:02:44,340 - scraper - INFO - ======================================================================
+2026-02-19 13:02:45,298 - scraper - INFO - Checking Windows Registry for Chrome version...
+2026-02-19 13:02:45,298 - scraper - INFO - Found Chrome version: 145.0.7632.76 (major: 145)
+2026-02-19 13:02:45,302 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2026-02-19 13:02:45,799 - undetected_chromedriver.patcher - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.77/win32/chromedriver-win32.zip
+2026-02-19 13:02:46,316 - undetected_chromedriver.patcher - DEBUG - unzipping C:\Users\MARKCA~1\AppData\Local\Temp\tmpd__c0y7w
+2026-02-19 13:02:46,477 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2026-02-19 13:02:47,916 - undetected_chromedriver.patcher - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2026-02-19 13:02:47,925 - undetected_chromedriver.patcher - DEBUG - patching took us 1.45 seconds
+2026-02-19 13:02:49,304 - uc - DEBUG - created a temporary folder in which the user-data (profile) will be stored during this
+session, and added it to chrome startup arguments: --user-data-dir=C:\Users\MARKCA~1\AppData\Local\Temp\tmp_sbjumbw
+2026-02-19 13:02:49,304 - uc - DEBUG - checking if C:\Users\Mark Castro\AppData\Local\Google/Chrome/Application\chrome.exe exists and is executable
+2026-02-19 13:02:49,304 - uc - DEBUG - checking if C:\Program Files (x86)\Google/Chrome/Application\chrome.exe exists and is executable
+2026-02-19 13:02:49,305 - uc - DEBUG - checking if C:\Program Files\Google/Chrome/Application\chrome.exe exists and is executable
+2026-02-19 13:02:49,305 - uc - DEBUG - found! using C:\Program Files\Google/Chrome/Application\chrome.exe
+2026-02-19 13:02:49,318 - uc - DEBUG - did not find a bad exit_type flag 
+2026-02-19 13:02:49,323 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2026-02-19 13:02:51,538 - selenium.webdriver.common.service - DEBUG - Started executable: `C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe` in a child process with pid: 5468 using 0 to output -3
+2026-02-19 13:02:52,055 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1920,1080', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=54339', '--user-data-dir=C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmp_sbjumbw', '--lang=en-US', '--no-default-browser-check', '--no-first-run', '--no-sandbox', '--test-type', '--window-size=1920,1080', '--start-maximized', '--no-sandbox', '--log-level=0'], 'debuggerAddress': '127.0.0.1:54339'}}}}
+2026-02-19 13:02:52,056 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:54340
+2026-02-19 13:02:52,077 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session HTTP/1.1" 200 0
+2026-02-19 13:02:52,077 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"145.0.7632.76","chrome":{"chromedriverVersion":"145.0.7632.77 (da516187054a90a4669ee732027b919261341392-refs/branch-heads/7632_45@{#16})"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"127.0.0.1:54339"},"pageLoadStrategy":"normal","platformName":"","proxy":{},"setWindowRect":false,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"ffe6d3fc50d13d3d582129ca58e5d607"}} | headers=HTTPHeaderDict({'Content-Length': '761', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:02:52,077 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:02:52,078 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/timeouts {'pageLoad': 120000}
+2026-02-19 13:02:52,080 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/timeouts HTTP/1.1" 200 0
+2026-02-19 13:02:52,080 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:02:52,080 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:02:52,080 - scraper - INFO - Chrome driver initialized successfully
+2026-02-19 13:02:52,080 - scraper - INFO - Navigating to: https://www.bts.gov/freight-indicators#anchored-offshore
+2026-02-19 13:02:52,081 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/url {'url': 'https://www.bts.gov/freight-indicators#anchored-offshore'}
+2026-02-19 13:02:57,510 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/url HTTP/1.1" 200 0
+2026-02-19 13:02:57,511 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:02:57,512 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:02:57,522 - scraper - INFO - Waiting for Tableau chart to load...
+2026-02-19 13:03:02,522 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/elements {'using': 'tag name', 'value': 'iframe'}
+2026-02-19 13:03:02,545 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/elements HTTP/1.1" 200 0
+2026-02-19 13:03:02,545 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.75"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.76"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.77"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.78"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.79"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.80"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.81"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.82"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.83"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.84"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.85"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.86"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.87"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.88"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.89"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.90"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.91"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.92"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.93"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.94"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.95"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.96"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.97"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.98"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.99"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.100"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.101"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.102"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.103"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.104"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.105"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.106"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.107"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.108"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.109"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.110"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.111"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.112"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.113"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.114"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.115"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.116"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.117"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.118"},{"element-6066-11e4-a52e-4f735466cecf":"f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.119"}]} | headers=HTTPHeaderDict({'Content-Length': '5296', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:03:02,546 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:03:02,546 - scraper - INFO - Found 45 iframes on page
+2026-02-19 13:03:02,548 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.75'}, 'src']}
+2026-02-19 13:03:02,562 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/execute/sync HTTP/1.1" 200 0
+2026-02-19 13:03:02,562 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"https://explore.dot.gov/views/FreightIndicators/ContainerShipCapacity?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fexplore.dot.gov%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:showAppBanner=false&:display_spinner=no&:loadOrderID=0"} | headers=HTTPHeaderDict({'Content-Length': '249', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:03:02,562 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:03:02,562 - scraper - INFO - Found target Tableau iframe: https://explore.dot.gov/views/FreightIndicators/ContainerShipCapacity?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fe
+2026-02-19 13:03:02,563 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/frame {'id': {'element-6066-11e4-a52e-4f735466cecf': 'f.B358E9712741140613D4972DCADB848F.d.EB8C9A3A657ED1369C913F3707D94A39.e.75'}}
+2026-02-19 13:03:02,611 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/frame HTTP/1.1" 200 0
+2026-02-19 13:03:02,611 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:03:02,611 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:03:02,611 - scraper - INFO - Switched to Tableau iframe
+2026-02-19 13:03:02,611 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/element {'using': 'css selector', 'value': '[data-tb-test-id="viz-viewer-toolbar-button-download"]'}
+2026-02-19 13:03:02,627 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/element HTTP/1.1" 200 0
+2026-02-19 13:03:02,628 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.5291702DEE6ECF7DBA9B5F86712A5039.d.5B857247B5EC0370439FDEC458B55F1E.e.22"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:03:02,628 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:03:02,628 - scraper - INFO - Tableau download button detected - chart is loaded
+2026-02-19 13:03:05,629 - scraper - INFO - Clicking Download button...
+2026-02-19 13:03:05,629 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/element {'using': 'css selector', 'value': '[data-tb-test-id="viz-viewer-toolbar-button-download"]'}
+2026-02-19 13:03:05,647 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/element HTTP/1.1" 200 0
+2026-02-19 13:03:05,647 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.5291702DEE6ECF7DBA9B5F86712A5039.d.5B857247B5EC0370439FDEC458B55F1E.e.22"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:03:05,648 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:03:05,648 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.5291702DEE6ECF7DBA9B5F86712A5039.d.5B857247B5EC0370439FDEC458B55F1E.e.22'}]}
+2026-02-19 13:03:05,675 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/execute/sync HTTP/1.1" 200 0
+2026-02-19 13:03:05,675 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:03:05,676 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:03:05,676 - selenium.webdriver.remote.remote_connection - DEBUG - GET http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/element/f.5291702DEE6ECF7DBA9B5F86712A5039.d.5B857247B5EC0370439FDEC458B55F1E.e.22/enabled {}
+2026-02-19 13:03:05,707 - urllib3.connectionpool - DEBUG - http://localhost:54340 "GET /session/ffe6d3fc50d13d3d582129ca58e5d607/element/f.5291702DEE6ECF7DBA9B5F86712A5039.d.5B857247B5EC0370439FDEC458B55F1E.e.22/enabled HTTP/1.1" 200 0
+2026-02-19 13:03:05,707 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:03:05,707 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:03:05,708 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:54340/session/ffe6d3fc50d13d3d582129ca58e5d607/element/f.5291702DEE6ECF7DBA9B5F86712A5039.d.5B857247B5EC0370439FDEC458B55F1E.e.22/click {}
+2026-02-19 13:03:06,938 - urllib3.connectionpool - DEBUG - http://localhost:54340 "POST /session/ffe6d3fc50d13d3d582129ca58e5d607/element/f.5291702DEE6ECF7DBA9B5F86712A5039.d.5B857247B5EC0370439FDEC458B55F1E.e.22/click HTTP/1.1" 400 0
+2026-02-19 13:03:06,938 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=400 | data={"value":{"error":"element click intercepted","message":"element click intercepted: Element \u003Ciframe frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\" title=\"Embedded Media\" allowtransparency=\"true\" allowfullscreen=\"true\" class=\"tableauViz\" height=\"640\" style=\"display: block; margin: 0px; padding: 0px; border: none; width: 820px; height: 640px;\" width=\"820\" src=\"https://explore.dot.gov/views/FreightIndicators/ContainerShipCapacity?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=0\" data-gtm-yt-inspected-15=\"true\" data-gtm-yt-inspected-20=\"true\" cd_frame_id_=\"df881d713a741c0e52f4f212415e25ff\">\u003C/iframe> is not clickable at point (1331, 13). Other element would receive the click: \u003Cnav class=\"navbar navbar-dark navbar-expand-lg\" id=\"navbar-main\">...\u003C/nav>\n  (Session info: chrome=145.0.7632.76)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x56f3e3\n\t0x56f424\n\t0x362090\n\t0x3b2c08\n\t0x3b0e19\n\t0x3aec27\n\t0x3ad9e4\n\t0x3a2158\n\t0x3cee1c\n\t0x3a1b94\n\t0x3cefe4\n\t0x3ebb23\n\t0x3cebb6\n\t0x3a0319\n\t0x3a10d4\n\t0x7c46a4\n\t0x7bf9a9\n\t0x7dc940\n\t0x5880f8\n\t0x58fe4d\n\t0x577c18\n\t0x577de2\n\t0x5618ea\n\t0x76826839\n\t0x772f906f\n\t0x772f903d\n"}} | headers=HTTPHeaderDict({'Content-Length': '1391', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 13:03:06,938 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 13:03:06,939 - scraper - ERROR - Error during download flow: Message: element click intercepted: Element <iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" height="640" style="display: block; margin: 0px; padding: 0px; border: none; width: 820px; height: 640px;" width="820" src="https://explore.dot.gov/views/FreightIndicators/ContainerShipCapacity?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=0" data-gtm-yt-inspected-15="true" data-gtm-yt-inspected-20="true" cd_frame_id_="df881d713a741c0e52f4f212415e25ff"></iframe> is not clickable at point (1331, 13). Other element would receive the click: <nav class="navbar navbar-dark navbar-expand-lg" id="navbar-main">...</nav>
+  (Session info: chrome=145.0.7632.76)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x56f3e3
+	0x56f424
+	0x362090
+	0x3b2c08
+	0x3b0e19
+	0x3aec27
+	0x3ad9e4
+	0x3a2158
+	0x3cee1c
+	0x3a1b94
+	0x3cefe4
+	0x3ebb23
+	0x3cebb6
+	0x3a0319
+	0x3a10d4
+	0x7c46a4
+	0x7bf9a9
+	0x7dc940
+	0x5880f8
+	0x58fe4d
+	0x577c18
+	0x577de2
+	0x5618ea
+	0x76826839
+	0x772f906f
+	0x772f903d
+
+2026-02-19 13:03:06,939 - scraper - ERROR - Failed to complete download flow
+2026-02-19 13:03:06,939 - uc - DEBUG - webdriver process ended
+2026-02-19 13:03:06,940 - uc - DEBUG - gracefully closed browser
+2026-02-19 13:03:07,068 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmp_sbjumbw\\CrashpadMetrics-active.pma'
+retrying...
+2026-02-19 13:03:07,170 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmp_sbjumbw\\CrashpadMetrics-active.pma'
+retrying...
+2026-02-19 13:03:07,272 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmp_sbjumbw\\CrashpadMetrics-active.pma'
+retrying...
+2026-02-19 13:03:07,581 - uc - DEBUG - successfully removed C:\Users\MARKCA~1\AppData\Local\Temp\tmp_sbjumbw
+2026-02-19 13:03:07,581 - scraper - INFO - Browser closed
+2026-02-19 13:03:07,581 - __main__ - WARNING - No CSV data downloaded from BTS
+2026-02-19 13:03:07,582 - parser - INFO - Loaded master: 52 data rows
+2026-02-19 13:03:07,582 - parser - INFO -   Date range: 2025-01 to 2026-08
+2026-02-19 13:03:07,582 - __main__ - INFO - Generating output from existing master data...
+2026-02-19 13:03:07,582 - file_generator - INFO - ======================================================================
+2026-02-19 13:03:07,582 - file_generator - INFO - Generating output files...
+2026-02-19 13:03:07,582 - file_generator - INFO - Output directory: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_130243
+2026-02-19 13:03:07,582 - file_generator - INFO - ======================================================================
+2026-02-19 13:03:07,592 - file_generator - INFO - DATA XLS created: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_130243\FREIGHTINFO_MARAD_DATA_20260219.xls
+2026-02-19 13:03:07,596 - file_generator - INFO - META XLS created: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_130243\FREIGHTINFO_MARAD_META_20260219.xls
+2026-02-19 13:03:07,615 - file_generator - INFO - ZIP created: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_130243\FREIGHTINFO_MARAD_20260219.zip
+2026-02-19 13:03:07,619 - file_generator - INFO -   Copied to latest: FREIGHTINFO_MARAD_DATA_20260219.xls
+2026-02-19 13:03:07,621 - file_generator - INFO -   Copied to latest: FREIGHTINFO_MARAD_META_20260219.xls
+2026-02-19 13:03:07,639 - file_generator - INFO -   Copied to latest: FREIGHTINFO_MARAD_20260219.zip
+2026-02-19 13:03:07,639 - file_generator - INFO - File generation complete
+2026-02-19 13:03:07,639 - __main__ - INFO - ======================================================================
+2026-02-19 13:03:07,639 - __main__ - INFO - EXECUTION SUMMARY
+2026-02-19 13:03:07,640 - __main__ - INFO - ======================================================================
+2026-02-19 13:03:07,640 - __main__ - INFO -   Master data rows: 52
+2026-02-19 13:03:07,640 - __main__ - INFO -   Date range: 2025-01 to 2026-08
+2026-02-19 13:03:07,640 - __main__ - INFO -   Output files:
+2026-02-19 13:03:07,640 - __main__ - INFO -     data: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_130243\FREIGHTINFO_MARAD_DATA_20260219.xls
+2026-02-19 13:03:07,640 - __main__ - INFO -     meta: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_130243\FREIGHTINFO_MARAD_META_20260219.xls
+2026-02-19 13:03:07,640 - __main__ - INFO -     zip: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_130243\FREIGHTINFO_MARAD_20260219.zip
+2026-02-19 13:03:07,640 - __main__ - INFO - ======================================================================
+2026-02-19 13:03:07,641 - uc - INFO - ensuring close
+2026-02-19 13:03:07,666 - uc - DEBUG - webdriver process ended

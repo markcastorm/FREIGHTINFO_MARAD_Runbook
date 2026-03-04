@@ -1,0 +1,439 @@
+2026-02-19 14:37:47,019 - root - INFO - ======================================================================
+2026-02-19 14:37:47,019 - root - INFO - Logging initialized: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\logs\20260219_143746\freightinfo_marad_20260219_143746.log
+2026-02-19 14:37:47,019 - root - INFO - ======================================================================
+2026-02-19 14:37:47,020 - __main__ - INFO - ======================================================================
+2026-02-19 14:37:47,020 - __main__ - INFO - STEP 1: Checking Master Data
+2026-02-19 14:37:47,020 - __main__ - INFO - ======================================================================
+2026-02-19 14:37:47,021 - parser - INFO - Loaded master: 49 data rows
+2026-02-19 14:37:47,021 - parser - INFO -   Date range: 2025-01 to 2026-04
+2026-02-19 14:37:47,021 - __main__ - INFO - Last week in master: 2026-04
+2026-02-19 14:37:47,021 - __main__ - INFO - ======================================================================
+2026-02-19 14:37:47,022 - __main__ - INFO - STEP 2: Fetching Week Mapping Data
+2026-02-19 14:37:47,022 - __main__ - INFO - ======================================================================
+2026-02-19 14:37:47,022 - scraper - INFO - Week mapping cache is up to date
+2026-02-19 14:37:47,023 - scraper - INFO - Using cached week mapping data
+2026-02-19 14:37:47,023 - parser - INFO - Loaded week mapping: 3 years, 157 weeks total
+2026-02-19 14:37:47,023 - __main__ - INFO - ======================================================================
+2026-02-19 14:37:47,024 - __main__ - INFO - STEP 3: Fetching Chart Data from BTS
+2026-02-19 14:37:47,024 - __main__ - INFO - ======================================================================
+2026-02-19 14:37:47,024 - scraper - INFO - ======================================================================
+2026-02-19 14:37:47,024 - scraper - INFO - Fetching chart data from BTS Tableau...
+2026-02-19 14:37:47,024 - scraper - INFO - URL: https://www.bts.gov/freight-indicators#anchored-offshore
+2026-02-19 14:37:47,024 - scraper - INFO - ======================================================================
+2026-02-19 14:37:47,765 - scraper - INFO - Checking Windows Registry for Chrome version...
+2026-02-19 14:37:47,765 - scraper - INFO - Found Chrome version: 145.0.7632.76 (major: 145)
+2026-02-19 14:37:47,769 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2026-02-19 14:37:48,036 - undetected_chromedriver.patcher - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.77/win32/chromedriver-win32.zip
+2026-02-19 14:37:48,360 - undetected_chromedriver.patcher - DEBUG - unzipping C:\Users\MARKCA~1\AppData\Local\Temp\tmpwj2enonn
+2026-02-19 14:37:48,528 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2026-02-19 14:37:49,866 - undetected_chromedriver.patcher - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2026-02-19 14:37:49,875 - undetected_chromedriver.patcher - DEBUG - patching took us 1.35 seconds
+2026-02-19 14:37:51,188 - uc - DEBUG - created a temporary folder in which the user-data (profile) will be stored during this
+session, and added it to chrome startup arguments: --user-data-dir=C:\Users\MARKCA~1\AppData\Local\Temp\tmpm26g74eo
+2026-02-19 14:37:51,189 - uc - DEBUG - checking if C:\Users\Mark Castro\AppData\Local\Google/Chrome/Application\chrome.exe exists and is executable
+2026-02-19 14:37:51,189 - uc - DEBUG - checking if C:\Program Files\Google/Chrome/Application\chrome.exe exists and is executable
+2026-02-19 14:37:51,189 - uc - DEBUG - found! using C:\Program Files\Google/Chrome/Application\chrome.exe
+2026-02-19 14:37:51,203 - uc - DEBUG - did not find a bad exit_type flag 
+2026-02-19 14:37:51,208 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2026-02-19 14:37:53,305 - selenium.webdriver.common.service - DEBUG - Started executable: `C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe` in a child process with pid: 5552 using 0 to output -3
+2026-02-19 14:37:53,815 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1920,1080', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=53148', '--user-data-dir=C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmpm26g74eo', '--lang=en-US', '--no-default-browser-check', '--no-first-run', '--no-sandbox', '--test-type', '--window-size=1920,1080', '--start-maximized', '--no-sandbox', '--log-level=0'], 'debuggerAddress': '127.0.0.1:53148'}}}}
+2026-02-19 14:37:53,816 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:53149
+2026-02-19 14:37:53,841 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session HTTP/1.1" 200 0
+2026-02-19 14:37:53,842 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"145.0.7632.76","chrome":{"chromedriverVersion":"145.0.7632.77 (da516187054a90a4669ee732027b919261341392-refs/branch-heads/7632_45@{#16})"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"127.0.0.1:53148"},"pageLoadStrategy":"normal","platformName":"","proxy":{},"setWindowRect":false,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"42ef4f51ae4e404917175201d8397f26"}} | headers=HTTPHeaderDict({'Content-Length': '761', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:37:53,842 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:37:53,843 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/timeouts {'pageLoad': 120000}
+2026-02-19 14:37:53,845 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/timeouts HTTP/1.1" 200 0
+2026-02-19 14:37:53,845 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:37:53,845 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:37:53,845 - scraper - INFO - Chrome driver initialized successfully
+2026-02-19 14:37:53,845 - scraper - INFO - Navigating to: https://www.bts.gov/freight-indicators#anchored-offshore
+2026-02-19 14:37:53,846 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/url {'url': 'https://www.bts.gov/freight-indicators#anchored-offshore'}
+2026-02-19 14:37:59,100 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/url HTTP/1.1" 200 0
+2026-02-19 14:37:59,101 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:37:59,102 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:37:59,110 - scraper - INFO - Waiting for Tableau chart to load...
+2026-02-19 14:38:04,111 - scraper - INFO - Clicking #anchored-offshore link to navigate to chart...
+2026-02-19 14:38:04,113 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/element {'using': 'css selector', 'value': 'a[href="#anchored-offshore"]'}
+2026-02-19 14:38:04,141 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/element HTTP/1.1" 200 0
+2026-02-19 14:38:04,142 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.7"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:04,142 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:04,142 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': 'arguments[0].click();', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.7'}]}
+2026-02-19 14:38:04,166 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:04,166 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:04,166 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,167 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/elements {'using': 'tag name', 'value': 'iframe'}
+2026-02-19 14:38:09,555 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/elements HTTP/1.1" 200 0
+2026-02-19 14:38:09,555 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.77"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.78"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.79"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.80"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.81"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.82"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.83"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.84"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.85"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.86"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.87"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.88"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.89"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.90"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.91"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.92"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.93"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.94"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.95"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.96"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.97"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.98"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.99"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.100"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.101"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.102"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.103"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.104"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.105"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.106"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.107"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.108"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.109"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.110"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.111"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.112"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.113"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.114"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.115"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.116"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.117"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.118"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.119"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.120"},{"element-6066-11e4-a52e-4f735466cecf":"f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.121"}]} | headers=HTTPHeaderDict({'Content-Length': '5298', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,556 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,557 - scraper - INFO - Found 45 iframes on page
+2026-02-19 14:38:09,558 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.77'}, 'src']}
+2026-02-19 14:38:09,585 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:09,585 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"https://explore.dot.gov/views/FreightIndicators/ContainerShipCapacity?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fexplore.dot.gov%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:showAppBanner=false&:display_spinner=no&:loadOrderID=0"} | headers=HTTPHeaderDict({'Content-Length': '249', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,586 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,586 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.78'}, 'src']}
+2026-02-19 14:38:09,601 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:09,602 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"https://explore.dot.gov/views/FreightIndicators/LoadedImportContainers?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fexplore.dot.gov%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:showAppBanner=false&:display_spinner=no&:loadOrderID=1"} | headers=HTTPHeaderDict({'Content-Length': '250', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,602 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,603 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.79'}, 'src']}
+2026-02-19 14:38:09,631 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:09,631 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"https://explore.dot.gov/views/FreightIndicators/LoadedExportContainers?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fexplore.dot.gov%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:showAppBanner=false&:display_spinner=no&:loadOrderID=2"} | headers=HTTPHeaderDict({'Content-Length': '250', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,632 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,632 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.80'}, 'src']}
+2026-02-19 14:38:09,754 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:09,754 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"https://explore.dot.gov/views/FreightIndicators/EmptyExportContainers?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fexplore.dot.gov%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:showAppBanner=false&:display_spinner=no&:loadOrderID=3"} | headers=HTTPHeaderDict({'Content-Length': '249', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,754 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,755 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.81'}, 'src']}
+2026-02-19 14:38:09,775 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:09,775 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"https://explore.dot.gov/views/FreightIndicators/EmptyExportContainersbyyear?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fexplore.dot.gov%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:showAppBanner=false&:display_spinner=no&:loadOrderID=4"} | headers=HTTPHeaderDict({'Content-Length': '255', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,776 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,776 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.82'}, 'src']}
+2026-02-19 14:38:09,787 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:09,787 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fexplore.dot.gov%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:showAppBanner=false&:display_spinner=no&:loadOrderID=5"} | headers=HTTPHeaderDict({'Content-Length': '250', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,787 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,788 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.82'}, 'src']}
+2026-02-19 14:38:09,801 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:09,802 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":"https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fexplore.dot.gov%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:showAppBanner=false&:display_spinner=no&:loadOrderID=5"} | headers=HTTPHeaderDict({'Content-Length': '250', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,802 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:09,802 - scraper - INFO - Target iframe found: https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2F
+2026-02-19 14:38:09,802 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': "arguments[0].scrollIntoView({block: 'center'});", 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.82'}]}
+2026-02-19 14:38:09,824 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:09,824 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:09,825 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:10,832 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/frame {'id': {'element-6066-11e4-a52e-4f735466cecf': 'f.09F4CEE83528700DE2FF64F7A59902CB.d.AF3F590C2B9CF2B9AD59E754A44B5DEF.e.82'}}
+2026-02-19 14:38:11,036 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/frame HTTP/1.1" 200 0
+2026-02-19 14:38:11,036 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:11,036 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:11,037 - scraper - INFO - Switched to Tableau iframe
+2026-02-19 14:38:11,037 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/element {'using': 'css selector', 'value': '[data-tb-test-id="viz-viewer-toolbar-button-download"]'}
+2026-02-19 14:38:11,186 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/element HTTP/1.1" 200 0
+2026-02-19 14:38:11,187 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.53"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:11,187 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:11,188 - scraper - INFO - Tableau download button detected - chart is loaded
+2026-02-19 14:38:14,189 - scraper - INFO - Clicking Download button...
+2026-02-19 14:38:14,189 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/element {'using': 'css selector', 'value': '[data-tb-test-id="viz-viewer-toolbar-button-download"]'}
+2026-02-19 14:38:14,301 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/element HTTP/1.1" 200 0
+2026-02-19 14:38:14,302 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.53"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:14,302 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:14,302 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': 'arguments[0].click();', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.53'}]}
+2026-02-19 14:38:14,346 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:14,347 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:14,347 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:16,347 - scraper - INFO - Clicking Crosstab option...
+2026-02-19 14:38:16,347 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/element {'using': 'css selector', 'value': '[data-tb-test-id="download-flyout-download-crosstab-MenuItem"]'}
+2026-02-19 14:38:16,436 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/element HTTP/1.1" 200 0
+2026-02-19 14:38:16,436 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.77"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:16,436 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:16,437 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': 'arguments[0].click();', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.77'}]}
+2026-02-19 14:38:16,885 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:16,885 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:16,886 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:19,887 - scraper - INFO - Waiting for Download Crosstab modal...
+2026-02-19 14:38:19,887 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/element {'using': 'css selector', 'value': '[data-tb-test-id="export-crosstab-export-Button"]'}
+2026-02-19 14:38:20,544 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/element HTTP/1.1" 404 0
+2026-02-19 14:38:20,544 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[data-tb-test-id=\"export-crosstab-export-Button\"]\"}\n  (Session info: chrome=145.0.7632.76)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x10af3e3\n\t0x10af424\n\t0xea2090\n\t0xeec51a\n\t0xeec7bb\n\t0xf2e212\n\t0xf0ee64\n\t0xf2bb23\n\t0xf0ebb6\n\t0xee0319\n\t0xee10d4\n\t0x13046a4\n\t0x12ff9a9\n\t0x131c940\n\t0x10c80f8\n\t0x10cfe4d\n\t0x10b7c18\n\t0x10b7de2\n\t0x10a18ea\n\t0x76a36839\n\t0x7710906f\n\t0x7710903d\n"}} | headers=HTTPHeaderDict({'Content-Length': '581', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:20,544 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:21,047 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/element {'using': 'css selector', 'value': '[data-tb-test-id="export-crosstab-export-Button"]'}
+2026-02-19 14:38:21,085 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/element HTTP/1.1" 200 0
+2026-02-19 14:38:21,085 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.98"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:21,085 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:21,086 - scraper - INFO - Selecting CSV format...
+2026-02-19 14:38:21,086 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/element {'using': 'css selector', 'value': '[data-tb-test-id="crosstab-options-dialog-radio-csv-Label"]'}
+2026-02-19 14:38:21,101 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/element HTTP/1.1" 200 0
+2026-02-19 14:38:21,101 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.99"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:21,101 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:21,101 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': 'arguments[0].click();', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.99'}]}
+2026-02-19 14:38:21,114 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:21,114 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:21,115 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:22,117 - scraper - INFO - Clicking Export button...
+2026-02-19 14:38:22,117 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/element {'using': 'css selector', 'value': '[data-tb-test-id="export-crosstab-export-Button"]'}
+2026-02-19 14:38:22,134 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/element HTTP/1.1" 200 0
+2026-02-19 14:38:22,134 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.98"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:22,135 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:22,135 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:53149/session/42ef4f51ae4e404917175201d8397f26/execute/sync {'script': 'arguments[0].click();', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.53E44C0172E04D270046F09E82B22A6D.d.2F35E1E658493074EB4E2F532FBDFB3A.e.98'}]}
+2026-02-19 14:38:22,151 - urllib3.connectionpool - DEBUG - http://localhost:53149 "POST /session/42ef4f51ae4e404917175201d8397f26/execute/sync HTTP/1.1" 200 0
+2026-02-19 14:38:22,152 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-19 14:38:22,152 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2026-02-19 14:38:22,153 - scraper - INFO - Download triggered, waiting for file...
+2026-02-19 14:38:26,183 - scraper - INFO - Download complete: 1.5 Containerships Anchored off US Ports.csv
+2026-02-19 14:38:26,184 - uc - DEBUG - webdriver process ended
+2026-02-19 14:38:26,191 - uc - DEBUG - gracefully closed browser
+2026-02-19 14:38:26,372 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmpm26g74eo\\CrashpadMetrics-active.pma'
+retrying...
+2026-02-19 14:38:26,480 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmpm26g74eo\\CrashpadMetrics-active.pma'
+retrying...
+2026-02-19 14:38:26,605 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\MARKCA~1\\AppData\\Local\\Temp\\tmpm26g74eo\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-02-19 14:38:26,915 - uc - DEBUG - successfully removed C:\Users\MARKCA~1\AppData\Local\Temp\tmpm26g74eo
+2026-02-19 14:38:26,916 - scraper - INFO - Browser closed
+2026-02-19 14:38:26,916 - __main__ - INFO - ======================================================================
+2026-02-19 14:38:26,916 - __main__ - INFO - STEP 4: Parsing Data & Updating Master
+2026-02-19 14:38:26,916 - __main__ - INFO - ======================================================================
+2026-02-19 14:38:26,916 - parser - INFO - Parsing downloaded CSV: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\downloads\20260219_143746\1.5 Containerships Anchored off US Ports.csv
+2026-02-19 14:38:26,959 - parser - INFO -   Successfully read CSV with encoding: utf-16
+2026-02-19 14:38:26,959 - parser - INFO -   CSV has 689 lines
+2026-02-19 14:38:26,979 - parser - INFO -   Parsed 229 unique dates (0 rows skipped)
+2026-02-19 14:38:26,986 - parser - DEBUG -     01/27/2026: {'West': 0, 'East': 4, 'Gulf': 4}
+2026-02-19 14:38:26,986 - parser - DEBUG -     02/10/2026: {'West': 2, 'East': 9, 'Gulf': 3}
+2026-02-19 14:38:26,986 - parser - DEBUG -     02/17/2026: {'West': 1, 'East': 5, 'Gulf': 2}
+2026-02-19 14:38:26,987 - parser - WARNING - Date 07/27/2021 not found in cache, using isocalendar: 2021-30
+2026-02-19 14:38:26,987 - parser - WARNING - Date 08/03/2021 not found in cache, using isocalendar: 2021-31
+2026-02-19 14:38:26,987 - parser - WARNING - Date 08/10/2021 not found in cache, using isocalendar: 2021-32
+2026-02-19 14:38:26,987 - parser - WARNING - Date 08/17/2021 not found in cache, using isocalendar: 2021-33
+2026-02-19 14:38:26,987 - parser - WARNING - Date 08/24/2021 not found in cache, using isocalendar: 2021-34
+2026-02-19 14:38:26,988 - parser - WARNING - Date 08/31/2021 not found in cache, using isocalendar: 2021-35
+2026-02-19 14:38:26,988 - parser - WARNING - Date 09/07/2021 not found in cache, using isocalendar: 2021-36
+2026-02-19 14:38:26,988 - parser - WARNING - Date 09/14/2021 not found in cache, using isocalendar: 2021-37
+2026-02-19 14:38:26,988 - parser - WARNING - Date 09/21/2021 not found in cache, using isocalendar: 2021-38
+2026-02-19 14:38:26,988 - parser - WARNING - Date 09/28/2021 not found in cache, using isocalendar: 2021-39
+2026-02-19 14:38:26,989 - parser - WARNING - Date 10/05/2021 not found in cache, using isocalendar: 2021-40
+2026-02-19 14:38:26,989 - parser - WARNING - Date 10/12/2021 not found in cache, using isocalendar: 2021-41
+2026-02-19 14:38:26,989 - parser - WARNING - Date 10/19/2021 not found in cache, using isocalendar: 2021-42
+2026-02-19 14:38:26,989 - parser - WARNING - Date 10/26/2021 not found in cache, using isocalendar: 2021-43
+2026-02-19 14:38:26,989 - parser - WARNING - Date 11/02/2021 not found in cache, using isocalendar: 2021-44
+2026-02-19 14:38:26,990 - parser - WARNING - Date 11/09/2021 not found in cache, using isocalendar: 2021-45
+2026-02-19 14:38:26,990 - parser - WARNING - Date 11/16/2021 not found in cache, using isocalendar: 2021-46
+2026-02-19 14:38:26,990 - parser - WARNING - Date 11/23/2021 not found in cache, using isocalendar: 2021-47
+2026-02-19 14:38:26,991 - parser - WARNING - Date 11/30/2021 not found in cache, using isocalendar: 2021-48
+2026-02-19 14:38:26,991 - parser - WARNING - Date 12/07/2021 not found in cache, using isocalendar: 2021-49
+2026-02-19 14:38:26,991 - parser - WARNING - Date 12/14/2021 not found in cache, using isocalendar: 2021-50
+2026-02-19 14:38:26,992 - parser - WARNING - Date 12/21/2021 not found in cache, using isocalendar: 2021-51
+2026-02-19 14:38:26,992 - parser - WARNING - Date 12/28/2021 not found in cache, using isocalendar: 2021-52
+2026-02-19 14:38:26,992 - parser - WARNING - Date 01/04/2022 not found in cache, using isocalendar: 2022-01
+2026-02-19 14:38:26,993 - parser - WARNING - Date 01/11/2022 not found in cache, using isocalendar: 2022-02
+2026-02-19 14:38:26,993 - parser - WARNING - Date 01/18/2022 not found in cache, using isocalendar: 2022-03
+2026-02-19 14:38:26,993 - parser - WARNING - Date 01/25/2022 not found in cache, using isocalendar: 2022-04
+2026-02-19 14:38:26,993 - parser - WARNING - Date 02/01/2022 not found in cache, using isocalendar: 2022-05
+2026-02-19 14:38:26,994 - parser - WARNING - Date 02/08/2022 not found in cache, using isocalendar: 2022-06
+2026-02-19 14:38:26,994 - parser - WARNING - Date 02/15/2022 not found in cache, using isocalendar: 2022-07
+2026-02-19 14:38:26,994 - parser - WARNING - Date 02/22/2022 not found in cache, using isocalendar: 2022-08
+2026-02-19 14:38:26,995 - parser - WARNING - Date 03/01/2022 not found in cache, using isocalendar: 2022-09
+2026-02-19 14:38:26,995 - parser - WARNING - Date 03/08/2022 not found in cache, using isocalendar: 2022-10
+2026-02-19 14:38:26,996 - parser - WARNING - Date 03/15/2022 not found in cache, using isocalendar: 2022-11
+2026-02-19 14:38:26,996 - parser - WARNING - Date 03/22/2022 not found in cache, using isocalendar: 2022-12
+2026-02-19 14:38:26,996 - parser - WARNING - Date 03/29/2022 not found in cache, using isocalendar: 2022-13
+2026-02-19 14:38:26,997 - parser - WARNING - Date 04/05/2022 not found in cache, using isocalendar: 2022-14
+2026-02-19 14:38:26,997 - parser - WARNING - Date 04/12/2022 not found in cache, using isocalendar: 2022-15
+2026-02-19 14:38:26,997 - parser - WARNING - Date 04/19/2022 not found in cache, using isocalendar: 2022-16
+2026-02-19 14:38:26,997 - parser - WARNING - Date 04/26/2022 not found in cache, using isocalendar: 2022-17
+2026-02-19 14:38:26,998 - parser - WARNING - Date 05/03/2022 not found in cache, using isocalendar: 2022-18
+2026-02-19 14:38:26,998 - parser - WARNING - Date 05/10/2022 not found in cache, using isocalendar: 2022-19
+2026-02-19 14:38:26,998 - parser - WARNING - Date 05/17/2022 not found in cache, using isocalendar: 2022-20
+2026-02-19 14:38:26,998 - parser - WARNING - Date 05/24/2022 not found in cache, using isocalendar: 2022-21
+2026-02-19 14:38:26,999 - parser - WARNING - Date 05/31/2022 not found in cache, using isocalendar: 2022-22
+2026-02-19 14:38:26,999 - parser - WARNING - Date 06/07/2022 not found in cache, using isocalendar: 2022-23
+2026-02-19 14:38:26,999 - parser - WARNING - Date 06/14/2022 not found in cache, using isocalendar: 2022-24
+2026-02-19 14:38:26,999 - parser - WARNING - Date 06/21/2022 not found in cache, using isocalendar: 2022-25
+2026-02-19 14:38:27,000 - parser - WARNING - Date 06/28/2022 not found in cache, using isocalendar: 2022-26
+2026-02-19 14:38:27,000 - parser - WARNING - Date 07/05/2022 not found in cache, using isocalendar: 2022-27
+2026-02-19 14:38:27,000 - parser - WARNING - Date 07/12/2022 not found in cache, using isocalendar: 2022-28
+2026-02-19 14:38:27,001 - parser - WARNING - Date 07/19/2022 not found in cache, using isocalendar: 2022-29
+2026-02-19 14:38:27,001 - parser - WARNING - Date 07/26/2022 not found in cache, using isocalendar: 2022-30
+2026-02-19 14:38:27,001 - parser - WARNING - Date 08/02/2022 not found in cache, using isocalendar: 2022-31
+2026-02-19 14:38:27,001 - parser - WARNING - Date 08/09/2022 not found in cache, using isocalendar: 2022-32
+2026-02-19 14:38:27,002 - parser - WARNING - Date 08/16/2022 not found in cache, using isocalendar: 2022-33
+2026-02-19 14:38:27,002 - parser - WARNING - Date 08/23/2022 not found in cache, using isocalendar: 2022-34
+2026-02-19 14:38:27,002 - parser - WARNING - Date 08/30/2022 not found in cache, using isocalendar: 2022-35
+2026-02-19 14:38:27,003 - parser - WARNING - Date 09/06/2022 not found in cache, using isocalendar: 2022-36
+2026-02-19 14:38:27,003 - parser - WARNING - Date 09/13/2022 not found in cache, using isocalendar: 2022-37
+2026-02-19 14:38:27,003 - parser - WARNING - Date 09/20/2022 not found in cache, using isocalendar: 2022-38
+2026-02-19 14:38:27,004 - parser - WARNING - Date 09/27/2022 not found in cache, using isocalendar: 2022-39
+2026-02-19 14:38:27,004 - parser - WARNING - Date 10/04/2022 not found in cache, using isocalendar: 2022-40
+2026-02-19 14:38:27,004 - parser - WARNING - Date 10/11/2022 not found in cache, using isocalendar: 2022-41
+2026-02-19 14:38:27,004 - parser - WARNING - Date 10/18/2022 not found in cache, using isocalendar: 2022-42
+2026-02-19 14:38:27,005 - parser - WARNING - Date 10/25/2022 not found in cache, using isocalendar: 2022-43
+2026-02-19 14:38:27,005 - parser - WARNING - Date 11/01/2022 not found in cache, using isocalendar: 2022-44
+2026-02-19 14:38:27,005 - parser - WARNING - Date 11/08/2022 not found in cache, using isocalendar: 2022-45
+2026-02-19 14:38:27,005 - parser - WARNING - Date 11/15/2022 not found in cache, using isocalendar: 2022-46
+2026-02-19 14:38:27,006 - parser - WARNING - Date 11/22/2022 not found in cache, using isocalendar: 2022-47
+2026-02-19 14:38:27,006 - parser - WARNING - Date 11/29/2022 not found in cache, using isocalendar: 2022-48
+2026-02-19 14:38:27,006 - parser - WARNING - Date 12/06/2022 not found in cache, using isocalendar: 2022-49
+2026-02-19 14:38:27,007 - parser - WARNING - Date 12/13/2022 not found in cache, using isocalendar: 2022-50
+2026-02-19 14:38:27,007 - parser - WARNING - Date 12/20/2022 not found in cache, using isocalendar: 2022-51
+2026-02-19 14:38:27,007 - parser - WARNING - Date 12/27/2022 not found in cache, using isocalendar: 2022-52
+2026-02-19 14:38:27,007 - parser - WARNING - Date 01/03/2023 not found in cache, using isocalendar: 2023-01
+2026-02-19 14:38:27,008 - parser - WARNING - Date 01/10/2023 not found in cache, using isocalendar: 2023-02
+2026-02-19 14:38:27,008 - parser - WARNING - Date 01/17/2023 not found in cache, using isocalendar: 2023-03
+2026-02-19 14:38:27,008 - parser - WARNING - Date 01/24/2023 not found in cache, using isocalendar: 2023-04
+2026-02-19 14:38:27,008 - parser - WARNING - Date 01/31/2023 not found in cache, using isocalendar: 2023-05
+2026-02-19 14:38:27,009 - parser - WARNING - Date 02/07/2023 not found in cache, using isocalendar: 2023-06
+2026-02-19 14:38:27,009 - parser - WARNING - Date 02/14/2023 not found in cache, using isocalendar: 2023-07
+2026-02-19 14:38:27,009 - parser - WARNING - Date 02/21/2023 not found in cache, using isocalendar: 2023-08
+2026-02-19 14:38:27,009 - parser - WARNING - Date 02/28/2023 not found in cache, using isocalendar: 2023-09
+2026-02-19 14:38:27,010 - parser - WARNING - Date 03/07/2023 not found in cache, using isocalendar: 2023-10
+2026-02-19 14:38:27,010 - parser - WARNING - Date 03/14/2023 not found in cache, using isocalendar: 2023-11
+2026-02-19 14:38:27,010 - parser - WARNING - Date 03/21/2023 not found in cache, using isocalendar: 2023-12
+2026-02-19 14:38:27,010 - parser - WARNING - Date 03/28/2023 not found in cache, using isocalendar: 2023-13
+2026-02-19 14:38:27,011 - parser - WARNING - Date 04/04/2023 not found in cache, using isocalendar: 2023-14
+2026-02-19 14:38:27,011 - parser - WARNING - Date 04/11/2023 not found in cache, using isocalendar: 2023-15
+2026-02-19 14:38:27,011 - parser - WARNING - Date 04/18/2023 not found in cache, using isocalendar: 2023-16
+2026-02-19 14:38:27,011 - parser - WARNING - Date 04/25/2023 not found in cache, using isocalendar: 2023-17
+2026-02-19 14:38:27,012 - parser - WARNING - Date 05/02/2023 not found in cache, using isocalendar: 2023-18
+2026-02-19 14:38:27,012 - parser - WARNING - Date 05/09/2023 not found in cache, using isocalendar: 2023-19
+2026-02-19 14:38:27,012 - parser - WARNING - Date 05/16/2023 not found in cache, using isocalendar: 2023-20
+2026-02-19 14:38:27,012 - parser - WARNING - Date 05/23/2023 not found in cache, using isocalendar: 2023-21
+2026-02-19 14:38:27,013 - parser - WARNING - Date 05/30/2023 not found in cache, using isocalendar: 2023-22
+2026-02-19 14:38:27,013 - parser - WARNING - Date 06/06/2023 not found in cache, using isocalendar: 2023-23
+2026-02-19 14:38:27,013 - parser - WARNING - Date 06/13/2023 not found in cache, using isocalendar: 2023-24
+2026-02-19 14:38:27,013 - parser - WARNING - Date 06/20/2023 not found in cache, using isocalendar: 2023-25
+2026-02-19 14:38:27,013 - parser - WARNING - Date 06/27/2023 not found in cache, using isocalendar: 2023-26
+2026-02-19 14:38:27,014 - parser - WARNING - Date 07/03/2023 not found in cache, using isocalendar: 2023-27
+2026-02-19 14:38:27,014 - parser - WARNING - Date 07/10/2023 not found in cache, using isocalendar: 2023-28
+2026-02-19 14:38:27,014 - parser - WARNING - Date 07/17/2023 not found in cache, using isocalendar: 2023-29
+2026-02-19 14:38:27,014 - parser - WARNING - Date 07/25/2023 not found in cache, using isocalendar: 2023-30
+2026-02-19 14:38:27,014 - parser - WARNING - Date 08/01/2023 not found in cache, using isocalendar: 2023-31
+2026-02-19 14:38:27,015 - parser - WARNING - Date 08/08/2023 not found in cache, using isocalendar: 2023-32
+2026-02-19 14:38:27,015 - parser - WARNING - Date 08/15/2023 not found in cache, using isocalendar: 2023-33
+2026-02-19 14:38:27,015 - parser - WARNING - Date 08/22/2023 not found in cache, using isocalendar: 2023-34
+2026-02-19 14:38:27,015 - parser - WARNING - Date 08/29/2023 not found in cache, using isocalendar: 2023-35
+2026-02-19 14:38:27,015 - parser - WARNING - Date 09/05/2023 not found in cache, using isocalendar: 2023-36
+2026-02-19 14:38:27,016 - parser - WARNING - Date 09/12/2023 not found in cache, using isocalendar: 2023-37
+2026-02-19 14:38:27,016 - parser - WARNING - Date 09/19/2023 not found in cache, using isocalendar: 2023-38
+2026-02-19 14:38:27,016 - parser - WARNING - Date 09/26/2023 not found in cache, using isocalendar: 2023-39
+2026-02-19 14:38:27,016 - parser - WARNING - Date 10/03/2023 not found in cache, using isocalendar: 2023-40
+2026-02-19 14:38:27,016 - parser - WARNING - Date 10/10/2023 not found in cache, using isocalendar: 2023-41
+2026-02-19 14:38:27,017 - parser - WARNING - Date 10/17/2023 not found in cache, using isocalendar: 2023-42
+2026-02-19 14:38:27,017 - parser - WARNING - Date 10/24/2023 not found in cache, using isocalendar: 2023-43
+2026-02-19 14:38:27,017 - parser - WARNING - Date 10/31/2023 not found in cache, using isocalendar: 2023-44
+2026-02-19 14:38:27,017 - parser - WARNING - Date 11/07/2023 not found in cache, using isocalendar: 2023-45
+2026-02-19 14:38:27,017 - parser - WARNING - Date 11/14/2023 not found in cache, using isocalendar: 2023-46
+2026-02-19 14:38:27,017 - parser - WARNING - Date 11/21/2023 not found in cache, using isocalendar: 2023-47
+2026-02-19 14:38:27,018 - parser - WARNING - Date 11/28/2023 not found in cache, using isocalendar: 2023-48
+2026-02-19 14:38:27,018 - parser - WARNING - Date 12/05/2023 not found in cache, using isocalendar: 2023-49
+2026-02-19 14:38:27,018 - parser - WARNING - Date 12/12/2023 not found in cache, using isocalendar: 2023-50
+2026-02-19 14:38:27,018 - parser - WARNING - Date 12/19/2023 not found in cache, using isocalendar: 2023-51
+2026-02-19 14:38:27,019 - parser - WARNING - Date 12/27/2023 not found in cache, using isocalendar: 2023-52
+2026-02-19 14:38:27,019 - parser - WARNING - Date 01/02/2024 not found in cache, using isocalendar: 2024-01
+2026-02-19 14:38:27,019 - parser - WARNING - Date 01/09/2024 not found in cache, using isocalendar: 2024-02
+2026-02-19 14:38:27,020 - parser - WARNING - Date 01/16/2024 not found in cache, using isocalendar: 2024-03
+2026-02-19 14:38:27,020 - parser - WARNING - Date 01/22/2024 not found in cache, using isocalendar: 2024-04
+2026-02-19 14:38:27,020 - parser - WARNING - Date 01/30/2024 not found in cache, using isocalendar: 2024-05
+2026-02-19 14:38:27,020 - parser - WARNING - Date 02/06/2024 not found in cache, using isocalendar: 2024-06
+2026-02-19 14:38:27,021 - parser - WARNING - Date 02/12/2024 not found in cache, using isocalendar: 2024-07
+2026-02-19 14:38:27,021 - parser - WARNING - Date 02/20/2024 not found in cache, using isocalendar: 2024-08
+2026-02-19 14:38:27,021 - parser - WARNING - Date 02/27/2024 not found in cache, using isocalendar: 2024-09
+2026-02-19 14:38:27,021 - parser - WARNING - Date 03/05/2024 not found in cache, using isocalendar: 2024-10
+2026-02-19 14:38:27,022 - parser - WARNING - Date 03/12/2024 not found in cache, using isocalendar: 2024-11
+2026-02-19 14:38:27,022 - parser - WARNING - Date 03/19/2024 not found in cache, using isocalendar: 2024-12
+2026-02-19 14:38:27,022 - parser - WARNING - Date 03/26/2024 not found in cache, using isocalendar: 2024-13
+2026-02-19 14:38:27,022 - parser - WARNING - Date 04/02/2024 not found in cache, using isocalendar: 2024-14
+2026-02-19 14:38:27,022 - parser - WARNING - Date 04/10/2024 not found in cache, using isocalendar: 2024-15
+2026-02-19 14:38:27,022 - parser - WARNING - Date 04/16/2024 not found in cache, using isocalendar: 2024-16
+2026-02-19 14:38:27,023 - parser - WARNING - Date 04/23/2024 not found in cache, using isocalendar: 2024-17
+2026-02-19 14:38:27,023 - parser - WARNING - Date 04/30/2024 not found in cache, using isocalendar: 2024-18
+2026-02-19 14:38:27,023 - parser - WARNING - Date 05/07/2024 not found in cache, using isocalendar: 2024-19
+2026-02-19 14:38:27,023 - parser - WARNING - Date 05/14/2024 not found in cache, using isocalendar: 2024-20
+2026-02-19 14:38:27,023 - parser - WARNING - Date 05/21/2024 not found in cache, using isocalendar: 2024-21
+2026-02-19 14:38:27,023 - parser - WARNING - Date 05/28/2024 not found in cache, using isocalendar: 2024-22
+2026-02-19 14:38:27,023 - parser - WARNING - Date 06/04/2024 not found in cache, using isocalendar: 2024-23
+2026-02-19 14:38:27,024 - parser - WARNING - Date 06/11/2024 not found in cache, using isocalendar: 2024-24
+2026-02-19 14:38:27,024 - parser - WARNING - Date 06/18/2024 not found in cache, using isocalendar: 2024-25
+2026-02-19 14:38:27,024 - parser - WARNING - Date 06/25/2024 not found in cache, using isocalendar: 2024-26
+2026-02-19 14:38:27,024 - parser - WARNING - Date 07/02/2024 not found in cache, using isocalendar: 2024-27
+2026-02-19 14:38:27,024 - parser - WARNING - Date 07/09/2024 not found in cache, using isocalendar: 2024-28
+2026-02-19 14:38:27,024 - parser - WARNING - Date 07/16/2024 not found in cache, using isocalendar: 2024-29
+2026-02-19 14:38:27,025 - parser - WARNING - Date 07/22/2024 not found in cache, using isocalendar: 2024-30
+2026-02-19 14:38:27,025 - parser - WARNING - Date 07/30/2024 not found in cache, using isocalendar: 2024-31
+2026-02-19 14:38:27,025 - parser - WARNING - Date 08/06/2024 not found in cache, using isocalendar: 2024-32
+2026-02-19 14:38:27,025 - parser - WARNING - Date 08/13/2024 not found in cache, using isocalendar: 2024-33
+2026-02-19 14:38:27,025 - parser - WARNING - Date 08/20/2024 not found in cache, using isocalendar: 2024-34
+2026-02-19 14:38:27,025 - parser - WARNING - Date 08/27/2024 not found in cache, using isocalendar: 2024-35
+2026-02-19 14:38:27,025 - parser - WARNING - Date 09/10/2024 not found in cache, using isocalendar: 2024-37
+2026-02-19 14:38:27,026 - parser - WARNING - Date 09/17/2024 not found in cache, using isocalendar: 2024-38
+2026-02-19 14:38:27,026 - parser - WARNING - Date 09/24/2024 not found in cache, using isocalendar: 2024-39
+2026-02-19 14:38:27,026 - parser - WARNING - Date 10/01/2024 not found in cache, using isocalendar: 2024-40
+2026-02-19 14:38:27,026 - parser - WARNING - Date 10/08/2024 not found in cache, using isocalendar: 2024-41
+2026-02-19 14:38:27,026 - parser - WARNING - Date 10/15/2024 not found in cache, using isocalendar: 2024-42
+2026-02-19 14:38:27,027 - parser - WARNING - Date 10/22/2024 not found in cache, using isocalendar: 2024-43
+2026-02-19 14:38:27,027 - parser - WARNING - Date 10/31/2024 not found in cache, using isocalendar: 2024-44
+2026-02-19 14:38:27,027 - parser - WARNING - Date 11/05/2024 not found in cache, using isocalendar: 2024-45
+2026-02-19 14:38:27,027 - parser - WARNING - Date 11/12/2024 not found in cache, using isocalendar: 2024-46
+2026-02-19 14:38:27,027 - parser - WARNING - Date 11/19/2024 not found in cache, using isocalendar: 2024-47
+2026-02-19 14:38:27,027 - parser - WARNING - Date 11/26/2024 not found in cache, using isocalendar: 2024-48
+2026-02-19 14:38:27,027 - parser - WARNING - Date 12/03/2024 not found in cache, using isocalendar: 2024-49
+2026-02-19 14:38:27,028 - parser - WARNING - Date 12/10/2024 not found in cache, using isocalendar: 2024-50
+2026-02-19 14:38:27,028 - parser - WARNING - Date 12/17/2024 not found in cache, using isocalendar: 2024-51
+2026-02-19 14:38:27,028 - parser - WARNING - Date 12/31/2024 not found in cache, using isocalendar: 2025-01
+2026-02-19 14:38:27,028 - parser - WARNING - Date 01/07/2025 not found in cache, using isocalendar: 2025-02
+2026-02-19 14:38:27,028 - parser - WARNING - Date 01/14/2025 not found in cache, using isocalendar: 2025-03
+2026-02-19 14:38:27,028 - parser - WARNING - Date 01/21/2025 not found in cache, using isocalendar: 2025-04
+2026-02-19 14:38:27,028 - parser - WARNING - Date 01/28/2025 not found in cache, using isocalendar: 2025-05
+2026-02-19 14:38:27,028 - parser - WARNING - Date 02/04/2025 not found in cache, using isocalendar: 2025-06
+2026-02-19 14:38:27,029 - parser - WARNING - Date 02/11/2025 not found in cache, using isocalendar: 2025-07
+2026-02-19 14:38:27,029 - parser - WARNING - Date 02/18/2025 not found in cache, using isocalendar: 2025-08
+2026-02-19 14:38:27,029 - parser - WARNING - Date 02/25/2025 not found in cache, using isocalendar: 2025-09
+2026-02-19 14:38:27,029 - parser - WARNING - Date 03/04/2025 not found in cache, using isocalendar: 2025-10
+2026-02-19 14:38:27,029 - parser - WARNING - Date 03/11/2025 not found in cache, using isocalendar: 2025-11
+2026-02-19 14:38:27,029 - parser - WARNING - Date 03/18/2025 not found in cache, using isocalendar: 2025-12
+2026-02-19 14:38:27,029 - parser - WARNING - Date 03/25/2025 not found in cache, using isocalendar: 2025-13
+2026-02-19 14:38:27,029 - parser - WARNING - Date 04/01/2025 not found in cache, using isocalendar: 2025-14
+2026-02-19 14:38:27,030 - parser - WARNING - Date 04/08/2025 not found in cache, using isocalendar: 2025-15
+2026-02-19 14:38:27,030 - parser - WARNING - Date 04/15/2025 not found in cache, using isocalendar: 2025-16
+2026-02-19 14:38:27,030 - parser - WARNING - Date 04/22/2025 not found in cache, using isocalendar: 2025-17
+2026-02-19 14:38:27,030 - parser - WARNING - Date 04/29/2025 not found in cache, using isocalendar: 2025-18
+2026-02-19 14:38:27,030 - parser - WARNING - Date 05/06/2025 not found in cache, using isocalendar: 2025-19
+2026-02-19 14:38:27,030 - parser - WARNING - Date 05/13/2025 not found in cache, using isocalendar: 2025-20
+2026-02-19 14:38:27,030 - parser - WARNING - Date 05/20/2025 not found in cache, using isocalendar: 2025-21
+2026-02-19 14:38:27,030 - parser - WARNING - Date 05/27/2025 not found in cache, using isocalendar: 2025-22
+2026-02-19 14:38:27,031 - parser - WARNING - Date 06/03/2025 not found in cache, using isocalendar: 2025-23
+2026-02-19 14:38:27,031 - parser - WARNING - Date 06/10/2025 not found in cache, using isocalendar: 2025-24
+2026-02-19 14:38:27,031 - parser - WARNING - Date 06/17/2025 not found in cache, using isocalendar: 2025-25
+2026-02-19 14:38:27,031 - parser - WARNING - Date 06/24/2025 not found in cache, using isocalendar: 2025-26
+2026-02-19 14:38:27,031 - parser - WARNING - Date 07/01/2025 not found in cache, using isocalendar: 2025-27
+2026-02-19 14:38:27,031 - parser - WARNING - Date 07/08/2025 not found in cache, using isocalendar: 2025-28
+2026-02-19 14:38:27,031 - parser - WARNING - Date 07/15/2025 not found in cache, using isocalendar: 2025-29
+2026-02-19 14:38:27,031 - parser - WARNING - Date 07/22/2025 not found in cache, using isocalendar: 2025-30
+2026-02-19 14:38:27,032 - parser - WARNING - Date 07/29/2025 not found in cache, using isocalendar: 2025-31
+2026-02-19 14:38:27,032 - parser - WARNING - Date 08/05/2025 not found in cache, using isocalendar: 2025-32
+2026-02-19 14:38:27,032 - parser - WARNING - Date 08/12/2025 not found in cache, using isocalendar: 2025-33
+2026-02-19 14:38:27,032 - parser - WARNING - Date 08/19/2025 not found in cache, using isocalendar: 2025-34
+2026-02-19 14:38:27,032 - parser - WARNING - Date 08/26/2025 not found in cache, using isocalendar: 2025-35
+2026-02-19 14:38:27,032 - parser - WARNING - Date 09/02/2025 not found in cache, using isocalendar: 2025-36
+2026-02-19 14:38:27,032 - parser - WARNING - Date 09/09/2025 not found in cache, using isocalendar: 2025-37
+2026-02-19 14:38:27,032 - parser - WARNING - Date 09/16/2025 not found in cache, using isocalendar: 2025-38
+2026-02-19 14:38:27,033 - parser - WARNING - Date 09/23/2025 not found in cache, using isocalendar: 2025-39
+2026-02-19 14:38:27,033 - parser - WARNING - Date 09/30/2025 not found in cache, using isocalendar: 2025-40
+2026-02-19 14:38:27,033 - parser - WARNING - Date 11/18/2025 not found in cache, using isocalendar: 2025-47
+2026-02-19 14:38:27,033 - parser - WARNING - Date 11/25/2025 not found in cache, using isocalendar: 2025-48
+2026-02-19 14:38:27,033 - parser - WARNING - Date 12/02/2025 not found in cache, using isocalendar: 2025-49
+2026-02-19 14:38:27,033 - parser - WARNING - Date 12/09/2025 not found in cache, using isocalendar: 2025-50
+2026-02-19 14:38:27,033 - parser - WARNING - Date 12/16/2025 not found in cache, using isocalendar: 2025-51
+2026-02-19 14:38:27,033 - parser - WARNING - Date 12/23/2025 not found in cache, using isocalendar: 2025-52
+2026-02-19 14:38:27,034 - parser - INFO - Mapped 229 weeks (0 dates unmapped)
+2026-02-19 14:38:27,034 - parser - INFO - Loaded master: 49 data rows
+2026-02-19 14:38:27,034 - parser - INFO -   Date range: 2025-01 to 2026-04
+2026-02-19 14:38:27,034 - parser - INFO - Master's last week: 2026-04
+2026-02-19 14:38:27,034 - parser - INFO - Adding 3 new weeks to master:
+2026-02-19 14:38:27,034 - parser - INFO -   2026-05: East=4, West=0, Gulf=4
+2026-02-19 14:38:27,034 - parser - INFO -   2026-07: East=9, West=2, Gulf=3
+2026-02-19 14:38:27,035 - parser - INFO -   2026-08: East=5, West=1, Gulf=2
+2026-02-19 14:38:27,036 - parser - INFO - Master saved: 52 rows -> D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Master_Data\Master_FREIGHTINFO_MARAD_DATA.csv
+2026-02-19 14:38:27,036 - __main__ - INFO - ======================================================================
+2026-02-19 14:38:27,036 - __main__ - INFO - STEP 5: Generating Output Files
+2026-02-19 14:38:27,036 - __main__ - INFO - ======================================================================
+2026-02-19 14:38:27,036 - file_generator - INFO - ======================================================================
+2026-02-19 14:38:27,036 - file_generator - INFO - Generating output files...
+2026-02-19 14:38:27,036 - file_generator - INFO - Output directory: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_143746
+2026-02-19 14:38:27,037 - file_generator - INFO - ======================================================================
+2026-02-19 14:38:27,042 - file_generator - INFO - DATA XLS created: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_143746\FREIGHTINFO_MARAD_DATA_20260219.xls
+2026-02-19 14:38:27,044 - file_generator - INFO - META XLS created: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_143746\FREIGHTINFO_MARAD_META_20260219.xls
+2026-02-19 14:38:27,067 - file_generator - INFO - ZIP created: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_143746\FREIGHTINFO_MARAD_20260219.zip
+2026-02-19 14:38:27,070 - file_generator - INFO -   Copied to latest: FREIGHTINFO_MARAD_DATA_20260219.xls
+2026-02-19 14:38:27,072 - file_generator - INFO -   Copied to latest: FREIGHTINFO_MARAD_META_20260219.xls
+2026-02-19 14:38:27,090 - file_generator - INFO -   Copied to latest: FREIGHTINFO_MARAD_20260219.zip
+2026-02-19 14:38:27,090 - file_generator - INFO - File generation complete
+2026-02-19 14:38:27,090 - __main__ - INFO - ======================================================================
+2026-02-19 14:38:27,090 - __main__ - INFO - EXECUTION SUMMARY
+2026-02-19 14:38:27,091 - __main__ - INFO - ======================================================================
+2026-02-19 14:38:27,091 - __main__ - INFO -   Master data rows: 52
+2026-02-19 14:38:27,091 - __main__ - INFO -   Date range: 2025-01 to 2026-08
+2026-02-19 14:38:27,091 - __main__ - INFO -   Output files:
+2026-02-19 14:38:27,091 - __main__ - INFO -     data: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_143746\FREIGHTINFO_MARAD_DATA_20260219.xls
+2026-02-19 14:38:27,091 - __main__ - INFO -     meta: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_143746\FREIGHTINFO_MARAD_META_20260219.xls
+2026-02-19 14:38:27,091 - __main__ - INFO -     zip: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\output\20260219_143746\FREIGHTINFO_MARAD_20260219.zip
+2026-02-19 14:38:27,091 - __main__ - INFO - ======================================================================
+2026-02-19 14:38:27,092 - uc - INFO - ensuring close
+2026-02-19 14:38:27,128 - uc - DEBUG - webdriver process ended

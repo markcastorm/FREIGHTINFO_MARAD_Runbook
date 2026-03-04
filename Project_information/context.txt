@@ -1,0 +1,2344 @@
+Understand the python scripts for the last runbook befor we get started with the new one ((D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A))
+Let me explore the current project's Python scripts to understand the patterns and structure.
+
+Task:Explore FREIGHTINFO_MARAD Python scripts
+IN
+Thoroughly explore the project at D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook. I need to understand:
+
+1. The overall project structure (all files and folders)
+2. Every Python script - read each one completely
+3. The patterns used: how data is fetched, transformed, loaded
+4. Any configuration files, SQL files, or supporting files
+5. The general workflow/pipeline
+
+Read every Python file in full and provide a detailed summary of:
+- What each script does
+- Key functions and their purposes
+- Data flow (source → transformation → destination)
+- Libraries and dependencies used
+- Any common patterns or conventions
+
+Be very thorough - read ALL files.
+Bash Show directory structure recursively
+IN
+cd "d:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook" && dir /s
+
+OUT
+Exit code 2
+dir: cannot access '/s': No such file or directory
+Globpattern: "**/*.md"
+No files found
+Read d:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\week_sample.txt
+Read d:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\FREIGHTINFO_MARAD_DATA_20260128 - DATA.csv
+Grep ".*" (in d:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt)
+101 lines of output
+Bash Read the master data CSV file
+IN
+cd "d:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook" && cat Master_Data/Master_FREIGHTINFO_MARAD_DATA.csv
+
+OUT
+,USA.CONTAINERSHIP_PORT_REGION_EAST.W,USA.CONTAINERSHIP_PORT_REGION_WEST.W,USA.CONTAINERSHIP_PORT_REGION_GULF.W
+,USA.Containership port region East,USA.Containership port region West,USA.Containership port region Gulf
+2025-01,16,3,4
+2025-02,11,5,3
+2025-03,12,7,1
+2025-04,14,5,2
+2025-05,28,4,3
+2025-06,26,5,5
+2025-07,30,3,9
+2025-08,30,3,4
+2025-09,26,4,4
+2025-10,14,1,2
+2025-11,18,0,5
+2025-12,14,1,1
+2025-13,22,1,2
+2025-14,17,1,5
+2025-15,8,0,1
+2025-16,7,3,2
+2025-17,9,2,4
+2025-18,6,1,0
+2025-19,8,0,0
+2025-20,2,1,1
+2025-21,3,1,3
+2025-22,5,3,2
+2025-23,6,2,1
+2025-24,3,1,0
+2025-25,3,2,2
+2025-26,3,1,0
+2025-27,8,1,5
+2025-28,5,2,2
+2025-29,8,1,5
+2025-30,7,1,4
+2025-31,6,1,0
+2025-32,12,2,0
+2025-33,10,1,1
+2025-34,5,3,1
+2025-35,12,2,1
+2025-36,20,0,2
+2025-37,8,0,2
+2025-38,2,1,1
+2025-39,9,2,1
+2025-40,6,1,2
+2025-47,10,0,4
+2025-48,5,3,3
+2025-49,6,1,2
+2025-50,10,1,2
+2025-51,5,5,3
+2025-52,6,0,6
+2026-02,11,1,7
+2026-03,9,1,2
+2026-04,8,1,0
+2026-05,4,0,4
+2026-07,9,2,3
+2026-08,5,1,2
+Bash Detailed listing of Project_information directory
+IN
+cd "d:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information" && ls -lah
+
+OUT
+total 2.0M
+drwxr-xr-x 1 MarkCastro 197121    0 Feb 19 11:24 ./
+drwxr-xr-x 1 MarkCastro 197121    0 Feb 18 11:00 ../
+-rw-r--r-- 1 MarkCastro 197121 354K Feb 19 11:22 1.5 Containerships Anchored off US Ports (1).csv
+-rw-r--r-- 1 MarkCastro 197121 127K Feb 19 11:07 chart_interesteimage.png
+-rw-r--r-- 1 MarkCastro 197121  93K Feb 19 11:14 choicesimage.png
+-rw-r--r-- 1 MarkCastro 197121  46K Feb 19 10:56 Dynamic loading image.png
+-rw-r--r-- 1 MarkCastro 197121 1019 Feb 19 09:58 FREIGHTINFO_MARAD_DATA_20260128 - DATA.csv
+-rw-r--r-- 1 MarkCastro 197121  43K Feb 19 09:58 FREIGHTINFO_MARAD_DATA_20260128.xlsx
+-rw-r--r-- 1 MarkCastro 197121 9.5K Feb 19 09:58 FREIGHTINFO_MARAD_META_20250212.xlsx
+-rw-r--r-- 1 MarkCastro 197121 482K Feb 19 09:57 FREIGHTINFO_MARAD_Runbook.docx
+-rw-r--r-- 1 MarkCastro 197121  94K Feb 19 11:23 imagecsv screenshot.png
+-rw-r--r-- 1 MarkCastro 197121  89K Feb 19 11:18 imagemodal.png
+-rw-r--r-- 1 MarkCastro 197121  99K Feb 19 12:14 information.txt
+-rw-r--r-- 1 MarkCastro 197121 139K Feb 19 10:58 Loaded site image.png
+-rw-r--r-- 1 MarkCastro 197121 161K Feb 19 11:06 loaded site sample.txt
+-rw-r--r-- 1 MarkCastro 197121 187K Feb 19 10:50 week screenshots image.png
+-rw-r--r-- 1 MarkCastro 197121  52K Feb 19 10:22 week_sample.txt
+Bash Read the week sample data
+IN
+cd "d:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information" && cat "week_sample.txt" | head -80
+
+OUT
+<persisted-output>
+Output too large (40.4KB). Full output saved to: C:\Users\Mark Castro\.claude\projects\d--Projects-SIMBA-RUNBOOKS-FREIGHTINFO-MARAD-Runbook\e876a188-c415-4197-8af5-2d601c4e4153\tool-results\toolu_01Hcr1mJTJr9ND2Lfr43SdEv.txt
+
+Preview (first 2KB):
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Week Numbers for 2026</title><link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+<link rel="shortcut icon" href="/img/epoch.ico">
+<link rel="icon" href="/img/favicon-192x192.png" type="image/png" sizes="192x192">
+<link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="manifest" href="/img/site.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no"><link rel="stylesheet" href="/css/epoch.min.css?16" type="text/css">  <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-FPXXPJP3H5&amp;cx=c&amp;gtm=4e62d1"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202602120101/show_ads_impl_fy2021.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-2B52"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-2B52');</script><link rel="search" type="application/opensearchdescription+xml" href="/site/searchbar.xml" title="Epoch Converter - Convert Epoch to Date">  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script><script src="/js/epoch.min.js?16"></script>
+...
+</persisted-output>
+Bash Check similar project structure
+IN
+cd "d:\Projects\SIMBA-RUNBOOKS\CTCABCE_Runbook" && ls -la *.py
+
+OUT
+-rw-r--r-- 1 MarkCastro 197121  9780 Feb  3 11:46 config.py
+-rw-r--r-- 1 MarkCastro 197121  9757 Feb  3 11:52 file_generator.py
+-rw-r--r-- 1 MarkCastro 197121  2180 Feb  3 11:46 logger_setup.py
+-rw-r--r-- 1 MarkCastro 197121  7776 Feb  3 12:02 orchestrator.py
+-rw-r--r-- 1 MarkCastro 197121 18337 Feb  3 11:49 parser.py
+-rw-r--r-- 1 MarkCastro 197121 18911 Feb  3 11:47 scraper.py
+Read d:\Projects\SIMBA-RUNBOOKS\CTCABCE_Runbook\scraper.py
+The current project (FREIGHTINFO_MARAD_Runbook) is still in the planning/documentation phase with no Python scripts yet. Let me check the sibling runbook projects for existing Python code that would serve as the template.
+
+Bash List all runbook projects in SIMBA-RUNBOOKS
+IN
+dir /b "D:\Projects\SIMBA-RUNBOOKS"
+
+OUT
+Exit code 2
+dir: cannot access '/b': No such file or directory
+
+D\:\\Projects\\SIMBA-RUNBOOKS:
+BOACTAR			     JGBH_JMOF_BH_Runbook	  SNOWFALL_RUNBOOK
+CTCABCE_Runbook		     JMOF_Runbook		  SSGADD
+EpochaAI_Trajectory_Runbook  LULOMETER_Runbook		  STEMGRADS_Runbook
+EUCTF_Runbook		     New_Zealand_LSAP		  SWEAR_Runbook
+FLIGHTRADAR_Runbook	     New_Zealand_LSAP_Bond_Sales  Taiwan_Daily_Margin
+FREIGHTINFO_MARAD_Runbook    NOAADDF_A			  UKDMOGI_DATA_PART_1
+GNGD_Runbook		     NOAADDF_F			  UKDMOGI_PART_2
+GNGD_Runbook_Weekly	     NOAADDF_Runbook		  VANGUARDDD_RunBook
+GTTR_Runbook		     PTWTPL_RUNBOOK		  VPDR_BCV_Runbook
+JGBH_BOJ_Runbook	     SMASCPS_MAS		  WKORPUSE_Runbook
+Bash List runbook projects
+IN
+ls "D:\Projects\SIMBA-RUNBOOKS" | head -40
+
+OUT
+BOACTAR/
+CTCABCE_Runbook/
+EpochaAI_Trajectory_Runbook/
+EUCTF_Runbook/
+FLIGHTRADAR_Runbook/
+FREIGHTINFO_MARAD_Runbook/
+GNGD_Runbook/
+GNGD_Runbook_Weekly/
+GTTR_Runbook/
+JGBH_BOJ_Runbook/
+JGBH_JMOF_BH_Runbook/
+JMOF_Runbook/
+LULOMETER_Runbook/
+New_Zealand_LSAP/
+New_Zealand_LSAP_Bond_Sales/
+NOAADDF_A/
+NOAADDF_F/
+NOAADDF_Runbook/
+PTWTPL_RUNBOOK/
+SMASCPS_MAS/
+SNOWFALL_RUNBOOK/
+SSGADD/
+STEMGRADS_Runbook/
+SWEAR_Runbook/
+Taiwan_Daily_Margin/
+UKDMOGI_DATA_PART_1/
+UKDMOGI_PART_2/
+VANGUARDDD_RunBook/
+VPDR_BCV_Runbook/
+WKORPUSE_Runbook/
+Since the new runbook is NOAADDF_A, the "last runbook" likely refers to NOAADDF_Runbook (the original NOAA runbook). Let me also check NOAADDF_F as they may be related. Let me explore these for Python scripts.
+
+Task:Explore NOAADDF_Runbook Python scripts
+IN
+Thoroughly explore D:\Projects\SIMBA-RUNBOOKS\NOAADDF_Runbook. I need a complete understanding of ALL Python scripts.
+
+1. First list the full directory structure
+2. Read EVERY Python file (.py) completely
+3. Read any config, SQL, JSON, or text files that support the scripts
+4. For each Python script, document:
+   - Purpose and what it does
+   - All functions/classes and their roles
+   - Key variables and configurations
+   - How it interacts with other scripts
+   - Libraries/imports used
+5. Document the complete data flow from source to destination
+6. Note any patterns, conventions, or reusable components
+
+Be extremely thorough - read every single Python file in full.
+Task:Explore NOAADDF_F Python scripts
+IN
+Thoroughly explore D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F. I need a complete understanding of ALL Python scripts.
+
+1. First list the full directory structure
+2. Read EVERY Python file (.py) completely
+3. Read any config, SQL, JSON, or text files that support the scripts
+4. For each Python script, document:
+   - Purpose and what it does
+   - All functions/classes and their roles
+   - Key variables and configurations
+   - How it interacts with other scripts
+   - Libraries/imports used
+5. Document the complete data flow from source to destination
+6. Note any patterns, conventions, or reusable components
+
+Be extremely thorough - read every single Python file in full.
+Task:Explore NOAADDF_A project structure
+IN
+Explore D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A to understand what already exists for the new runbook. List the full directory structure and read any files that are present (documentation, data samples, configs, etc.). This is the target project for the new runbook being built.
+Globpattern: "d:/Projects/SIMBA-RUNBOOKS/NOAADDF_Runbook/**/*"
+Found 1 file
+Bash Get detailed directory structure
+IN
+cd /d "D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F" && tree /F 2>nul || find . -type f | sort
+
+OUT
+<tool_use_error>Sibling tool call errored</tool_use_error>
+Bash Get directory tree structure
+IN
+tree /d "D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A" 2>nul || (cd /d "D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A" && find . -type f -o -type d | head -100)
+
+OUT
+<tool_use_error>Sibling tool call errored</tool_use_error>
+Bash List all files recursively in NOAADDF_F directory
+IN
+dir "D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F" /s /b
+
+OUT
+Exit code 2
+dir: cannot access '/s': No such file or directory
+dir: cannot access '/b': No such file or directory
+
+D\:\\Projects\\SIMBA-RUNBOOKS\\NOAADDF_F:
+__pycache__	   logger_setup.py  output		  requirements.txt
+config.py	   logs		    parser.py		  scraper.py
+downloads	   Master\ Data     Project\ information
+file_generator.py  orchestrator.py  README.md
+Bash List complete directory structure recursively
+IN
+dir "d:\Projects\SIMBA-RUNBOOKS\NOAADDF_Runbook" /s
+
+OUT
+Exit code 2
+dir: cannot access '/s': No such file or directory
+
+d\:\\Projects\\SIMBA-RUNBOOKS\\NOAADDF_Runbook:
+Globpattern: "**/*"
+Found 1 file
+Bash Find all files in NOAADDF_F
+IN
+find "D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F" -type f 2>/dev/null | head -50
+
+OUT
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/.gitignore
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/config.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/downloads/20260212_233530/2026/02/11/Population.Cooling.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/downloads/20260212_233530/2026/02/11/Population.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/downloads/20260212_233530/2026/02/11/UtilityGas.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/downloads/20260212_233530/2026/02/12/Population.Cooling.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/downloads/20260212_233530/2026/02/12/Population.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/downloads/20260212_233530/2026/02/12/UtilityGas.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/file_generator.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/logger_setup.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/logs/20260212_233530/noaaddf_f_20260212_233530.log
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Master Data/Master_NOAADDF_F_DATA.csv
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/orchestrator.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/output/20260212_233530/NOAADDF_F_20260212.zip
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/output/20260212_233530/NOAADDF_F_DATA_20260212.xls
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/output/20260212_233530/NOAADDF_F_META_20260212.xls
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/output/latest/NOAADDF_F_20260212.zip
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/output/latest/NOAADDF_F_DATA_20260212.xls
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/output/latest/NOAADDF_F_META_20260212.xls
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/parser.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/image1.png
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/image2.png
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/image3.png
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/image4.png
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/information.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/NOAADDF_F_DATA_20260211 - DATA.csv
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/NOAADDF_F_DATA_20260211.xlsx
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/NOAADDF_F_META_20260211.xlsx
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/sample.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/sample2.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/Project information/sample3.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/README.md
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/requirements.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/scraper.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/__pycache__/config.cpython-312.pyc
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/__pycache__/file_generator.cpython-312.pyc
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/__pycache__/logger_setup.cpython-312.pyc
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/__pycache__/parser.cpython-312.pyc
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F/__pycache__/scraper.cpython-312.pyc
+Bash Find all relevant file types in project
+IN
+find "D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A" -type f -name "*.md" -o -name "*.txt" -o -name "*.py" -o -name "*.json" -o -name "*.yaml" -o -name "*.yml" -o -name "*.csv" 2>/dev/null
+
+OUT
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/config.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_124329/Population.Cooling.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_124329/Population.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_124329/UtilityGas.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_132701/Population.Cooling.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_132701/Population.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_132701/UtilityGas.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_160652/Population.Cooling.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_160652/Population.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/downloads/20260212_160652/UtilityGas.Heating.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/file_generator.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/logger_setup.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/Master Data/Master_NOAADDF_A_DATA.csv
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/orchestrator.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/parser.py
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/project_information/information.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/project_information/NOAADDF_A_DATA_20260211 - DATA.csv
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/project_information/sample.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/project_information/sample2.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/project_information/sample3.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/project_information/sample5.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/project_information/sample_organized_heatinggas.csv
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/README.md
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/requirements.txt
+D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A/scraper.py
+Bash List complete directory structure recursively
+IN
+ls -R "d:\Projects\SIMBA-RUNBOOKS\NOAADDF_Runbook"
+
+OUT
+d:\Projects\SIMBA-RUNBOOKS\NOAADDF_Runbook:
+Read D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F\scraper.py
+Read D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A\project_information\information.txt
+Bash List SIMBA-RUNBOOKS directory contents
+IN
+ls -la "d:\Projects\SIMBA-RUNBOOKS"
+
+OUT
+total 116
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 18 11:00 ./
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 21 15:02 ../
+drwxr-xr-x 1 MarkCastro 197121 0 Feb  6 13:38 BOACTAR/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb  3 12:11 CTCABCE_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 26 13:22 EpochaAI_Trajectory_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 21 14:50 EUCTF_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb  4 15:40 FLIGHTRADAR_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 18 11:00 FREIGHTINFO_MARAD_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 17 15:59 GNGD_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 17 15:59 GNGD_Runbook_Weekly/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 28 14:39 GTTR_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 20 13:13 JGBH_BOJ_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb  9 11:46 JGBH_JMOF_BH_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 29 19:59 JMOF_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb  3 15:32 LULOMETER_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 13 08:50 New_Zealand_LSAP/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 13 08:41 New_Zealand_LSAP_Bond_Sales/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 12 23:40 NOAADDF_A/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 12 23:41 NOAADDF_F/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 12 11:09 NOAADDF_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 19 13:23 PTWTPL_RUNBOOK/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 26 10:19 SMASCPS_MAS/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan  9 14:35 SNOWFALL_RUNBOOK/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 27 11:12 SSGADD/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 10 18:13 STEMGRADS_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 11 11:50 SWEAR_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb  3 15:55 Taiwan_Daily_Margin/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 13 12:53 UKDMOGI_DATA_PART_1/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 13 15:09 UKDMOGI_PART_2/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 27 13:45 VANGUARDDD_RunBook/
+drwxr-xr-x 1 MarkCastro 197121 0 Jan 30 12:27 VPDR_BCV_Runbook/
+drwxr-xr-x 1 MarkCastro 197121 0 Feb  3 10:15 WKORPUSE_Runbook/
+Read D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F\orchestrator.py
+Read D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A\file_generator.py
+Bash List NOAADDF_Runbook contents
+IN
+ls -la "d:\Projects\SIMBA-RUNBOOKS\NOAADDF_Runbook"
+
+OUT
+total 4
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 12 11:09 ./
+drwxr-xr-x 1 MarkCastro 197121 0 Feb 18 11:00 ../
+Read D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F\Master Data\Master_NOAADDF_F_DATA.csv
+Read D:\Projects\SIMBA-RUNBOOKS\NOAADDF_A\logger_setup.py
+Bash List NOAADDF_F contents
+IN
+ls -la "d:\Projects\SIMBA-RUNBOOKS\NOAADDF_F"
+
+OUT
+total 86
+drwxr-xr-x 1 MarkCastro 197121     0 Feb 12 23:41 ./
+drwxr-xr-x 1 MarkCastro 197121     0 Feb 18 11:00 ../
+-rw-r--r-- 1 MarkCastro 197121   287 Feb 12 23:40 .gitignore
+drwxr-xr-x 1 MarkCastro 197121     0 Feb 12 23:35 __pycache__/
+-rw-r--r-- 1 MarkCastro 197121  8850 Feb 12 23:11 config.py
+drwxr-xr-x 1 MarkCastro 197121     0 Feb 12 23:36 downloads/
+-rw-r--r-- 1 MarkCastro 197121  9297 Feb 12 23:18 file_generator.py
+-rw-r--r-- 1 MarkCastro 197121  1764 Feb 12 23:11 logger_setup.py
+drwxr-xr-x 1 MarkCastro 197121     0 Feb 12 23:35 logs/
+drwxr-xr-x 1 MarkCastro 197121     0 Feb 12 16:33 Master Data/
+-rwxr-xr-x 1 MarkCastro 197121  6702 Feb 12 23:22 orchestrator.py*
+drwxr-xr-x 1 MarkCastro 197121     0 Feb 12 23:36 output/
+-rw-r--r-- 1 MarkCastro 197121 11189 Feb 12 23:13 parser.py
+drwxr-xr-x 1 MarkCastro 197121     0 Feb 12 22:45 Project information/
+-rw-r--r-- 1 MarkCastro 197121  3222 Feb 12 23:41 README.md
+-rw-r--r-- 1 MarkCastro 197121   105 Feb 12 23:26 requirements.txt
+-rw-r--r-- 1 MarkCastro 197121 15564 Feb 12 23:12 scraper.py
+Read D:\Projects\SIMBA-RUNBOOKS\NOAADDF_F\logs\20260212_233530\noaaddf_f_20260212_233530.log
+Read d:\Projects\SIMBA-RUNBOOKS\NOAADDF_A\orchestrator.py
+Read d:\Projects\SIMBA-RUNBOOKS\NOAADDF_A\scraper.py
+Bash List Master Data directory
+IN
+ls -la "d:\Projects\SIMBA-RUNBOOKS\NOAADDF_A\Master Data"
+
+OUT
+total 12
+drwxr-xr-x 1 MarkCastro 197121    0 Feb 12 16:06 ./
+drwxr-xr-x 1 MarkCastro 197121    0 Feb 12 23:40 ../
+-rw-r--r-- 1 MarkCastro 197121 7752 Feb 12 16:07 Master_NOAADDF_A_DATA.csv
+Read d:\Projects\SIMBA-RUNBOOKS\NOAADDF_F\orchestrator.py
+Read d:\Projects\SIMBA-RUNBOOKS\NOAADDF_F\file_generator.py
+Read d:\Projects\SIMBA-RUNBOOKS\NOAADDF_F\logger_setup.py
+Read d:\Projects\SIMBA-RUNBOOKS\NOAADDF_F\requirements.txt
+Here's a comprehensive summary of the NOAADDF Python scripts (both NOAADDF_A and NOAADDF_F):
+
+Architecture Overview
+Both runbooks follow an identical 6-module ETL pattern:
+
+Module	Role
+config.py	Centralized settings (URLs, columns, paths, browser config)
+logger_setup.py	Dual file + console logging
+scraper.py	Web scraping (dual HTTP/Selenium modes)
+parser.py	Text parsing + master CSV management
+file_generator.py	XLS DATA, XLS META, ZIP output generation
+orchestrator.py	Main entry point, step-by-step pipeline
+Data Flow
+
+NOAA FTP Site (ftp.cpc.ncep.noaa.gov)
+    ↓  scraper.py (HTTP or Selenium)
+3 Text Files (Population.Cooling/Heating, UtilityGas.Heating)
+    ↓  parser.py (extract CONUS row, convert dates)
+Parsed Dict {date → {col_code → value}}
+    ↓  parser.py (incremental dedup merge)
+Master CSV (2-row header + sorted data rows)
+    ↓  file_generator.py
+XLS DATA + XLS META + ZIP → output/{timestamp}/ + output/latest/
+Key Differences: NOAADDF_A vs NOAADDF_F
+Aspect	NOAADDF_A (Actuals)	NOAADDF_F (Forecasts)
+FTP path	daily_data/	daily_forecasts_7day/
+Navigation depth	2 levels (base → year → files)	4 levels (base → year → month → day → files)
+Pipeline steps	4 steps	5 steps (adds "check last date" step)
+Column codes	NOAADDF.COOLING.D etc.	NOAADDF.COOLING.FORECAST.D etc.
+Extraction	Full date columns from each file	"Total" column (7-day sum) per day folder
+Fetch strategy	Re-fetches entire year file	Incremental (only days after last master date)
+Key Patterns & Conventions
+Dual-mode scraper — config.USE_BROWSER toggles Selenium (debugging) vs HTTP requests (production)
+Retry logic — 3 attempts with 5-second delays on HTTP failures
+Master CSV format — 2-row header (codes + descriptions), then YYYY-MM-DD,val1,val2,val3
+Incremental updates — Set-based dedup; only new dates get appended, then sorted chronologically
+Timestamped output — Each run creates output/{YYYYMMDD_HHMMSS}/ plus copies to output/latest/
+Static metadata — META XLS has 17 columns, 3 rows (one per timeseries), hardcoded in config
+Chrome version detection — Queries Windows Registry to match undetected-chromedriver version
+Dependencies
+
+requests, beautifulsoup4, xlwt, selenium, undetected-chromedriver
+Master Data
+NOAADDF_A: 414 rows, Dec 2024 – Feb 2026, 3 columns (cooling/heating/heatinggas degree days)
+NOAADDF_F: Same 3 columns but forecast variant, incremental day-by-day collection
+I now have a solid understanding of the architecture, patterns, and conventions. Ready to get started on the new runbook whenever you are — what's the plan for NOAADDF_A (the new one)?
+
+HERE IS THE NESW runbook information(D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt
+Large file — let me read it in sections.
+
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 2-301)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 2-201)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 2-101)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 101-300)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 101-250)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 101-200)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 101-180)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 101-160)
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\information.txt (lines 161-220)
+Now let me also read the key reference files — the master CSV and the downloaded CSV data.
+
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Master_Data\Master_FREIGHTINFO_MARAD_DATA.csv
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\FREIGHTINFO_MARAD_DATA_20260128 - DATA.csv
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\1.5 Containerships Anchored off US Ports (1).csv
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\1.5 Containerships Anchored off US Ports (1).csv (lines 2-31)
+I've thoroughly analyzed the information file and all reference data. Here's my understanding:
+
+Downloaded CSV structure (Tableau crosstab export):
+
+UTF-16 encoded, tab-delimited
+3 rows per date (West, East, Gulf regions)
+Column Date Week Tool Tip has dates like 07/27/2021 (MM/DD/YYYY)
+Values are floats like 38.00 that need integer conversion
+Very wide format — values spread across date columns
+Pipeline flow:
+
+Scrape epochconverter.com for week-to-date mapping → cache as JSON (3 years ahead)
+Selenium → BTS Tableau chart → Download → Crosstab → CSV → trigger download
+Parse UTF-16 tab-delimited CSV, extract latest dates for East/West/Gulf
+Map dates to ISO week numbers using cached JSON
+Compare against master, append only new weeks
+Generate output (copy master as XLS) in timestamped + latest folders
+Let me create the implementation plan.
+
+EnterPlanMode
+OUT
+Entered plan mode. You should now focus on exploring the codebase and designing an implementation approach.
+
+In plan mode, you should:
+1. Thoroughly explore the codebase to understand existing patterns
+2. Identify similar features and architectural approaches
+3. Consider multiple approaches and their trade-offs
+4. Use AskUserQuestion if you need to clarify the approach
+5. Design a concrete implementation strategy
+6. When ready, use ExitPlanMode to present your plan for approval
+
+Remember: DO NOT write or edit any files yet. This is a read-only exploration and planning phase.
+I already have a thorough understanding from the prior exploration. Let me look at the screenshots for additional visual context, then write the plan.
+
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\imagecsv screenshot.png
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\imagemodal.png
+Read D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\Project_information\chart_interesteimage.png
+Now I have complete visual and data understanding. Let me write the implementation plan.
+
+Write C:\Users\Mark Castro\.claude\plans\ticklish-marinating-corbato.md
+170 lines
+# FREIGHTINFO_MARAD Runbook - Implementation Plan
+
+## Context
+Build an automated weekly pipeline to scrape containership anchoring data from the BTS Tableau chart, map dates to ISO week numbers, and update a master CSV with new weekly data. Architecture follows NOAADDF_A patterns.
+
+## Project Location
+`D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\`
+
+## Files to Create (6 modules)
+
+### 1. `config.py`
+- `BASE_URL = "https://www.bts.gov/freight-indicators#anchored-offshore"`
+- `WEEK_URL_TEMPLATE = "https://www.epochconverter.com/weeks/{year}"` (for 3 years ahead)
+- `WEEK_CACHE_FILE` path in project root (`week_mapping.json`)
+- `YEARS_TO_CACHE = 3` (prefetch 3 years of week data)
+- Column mapping matching master CSV exactly:
+  - `USA.CONTAINERSHIP_PORT_REGION_EAST.W` / `USA.Containership port region East`
+  - `USA.CONTAINERSHIP_PORT_REGION_WEST.W` / `USA.Containership port region West`
+  - `USA.CONTAINERSHIP_PORT_REGION_GULF.W` / `USA.Containership port region Gulf`
+- Region mapping: `{"East": col_code_east, "West": col_code_west, "Gulf": col_code_gulf}`
+- Selenium settings: `USE_BROWSER=True`, `HEADLESS_MODE=False`, `WAIT_TIMEOUT=30`, `PAGE_LOAD_DELAY=3`
+- Directory config: `MASTER_DATA_DIR`, `DOWNLOADS_DIR`, `OUTPUT_DIR`, `LATEST_OUTPUT_DIR`, `LOG_DIR` (all timestamped like NOAADDF_A)
+- File naming: `FREIGHTINFO_MARAD_DATA_{date}.xls`, `FREIGHTINFO_MARAD_META_{date}.xls`, `FREIGHTINFO_MARAD_{date}.zip`
+- `META_COLUMNS` and `META_ROWS` (17-column metadata structure matching NOAADDF_A pattern)
+- Tableau selectors as constants (for maintainability):
+  - `DOWNLOAD_BUTTON_SELECTOR = '[data-tb-test-id="viz-viewer-toolbar-button-download"]'`
+  - `CROSSTAB_MENU_ITEM = '[data-tb-test-id="download-flyout-download-crosstab-MenuItem"]'`
+  - `CSV_RADIO_SELECTOR = '[data-tb-test-id="crosstab-options-dialog-radio-csv-RadioButton"]'`
+  - `EXPORT_BUTTON_SELECTOR = '[data-tb-test-id="export-crosstab-export-Button"]'`
+
+### 2. `logger_setup.py`
+- Identical pattern to NOAADDF_A: dual file+console logging, timestamped log files
+
+### 3. `scraper.py` - Class `FREIGHTINFOScraper`
+
+**Two scraping responsibilities:**
+
+#### A. Week Mapping (`fetch_week_data()`)
+- Check if `week_mapping.json` exists and covers current year + 2 more years
+- If not (or nearing end of cached data), scrape epochconverter.com for 3 years
+- Parse HTML table: extract Week Number, From Date, To Date for each week
+- Store as JSON: `{"2026": [{"week": 1, "from": "2025-12-29", "to": "2026-01-04"}, ...], "2027": [...], "2028": [...]}`
+- Navigation for next years: follow `<a href="/weeks/2027">` links
+- Use `requests` + `BeautifulSoup` (static HTML, no Selenium needed)
+
+#### B. BTS Tableau Chart (`fetch_chart_data()`)
+- Initialize Selenium with `undetected_chromedriver` (reuse NOAADDF_A Chrome version detection pattern)
+- Navigate to `https://www.bts.gov/freight-indicators#anchored-offshore`
+- **Dynamic wait**: Wait for Tableau chart to load - wait until spinner disappears AND chart title element `h2.tab-tvTitle` with text "Number of Containerships Anchored off U.S. Ports" is visible
+- Click Download button: `button#download` (`[data-tb-test-id="viz-viewer-toolbar-button-download"]`)
+- Wait for flyout menu, click Crosstab: `[data-tb-test-id="download-flyout-download-crosstab-MenuItem"]`
+- Wait for modal dialog "Download Crosstab"
+- Click CSV radio button: `[data-tb-test-id="crosstab-options-dialog-radio-csv-RadioButton"]`
+- Click Download button: `[data-tb-test-id="export-crosstab-export-Button"]`
+- Wait for file download to complete in configured download directory
+- Return path to downloaded CSV file
+- Configure Chrome download directory to `DOWNLOADS_DIR`
+
+### 4. `parser.py` - Class `FREIGHTINFOParser`
+
+**Key methods:**
+
+#### `load_week_mapping()`
+- Load `week_mapping.json`
+- Build lookup: given a date (MM/DD/YYYY), return `YYYY-WW` format
+- For each week entry, check if the date falls between `from` and `to` dates
+
+#### `parse_downloaded_csv(csv_path)`
+- Read CSV file (UTF-16 encoded, tab-delimited)
+- Structure: Row 1 = year headers (Date, Date, ...), Row 2 = column headers (Current Date - Week, Date Week Tool Tip, Indicator breakout, 2021, 2021, ...)
+- Rows 3+: Each row = one region (West/East/Gulf) for one date
+- **Parsing logic**:
+  1. For each data row, extract: `Date Week Tool Tip` (col B, date in M/D/YYYY), `Indicator breakout` (col C, region name)
+  2. Find the non-empty value cell in columns D onwards → that's the count value (convert from float like "38.00" to int 38)
+  3. Build dict: `{date_str: {"East": val, "West": val, "Gulf": val}}`
+- Only keep the **most recent dates** that are newer than master's last week
+
+#### `map_dates_to_weeks(parsed_data)`
+- For each unique date in parsed_data, look up week number from week_mapping.json
+- Convert to `YYYY-WW` format (e.g., "2026-08")
+- Group values by week (should already be 1:1 since data is weekly)
+
+#### `load_master_data()`
+- Read master CSV with 2-row header (codes + descriptions)
+- Return `(header_lines, data_rows)`
+- Identify last week code (e.g., "2026-08")
+
+#### `update_master(new_week_data)`
+- Load master, find which weeks are new (not already in master)
+- Build new rows: `YYYY-WW, east_val, west_val, gulf_val`
+- Append to master, maintain chronological sort
+- Save updated master CSV
+- Return `(header_lines, data_rows)` for file generator
+
+### 5. `file_generator.py` - Class `FREIGHTINFOFileGenerator`
+- **Identical pattern to NOAADDF_A** with project-specific naming
+- `create_xls_file()`: Duplicate master data into XLS (2-row header + all data rows)
+- `create_meta_file()`: 17-column metadata XLS from config.META_ROWS
+- `create_zip_file()`: ZIP containing DATA + META
+- `copy_to_latest()`: Copy to `output/latest/`
+- `generate_files()`: Orchestrate all above
+
+### 6. `orchestrator.py`
+**5-step pipeline:**
+1. **Setup**: Initialize logging, print banner/config
+2. **Week Data**: Check/fetch week mapping JSON (scraper.fetch_week_data)
+3. **Chart Data**: Selenium scrape BTS Tableau chart → download CSV (scraper.fetch_chart_data)
+4. **Parse & Update**: Parse CSV, map to weeks, update master (parser)
+5. **Generate Output**: Create XLS DATA, META, ZIP in timestamped + latest folders (file_generator)
+
+### 7. `requirements.txt`
+```
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+xlwt>=1.3.0
+selenium>=4.10.0
+undetected-chromedriver>=3.5.0
+```
+
+## Key Data Flow
+
+```
+epochconverter.com → week_mapping.json (cached, refreshed every 3 years)
+                                ↓
+BTS Tableau Chart → Selenium → Download CSV (UTF-16, tab-delimited)
+                                ↓
+Parse CSV → {date: {East: val, West: val, Gulf: val}}
+                                ↓
+Map dates → weeks using week_mapping.json → {YYYY-WW: {East: val, West: val, Gulf: val}}
+                                ↓
+Compare with Master CSV → find new weeks only
+                                ↓
+Append to Master_FREIGHTINFO_MARAD_DATA.csv
+                                ↓
+Generate: output/{timestamp}/FREIGHTINFO_MARAD_DATA_{date}.xls
+          output/{timestamp}/FREIGHTINFO_MARAD_META_{date}.xls
+          output/{timestamp}/FREIGHTINFO_MARAD_{date}.zip
+          output/latest/ (always latest copies)
+```
+
+## Master CSV Format (preserved exactly)
+```
+,USA.CONTAINERSHIP_PORT_REGION_EAST.W,USA.CONTAINERSHIP_PORT_REGION_WEST.W,USA.CONTAINERSHIP_PORT_REGION_GULF.W
+,USA.Containership port region East,USA.Containership port region West,USA.Containership port region Gulf
+2025-01,16,3,4
+2025-02,11,5,3
+...
+2026-08,5,1,2
+```
+
+## Week Mapping Logic
+- Downloaded CSV date `2/17/2026` → lookup in week_mapping.json → falls in Week 08 (Feb 16 - Feb 22, 2026) → `2026-08`
+- Only add weeks newer than master's last entry
+- Handle year boundaries (e.g., Week 01 of 2026 starts Dec 29, 2025)
+
+## Downloaded CSV Parsing Detail
+- File is UTF-16LE with BOM, tab-delimited
+- Row grouping: 3 consecutive rows per date (West, East, Gulf)
+- Each row has exactly ONE non-empty value in columns D+ (the count for that date/region)
+- The date column (col B "Date Week Tool Tip") uses M/D/YYYY format
+- Values are floats ("38.00") → convert to int (38)
+
+## Verification
+1. Run `python orchestrator.py` from project root
+2. Check `week_mapping.json` is created with 3 years of week data
+3. Verify Selenium opens BTS page, navigates download flow, saves CSV
+4. Confirm master CSV is updated with only new week(s)
+5. Verify output files exist in `output/{timestamp}/` and `output/latest/`
+6. Check XLS files open correctly with proper headers and data
+Claude’s Plan
+FREIGHTINFO_MARAD Runbook - Implementation Plan
+Context
+Build an automated weekly pipeline to scrape containership anchoring data from the BTS Tableau chart, map dates to ISO week numbers, and update a master CSV with new weekly data. Architecture follows NOAADDF_A patterns.
+
+Project Location
+D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\
+
+Files to Create (6 modules)
+1. config.py
+BASE_URL = "https://www.bts.gov/freight-indicators#anchored-offshore"
+WEEK_URL_TEMPLATE = "https://www.epochconverter.com/weeks/{year}" (for 3 years ahead)
+WEEK_CACHE_FILE path in project root (week_mapping.json)
+YEARS_TO_CACHE = 3 (prefetch 3 years of week data)
+Column mapping matching master CSV exactly:
+USA.CONTAINERSHIP_PORT_REGION_EAST.W / USA.Containership port region East
+USA.CONTAINERSHIP_PORT_REGION_WEST.W / USA.Containership port region West
+USA.CONTAINERSHIP_PORT_REGION_GULF.W / USA.Containership port region Gulf
+Region mapping: {"East": col_code_east, "West": col_code_west, "Gulf": col_code_gulf}
+Selenium settings: USE_BROWSER=True, HEADLESS_MODE=False, WAIT_TIMEOUT=30, PAGE_LOAD_DELAY=3
+Directory config: MASTER_DATA_DIR, DOWNLOADS_DIR, OUTPUT_DIR, LATEST_OUTPUT_DIR, LOG_DIR (all timestamped like NOAADDF_A)
+File naming: FREIGHTINFO_MARAD_DATA_{date}.xls, FREIGHTINFO_MARAD_META_{date}.xls, FREIGHTINFO_MARAD_{date}.zip
+META_COLUMNS and META_ROWS (17-column metadata structure matching NOAADDF_A pattern)
+Tableau selectors as constants (for maintainability):
+DOWNLOAD_BUTTON_SELECTOR = '[data-tb-test-id="viz-viewer-toolbar-button-download"]'
+CROSSTAB_MENU_ITEM = '[data-tb-test-id="download-flyout-download-crosstab-MenuItem"]'
+CSV_RADIO_SELECTOR = '[data-tb-test-id="crosstab-options-dialog-radio-csv-RadioButton"]'
+EXPORT_BUTTON_SELECTOR = '[data-tb-test-id="export-crosstab-export-Button"]'
+2. logger_setup.py
+Identical pattern to NOAADDF_A: dual file+console logging, timestamped log files
+3. scraper.py - Class FREIGHTINFOScraper
+Two scraping responsibilities:
+
+A. Week Mapping (fetch_week_data())
+Check if week_mapping.json exists and covers current year + 2 more years
+If not (or nearing end of cached data), scrape epochconverter.com for 3 years
+Parse HTML table: extract Week Number, From Date, To Date for each week
+Store as JSON: {"2026": [{"week": 1, "from": "2025-12-29", "to": "2026-01-04"}, ...], "2027": [...], "2028": [...]}
+Navigation for next years: follow <a href="/weeks/2027"> links
+Use requests + BeautifulSoup (static HTML, no Selenium needed)
+B. BTS Tableau Chart (fetch_chart_data())
+Initialize Selenium with undetected_chromedriver (reuse NOAADDF_A Chrome version detection pattern)
+Navigate to https://www.bts.gov/freight-indicators#anchored-offshore
+Dynamic wait: Wait for Tableau chart to load - wait until spinner disappears AND chart title element h2.tab-tvTitle with text "Number of Containerships Anchored off U.S. Ports" is visible
+Click Download button: button#download ([data-tb-test-id="viz-viewer-toolbar-button-download"])
+Wait for flyout menu, click Crosstab: [data-tb-test-id="download-flyout-download-crosstab-MenuItem"]
+Wait for modal dialog "Download Crosstab"
+Click CSV radio button: [data-tb-test-id="crosstab-options-dialog-radio-csv-RadioButton"]
+Click Download button: [data-tb-test-id="export-crosstab-export-Button"]
+Wait for file download to complete in configured download directory
+Return path to downloaded CSV file
+Configure Chrome download directory to DOWNLOADS_DIR
+4. parser.py - Class FREIGHTINFOParser
+Key methods:
+
+load_week_mapping()
+Load week_mapping.json
+Build lookup: given a date (MM/DD/YYYY), return YYYY-WW format
+For each week entry, check if the date falls between from and to dates
+parse_downloaded_csv(csv_path)
+Read CSV file (UTF-16 encoded, tab-delimited)
+Structure: Row 1 = year headers (Date, Date, ...), Row 2 = column headers (Current Date - Week, Date Week Tool Tip, Indicator breakout, 2021, 2021, ...)
+Rows 3+: Each row = one region (West/East/Gulf) for one date
+Parsing logic:
+For each data row, extract: Date Week Tool Tip (col B, date in M/D/YYYY), Indicator breakout (col C, region name)
+Find the non-empty value cell in columns D onwards → that's the count value (convert from float like "38.00" to int 38)
+Build dict: {date_str: {"East": val, "West": val, "Gulf": val}}
+Only keep the most recent dates that are newer than master's last week
+map_dates_to_weeks(parsed_data)
+For each unique date in parsed_data, look up week number from week_mapping.json
+Convert to YYYY-WW format (e.g., "2026-08")
+Group values by week (should already be 1:1 since data is weekly)
+load_master_data()
+Read master CSV with 2-row header (codes + descriptions)
+Return (header_lines, data_rows)
+Identify last week code (e.g., "2026-08")
+update_master(new_week_data)
+Load master, find which weeks are new (not already in master)
+Build new rows: YYYY-WW, east_val, west_val, gulf_val
+Append to master, maintain chronological sort
+Save updated master CSV
+Return (header_lines, data_rows) for file generator
+5. file_generator.py - Class FREIGHTINFOFileGenerator
+Identical pattern to NOAADDF_A with project-specific naming
+create_xls_file(): Duplicate master data into XLS (2-row header + all data rows)
+create_meta_file(): 17-column metadata XLS from config.META_ROWS
+create_zip_file(): ZIP containing DATA + META
+copy_to_latest(): Copy to output/latest/
+generate_files(): Orchestrate all above
+6. orchestrator.py
+5-step pipeline:
+
+Setup: Initialize logging, print banner/config
+Week Data: Check/fetch week mapping JSON (scraper.fetch_week_data)
+Chart Data: Selenium scrape BTS Tableau chart → download CSV (scraper.fetch_chart_data)
+Parse & Update: Parse CSV, map to weeks, update master (parser)
+Generate Output: Create XLS DATA, META, ZIP in timestamped + latest folders (file_generator)
+7. requirements.txt
+
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+xlwt>=1.3.0
+selenium>=4.10.0
+undetected-chromedriver>=3.5.0
+Key Data Flow
+
+epochconverter.com → week_mapping.json (cached, refreshed every 3 years)
+                                ↓
+BTS Tableau Chart → Selenium → Download CSV (UTF-16, tab-delimited)
+                                ↓
+Parse CSV → {date: {East: val, West: val, Gulf: val}}
+                                ↓
+Map dates → weeks using week_mapping.json → {YYYY-WW: {East: val, West: val, Gulf: val}}
+                                ↓
+Compare with Master CSV → find new weeks only
+                                ↓
+Append to Master_FREIGHTINFO_MARAD_DATA.csv
+                                ↓
+Generate: output/{timestamp}/FREIGHTINFO_MARAD_DATA_{date}.xls
+          output/{timestamp}/FREIGHTINFO_MARAD_META_{date}.xls
+          output/{timestamp}/FREIGHTINFO_MARAD_{date}.zip
+          output/latest/ (always latest copies)
+Master CSV Format (preserved exactly)
+
+,USA.CONTAINERSHIP_PORT_REGION_EAST.W,USA.CONTAINERSHIP_PORT_REGION_WEST.W,USA.CONTAINERSHIP_PORT_REGION_GULF.W
+,USA.Containership port region East,USA.Containership port region West,USA.Containership port region Gulf
+2025-01,16,3,4
+2025-02,11,5,3
+...
+2026-08,5,1,2
+Week Mapping Logic
+Downloaded CSV date 2/17/2026 → lookup in week_mapping.json → falls in Week 08 (Feb 16 - Feb 22, 2026) → 2026-08
+Only add weeks newer than master's last entry
+Handle year boundaries (e.g., Week 01 of 2026 starts Dec 29, 2025)
+Downloaded CSV Parsing Detail
+File is UTF-16LE with BOM, tab-delimited
+Row grouping: 3 consecutive rows per date (West, East, Gulf)
+Each row has exactly ONE non-empty value in columns D+ (the count for that date/region)
+The date column (col B "Date Week Tool Tip") uses M/D/YYYY format
+Values are floats ("38.00") → convert to int (38)
+Verification
+Run python orchestrator.py from project root
+Check week_mapping.json is created with 3 years of week data
+Verify Selenium opens BTS page, navigates download flow, saves CSV
+Confirm master CSV is updated with only new week(s)
+Verify output files exist in output/{timestamp}/ and output/latest/
+Check XLS files open correctly with proper headers and data
+User approved the plan
+Plan approved. Let me start implementing.
+
+Update Todos
+
+Create config.py with all settings, column mappings, and Tableau selectors
+
+Create logger_setup.py with dual file+console logging
+
+Create scraper.py with week mapping and BTS Tableau scraping
+
+Create parser.py with CSV parsing, week mapping, and master update logic
+
+Create file_generator.py for XLS/META/ZIP output generation
+
+Create orchestrator.py as main entry point
+
+Create requirements.txt
+Write D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\config.py
+173 lines
+"""
+FREIGHTINFO_MARAD Runbook - Configuration
+Centralized configuration for containership anchoring data pipeline.
+"""
+
+import os
+from datetime import datetime
+
+# =============================================================================
+# Timestamps
+# =============================================================================
+RUN_TIMESTAMP = datetime.now().strftime('%Y%m%d_%H%M%S')
+RUN_DATE = datetime.now().strftime('%Y%m%d')
+
+# =============================================================================
+# Data Sources
+# =============================================================================
+BASE_URL = "https://www.bts.gov/freight-indicators#anchored-offshore"
+WEEK_URL_TEMPLATE = "https://www.epochconverter.com/weeks/{year}"
+YEARS_TO_CACHE = 3  # Pre-fetch 3 years of week data
+
+# =============================================================================
+# Project Directories
+# =============================================================================
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+MASTER_DATA_DIR = os.path.join(PROJECT_ROOT, 'Master_Data')
+MASTER_DATA_FILE = os.path.join(MASTER_DATA_DIR, 'Master_FREIGHTINFO_MARAD_DATA.csv')
+WEEK_CACHE_FILE = os.path.join(PROJECT_ROOT, 'week_mapping.json')
+
+DOWNLOADS_DIR = os.path.join(PROJECT_ROOT, 'downloads', RUN_TIMESTAMP)
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'output', RUN_TIMESTAMP)
+LATEST_OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'output', 'latest')
+LOG_DIR = os.path.join(PROJECT_ROOT, 'logs', RUN_TIMESTAMP)
+
+# =============================================================================
+# Column Mapping (must match master CSV exactly)
+# =============================================================================
+OUTPUT_COLUMN_CODES = [
+    'USA.CONTAINERSHIP_PORT_REGION_EAST.W',
+    'USA.CONTAINERSHIP_PORT_REGION_WEST.W',
+    'USA.CONTAINERSHIP_PORT_REGION_GULF.W',
+]
+
+OUTPUT_COLUMN_DESCRIPTIONS = [
+    'USA.Containership port region East',
+    'USA.Containership port region West',
+    'USA.Containership port region Gulf',
+]
+
+# Map region names from downloaded CSV to column codes
+REGION_TO_COLUMN = {
+    'East': 'USA.CONTAINERSHIP_PORT_REGION_EAST.W',
+    'West': 'USA.CONTAINERSHIP_PORT_REGION_WEST.W',
+    'Gulf': 'USA.CONTAINERSHIP_PORT_REGION_GULF.W',
+}
+
+# =============================================================================
+# Selenium / Browser Configuration
+# =============================================================================
+USE_BROWSER = True
+HEADLESS_MODE = False
+WAIT_TIMEOUT = 60
+PAGE_LOAD_DELAY = 5
+
+# Tableau element selectors
+TABLEAU_TITLE_SELECTOR = 'h2.tab-tvTitle'
+TABLEAU_TITLE_TEXT = 'Number of Containerships Anchored off U.S. Ports'
+DOWNLOAD_BUTTON_SELECTOR = '[data-tb-test-id="viz-viewer-toolbar-button-download"]'
+CROSSTAB_MENU_ITEM_SELECTOR = '[data-tb-test-id="download-flyout-download-crosstab-MenuItem"]'
+CSV_RADIO_SELECTOR = '[data-tb-test-id="crosstab-options-dialog-radio-csv-RadioButton"]'
+CSV_RADIO_LABEL_SELECTOR = '[data-tb-test-id="crosstab-options-dialog-radio-csv-Label"]'
+EXPORT_BUTTON_SELECTOR = '[data-tb-test-id="export-crosstab-export-Button"]'
+LOADING_SPINNER_SELECTOR = '#loadingSpinner'
+
+# =============================================================================
+# HTTP Configuration (for week data scraping)
+# =============================================================================
+REQUEST_TIMEOUT = 30
+MAX_RETRIES = 3
+RETRY_DELAY = 5.0
+
+# =============================================================================
+# File Naming Patterns
+# =============================================================================
+DATASET_NAME = 'FREIGHTINFO_MARAD'
+DATA_FILE_PATTERN = f'FREIGHTINFO_MARAD_DATA_{RUN_DATE}.xls'
+META_FILE_PATTERN = f'FREIGHTINFO_MARAD_META_{RUN_DATE}.xls'
+ZIP_FILE_PATTERN = f'FREIGHTINFO_MARAD_{RUN_DATE}.zip'
+LOG_FILE_PATTERN = f'freightinfo_marad_{RUN_TIMESTAMP}.log'
+
+# =============================================================================
+# Logging Configuration
+# =============================================================================
+DEBUG_MODE = True
+LOG_LEVEL = 'DEBUG' if DEBUG_MODE else 'INFO'
+LOG_TO_CONSOLE = True
+LOG_TO_FILE = True
+
+# =============================================================================
+# Processing
+# =============================================================================
+CONTINUE_ON_ERROR = True
+
+# =============================================================================
+# Metadata Configuration (17 columns matching NOAADDF_A pattern)
+# =============================================================================
+META_COLUMNS = [
+    'CODE', 'CODE_MNEMONIC', 'DESCRIPTION', 'FREQUENCY', 'MULTIPLIER',
+    'AGGREGATION_TYPE', 'UNIT_TYPE', 'DATA_TYPE', 'DATA_UNIT',
+    'SEASONALLY_ADJUSTED', 'ANNUALIZED', 'PROVIDER_MEASURE_URL',
+    'PROVIDER', 'SOURCE', 'SOURCE_DESCRIPTION', 'COUNTRY', 'DATASET'
+]
+
+META_ROWS = [
+    {
+        'CODE': 'USA.CONTAINERSHIP_PORT_REGION_EAST.W',
+        'CODE_MNEMONIC': 'USA.CONTAINERSHIP_PORT_REGION_EAST.W',
+        'DESCRIPTION': 'USA.Containership port region East',
+        'FREQUENCY': 'W',
+        'MULTIPLIER': '1',
+        'AGGREGATION_TYPE': 'END_OF_PERIOD',
+        'UNIT_TYPE': 'COUNT',
+        'DATA_TYPE': 'STOCK',
+        'DATA_UNIT': 'Vessels',
+        'SEASONALLY_ADJUSTED': 'N',
+        'ANNUALIZED': 'N',
+        'PROVIDER_MEASURE_URL': BASE_URL,
+        'PROVIDER': 'BTS',
+        'SOURCE': 'Bureau of Transportation Statistics',
+        'SOURCE_DESCRIPTION': 'Number of Containerships Anchored off U.S. Ports - East Coast',
+        'COUNTRY': 'USA',
+        'DATASET': DATASET_NAME,
+    },
+    {
+        'CODE': 'USA.CONTAINERSHIP_PORT_REGION_WEST.W',
+        'CODE_MNEMONIC': 'USA.CONTAINERSHIP_PORT_REGION_WEST.W',
+        'DESCRIPTION': 'USA.Containership port region West',
+        'FREQUENCY': 'W',
+        'MULTIPLIER': '1',
+        'AGGREGATION_TYPE': 'END_OF_PERIOD',
+        'UNIT_TYPE': 'COUNT',
+        'DATA_TYPE': 'STOCK',
+        'DATA_UNIT': 'Vessels',
+        'SEASONALLY_ADJUSTED': 'N',
+        'ANNUALIZED': 'N',
+        'PROVIDER_MEASURE_URL': BASE_URL,
+        'PROVIDER': 'BTS',
+        'SOURCE': 'Bureau of Transportation Statistics',
+        'SOURCE_DESCRIPTION': 'Number of Containerships Anchored off U.S. Ports - West Coast',
+        'COUNTRY': 'USA',
+        'DATASET': DATASET_NAME,
+    },
+    {
+        'CODE': 'USA.CONTAINERSHIP_PORT_REGION_GULF.W',
+        'CODE_MNEMONIC': 'USA.CONTAINERSHIP_PORT_REGION_GULF.W',
+        'DESCRIPTION': 'USA.Containership port region Gulf',
+        'FREQUENCY': 'W',
+        'MULTIPLIER': '1',
+        'AGGREGATION_TYPE': 'END_OF_PERIOD',
+        'UNIT_TYPE': 'COUNT',
+        'DATA_TYPE': 'STOCK',
+        'DATA_UNIT': 'Vessels',
+        'SEASONALLY_ADJUSTED': 'N',
+        'ANNUALIZED': 'N',
+        'PROVIDER_MEASURE_URL': BASE_URL,
+        'PROVIDER': 'BTS',
+        'SOURCE': 'Bureau of Transportation Statistics',
+        'SOURCE_DESCRIPTION': 'Number of Containerships Anchored off U.S. Ports - Gulf of Mexico',
+        'COUNTRY': 'USA',
+        'DATASET': DATASET_NAME,
+    },
+]
+Update Todos
+
+Create config.py with all settings, column mappings, and Tableau selectors
+
+Create logger_setup.py with dual file+console logging
+
+Create scraper.py with week mapping and BTS Tableau scraping
+
+Create parser.py with CSV parsing, week mapping, and master update logic
+
+Create file_generator.py for XLS/META/ZIP output generation
+
+Create orchestrator.py as main entry point
+
+Create requirements.txt
+Write D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\logger_setup.py
+42 lines
+"""
+FREIGHTINFO_MARAD Runbook - Logging Configuration
+Dual file + console logging with timestamped log files.
+"""
+
+import os
+import logging
+import config
+
+
+def setup_logging():
+    """Configure logging for the application."""
+    os.makedirs(config.LOG_DIR, exist_ok=True)
+
+    log_file = os.path.join(config.LOG_DIR, config.LOG_FILE_PATTERN)
+
+    root_logger = logging.getLogger()
+    root_logger.setLevel(getattr(logging, config.LOG_LEVEL))
+
+    # Clear existing handlers
+    root_logger.handlers.clear()
+
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+    if config.LOG_TO_FILE:
+        file_handler = logging.FileHandler(log_file, encoding='utf-8')
+        file_handler.setLevel(getattr(logging, config.LOG_LEVEL))
+        file_handler.setFormatter(formatter)
+        root_logger.addHandler(file_handler)
+
+    if config.LOG_TO_CONSOLE:
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(getattr(logging, config.LOG_LEVEL))
+        console_handler.setFormatter(formatter)
+        root_logger.addHandler(console_handler)
+
+    logging.info('=' * 70)
+    logging.info(f'Logging initialized: {log_file}')
+    logging.info('=' * 70)
+
+    return log_file
+Update Todos
+
+Create config.py with all settings, column mappings, and Tableau selectors
+
+Create logger_setup.py with dual file+console logging
+
+Create scraper.py with week mapping and BTS Tableau scraping
+
+Create parser.py with CSV parsing, week mapping, and master update logic
+
+Create file_generator.py for XLS/META/ZIP output generation
+
+Create orchestrator.py as main entry point
+
+Create requirements.txt
+Write D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\scraper.py
+399 lines
+"""
+FREIGHTINFO_MARAD Runbook - Scraper
+Handles two scraping tasks:
+1. Week mapping from epochconverter.com (cached as JSON)
+2. BTS Tableau chart data download via Selenium
+"""
+
+import os
+import re
+import json
+import time
+import glob
+import logging
+from datetime import datetime
+
+import requests
+from bs4 import BeautifulSoup
+
+import config
+
+logger = logging.getLogger(__name__)
+
+
+class FREIGHTINFOScraper:
+
+    def __init__(self):
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+                          '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        })
+        self.driver = None
+
+    # =========================================================================
+    # WEEK MAPPING (epochconverter.com)
+    # =========================================================================
+
+    def _needs_week_refresh(self):
+        """Check if week_mapping.json needs to be refreshed."""
+        if not os.path.exists(config.WEEK_CACHE_FILE):
+            logger.info("Week mapping file not found, will fetch fresh data")
+            return True
+
+        try:
+            with open(config.WEEK_CACHE_FILE, 'r') as f:
+                data = json.load(f)
+
+            current_year = datetime.now().year
+            required_years = [str(current_year + i) for i in range(config.YEARS_TO_CACHE)]
+
+            for year in required_years:
+                if year not in data:
+                    logger.info(f"Week mapping missing year {year}, will refresh")
+                    return True
+
+            logger.info("Week mapping cache is up to date")
+            return False
+
+        except (json.JSONDecodeError, KeyError) as e:
+            logger.warning(f"Week mapping file corrupted: {e}")
+            return True
+
+    def _parse_week_table(self, html_content, target_year):
+        """Parse the week number table from epochconverter HTML."""
+        soup = BeautifulSoup(html_content, 'html.parser')
+        table = soup.find('table', class_='infotable')
+
+        if not table:
+            logger.error("Could not find week table in HTML")
+            return None
+
+        weeks = []
+        rows = table.find('tbody').find_all('tr')
+
+        for row in rows:
+            cells = row.find_all('td')
+            if len(cells) < 3:
+                continue
+
+            week_text = cells[0].get_text(strip=True)
+            from_text = cells[1].get_text(strip=True)
+            to_text = cells[2].get_text(strip=True)
+
+            # Parse week number: "Week 01" or "Week 52, 2025"
+            week_match = re.match(r'Week\s+(\d+)', week_text)
+            if not week_match:
+                continue
+
+            week_num = int(week_match.group(1))
+
+            # Skip entries from other years (e.g., "Week 52, 2025" on the 2026 page)
+            if ',' in week_text:
+                other_year_match = re.search(r',\s*(\d{4})', week_text)
+                if other_year_match and other_year_match.group(1) != str(target_year):
+                    continue
+
+            # Parse dates: "December 29, 2025" -> "2025-12-29"
+            try:
+                from_date = datetime.strptime(from_text, '%B %d, %Y').strftime('%Y-%m-%d')
+                to_date = datetime.strptime(to_text, '%B %d, %Y').strftime('%Y-%m-%d')
+            except ValueError as e:
+                logger.warning(f"Could not parse date in week {week_num}: {e}")
+                continue
+
+            weeks.append({
+                'week': week_num,
+                'from': from_date,
+                'to': to_date,
+            })
+
+        logger.info(f"  Parsed {len(weeks)} weeks for year {target_year}")
+        return weeks
+
+    def fetch_week_data(self):
+        """Fetch and cache week mapping data from epochconverter.com."""
+        if not self._needs_week_refresh():
+            logger.info("Using cached week mapping data")
+            return True
+
+        logger.info("Fetching week mapping data from epochconverter.com...")
+
+        current_year = datetime.now().year
+        years_to_fetch = [current_year + i for i in range(config.YEARS_TO_CACHE)]
+
+        week_data = {}
+
+        # Load existing data if available (to preserve older years)
+        if os.path.exists(config.WEEK_CACHE_FILE):
+            try:
+                with open(config.WEEK_CACHE_FILE, 'r') as f:
+                    week_data = json.load(f)
+            except (json.JSONDecodeError, IOError):
+                week_data = {}
+
+        for year in years_to_fetch:
+            url = config.WEEK_URL_TEMPLATE.format(year=year)
+            logger.info(f"  Fetching week data for {year}: {url}")
+
+            for attempt in range(1, config.MAX_RETRIES + 1):
+                try:
+                    response = self.session.get(url, timeout=config.REQUEST_TIMEOUT)
+                    response.raise_for_status()
+
+                    weeks = self._parse_week_table(response.text, year)
+                    if weeks:
+                        week_data[str(year)] = weeks
+                        break
+                    else:
+                        logger.warning(f"  No weeks parsed for {year}, attempt {attempt}")
+
+                except requests.RequestException as e:
+                    logger.warning(f"  Attempt {attempt}/{config.MAX_RETRIES} failed for {year}: {e}")
+                    if attempt < config.MAX_RETRIES:
+                        time.sleep(config.RETRY_DELAY)
+
+        if not week_data:
+            logger.error("Failed to fetch any week data")
+            return False
+
+        # Save to JSON cache
+        with open(config.WEEK_CACHE_FILE, 'w') as f:
+            json.dump(week_data, f, indent=2)
+
+        logger.info(f"Week mapping saved: {len(week_data)} years cached")
+        return True
+
+    # =========================================================================
+    # SELENIUM HELPERS
+    # =========================================================================
+
+    def get_chrome_version_from_registry(self):
+        """Query Windows Registry for installed Chrome version."""
+        try:
+            import winreg
+            key_path = r'SOFTWARE\Google\Chrome\BLBeacon'
+            key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path)
+            version, _ = winreg.QueryValueEx(key, 'version')
+            winreg.CloseKey(key)
+            major_version = int(version.split('.')[0])
+            logger.info(f"Chrome version detected: {version} (major: {major_version})")
+            return major_version
+        except Exception as e:
+            logger.warning(f"Could not detect Chrome version: {e}")
+            return None
+
+    def setup_driver(self):
+        """Initialize undetected ChromeDriver with download directory configured."""
+        import undetected_chromedriver as uc
+
+        os.makedirs(config.DOWNLOADS_DIR, exist_ok=True)
+
+        options = uc.ChromeOptions()
+
+        if config.HEADLESS_MODE:
+            options.add_argument('--headless=new')
+
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--window-size=1920,1080')
+
+        # Configure download directory
+        prefs = {
+            'download.default_directory': config.DOWNLOADS_DIR,
+            'download.prompt_for_download': False,
+            'download.directory_upgrade': True,
+            'safebrowsing.enabled': True,
+        }
+        options.add_experimental_option('prefs', prefs)
+
+        chrome_version = self.get_chrome_version_from_registry()
+
+        try:
+            if chrome_version:
+                self.driver = uc.Chrome(options=options, version_main=chrome_version)
+            else:
+                self.driver = uc.Chrome(options=options)
+
+            self.driver.set_page_load_timeout(config.WAIT_TIMEOUT * 2)
+            logger.info("Chrome driver initialized successfully")
+
+        except Exception as e:
+            logger.error(f"Failed to initialize Chrome driver: {e}")
+            raise
+
+    # =========================================================================
+    # BTS TABLEAU CHART SCRAPING
+    # =========================================================================
+
+    def _wait_for_tableau_load(self):
+        """Wait for the Tableau chart to fully load."""
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+
+        logger.info("Waiting for Tableau chart to load...")
+
+        wait = WebDriverWait(self.driver, config.WAIT_TIMEOUT)
+
+        # Wait for the page to have an iframe or the viz container
+        try:
+            # First, wait for the BTS page wrapper to load
+            time.sleep(config.PAGE_LOAD_DELAY)
+
+            # The Tableau viz is embedded - look for the iframe first
+            iframes = self.driver.find_elements(By.TAG_NAME, 'iframe')
+            logger.info(f"Found {len(iframes)} iframes on page")
+
+            # Look for the Tableau iframe
+            tableau_iframe = None
+            for iframe in iframes:
+                src = iframe.get_attribute('src') or ''
+                if 'tableau' in src.lower() or 'public.tableau' in src.lower():
+                    tableau_iframe = iframe
+                    logger.info(f"Found Tableau iframe: {src[:100]}...")
+                    break
+
+            if tableau_iframe:
+                self.driver.switch_to.frame(tableau_iframe)
+                logger.info("Switched to Tableau iframe")
+
+            # Wait for the chart title or visualization container
+            wait.until(EC.presence_of_element_located(
+                (By.CSS_SELECTOR, config.TABLEAU_TITLE_SELECTOR)
+            ))
+            logger.info("Tableau chart title detected")
+
+            # Additional wait for chart rendering
+            wait.until(EC.visibility_of_element_located(
+                (By.CSS_SELECTOR, '.tab-tvView')
+            ))
+            logger.info("Tableau chart view is visible")
+
+            # Extra delay for complete rendering
+            time.sleep(3)
+
+            return True
+
+        except Exception as e:
+            logger.error(f"Timeout waiting for Tableau chart: {e}")
+            return False
+
+    def _click_download_csv(self):
+        """Navigate the Tableau download flow: Download -> Crosstab -> CSV -> Download."""
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+
+        wait = WebDriverWait(self.driver, config.WAIT_TIMEOUT)
+
+        try:
+            # Step 1: Click the Download button in the toolbar
+            logger.info("Clicking Download button...")
+            download_btn = wait.until(EC.element_to_be_clickable(
+                (By.CSS_SELECTOR, config.DOWNLOAD_BUTTON_SELECTOR)
+            ))
+            download_btn.click()
+            time.sleep(1)
+
+            # Step 2: Click "Crosstab" from the flyout menu
+            logger.info("Clicking Crosstab option...")
+            crosstab_item = wait.until(EC.element_to_be_clickable(
+                (By.CSS_SELECTOR, config.CROSSTAB_MENU_ITEM_SELECTOR)
+            ))
+            crosstab_item.click()
+            time.sleep(2)
+
+            # Step 3: Wait for the Download Crosstab modal
+            logger.info("Waiting for Download Crosstab modal...")
+            wait.until(EC.presence_of_element_located(
+                (By.CSS_SELECTOR, config.EXPORT_BUTTON_SELECTOR)
+            ))
+
+            # Step 4: Click CSV radio button
+            logger.info("Selecting CSV format...")
+            csv_radio = wait.until(EC.element_to_be_clickable(
+                (By.CSS_SELECTOR, config.CSV_RADIO_LABEL_SELECTOR)
+            ))
+            csv_radio.click()
+            time.sleep(1)
+
+            # Step 5: Click the Download/Export button
+            logger.info("Clicking Export button...")
+            export_btn = wait.until(EC.element_to_be_clickable(
+                (By.CSS_SELECTOR, config.EXPORT_BUTTON_SELECTOR)
+            ))
+            export_btn.click()
+
+            logger.info("Download triggered, waiting for file...")
+            return True
+
+        except Exception as e:
+            logger.error(f"Error during download flow: {e}")
+            return False
+
+    def _wait_for_download(self, timeout=60):
+        """Wait for a CSV file to appear in the downloads directory."""
+        start_time = time.time()
+
+        while time.time() - start_time < timeout:
+            # Look for CSV files (not .crdownload partial files)
+            csv_files = glob.glob(os.path.join(config.DOWNLOADS_DIR, '*.csv'))
+            partial_files = glob.glob(os.path.join(config.DOWNLOADS_DIR, '*.crdownload'))
+
+            if csv_files and not partial_files:
+                # Return the most recent CSV file
+                latest = max(csv_files, key=os.path.getmtime)
+                logger.info(f"Download complete: {os.path.basename(latest)}")
+                return latest
+
+            time.sleep(1)
+
+        logger.error(f"Download timed out after {timeout} seconds")
+        return None
+
+    def fetch_chart_data(self):
+        """Main method: Navigate BTS Tableau and download CSV data."""
+        logger.info("=" * 70)
+        logger.info("Fetching chart data from BTS Tableau...")
+        logger.info(f"URL: {config.BASE_URL}")
+        logger.info("=" * 70)
+
+        try:
+            self.setup_driver()
+
+            # Navigate to the BTS page
+            logger.info(f"Navigating to: {config.BASE_URL}")
+            self.driver.get(config.BASE_URL)
+
+            # Wait for Tableau to load
+            if not self._wait_for_tableau_load():
+                logger.error("Failed to load Tableau chart")
+                return None
+
+            # Execute download flow
+            if not self._click_download_csv():
+                logger.error("Failed to complete download flow")
+                return None
+
+            # Wait for file download
+            csv_path = self._wait_for_download()
+            if not csv_path:
+                logger.error("No CSV file downloaded")
+                return None
+
+            return csv_path
+
+        except Exception as e:
+            logger.error(f"Error fetching chart data: {e}")
+            return None
+
+        finally:
+            if self.driver:
+                try:
+                    self.driver.quit()
+                    logger.info("Browser closed")
+                except Exception:
+                    pass
+Update Todos
+
+Create config.py with all settings, column mappings, and Tableau selectors
+
+Create logger_setup.py with dual file+console logging
+
+Create scraper.py with week mapping and BTS Tableau scraping
+
+Create parser.py with CSV parsing, week mapping, and master update logic
+
+Create file_generator.py for XLS/META/ZIP output generation
+
+Create orchestrator.py as main entry point
+
+Create requirements.txt
+Write D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\parser.py
+355 lines
+"""
+FREIGHTINFO_MARAD Runbook - Parser
+Parses the Tableau CSV export, maps dates to ISO weeks,
+and manages incremental master CSV updates.
+"""
+
+import os
+import json
+import logging
+from datetime import datetime
+
+import config
+
+logger = logging.getLogger(__name__)
+
+
+class FREIGHTINFOParser:
+
+    def __init__(self):
+        self.week_mapping = None
+
+    # =========================================================================
+    # WEEK MAPPING
+    # =========================================================================
+
+    def load_week_mapping(self):
+        """Load the week mapping JSON and build a date-to-week lookup."""
+        if not os.path.exists(config.WEEK_CACHE_FILE):
+            logger.error(f"Week mapping file not found: {config.WEEK_CACHE_FILE}")
+            return False
+
+        try:
+            with open(config.WEEK_CACHE_FILE, 'r') as f:
+                self.week_mapping = json.load(f)
+
+            total_weeks = sum(len(weeks) for weeks in self.week_mapping.values())
+            logger.info(f"Loaded week mapping: {len(self.week_mapping)} years, {total_weeks} weeks total")
+            return True
+
+        except (json.JSONDecodeError, IOError) as e:
+            logger.error(f"Failed to load week mapping: {e}")
+            return False
+
+    def date_to_week_code(self, date_str):
+        """
+        Convert a date string to YYYY-WW week code using the cached mapping.
+        date_str can be in M/D/YYYY or MM/DD/YYYY format.
+        Returns e.g., "2026-08" or None if not found.
+        """
+        if not self.week_mapping:
+            logger.error("Week mapping not loaded")
+            return None
+
+        # Parse the date
+        try:
+            date_obj = datetime.strptime(date_str.strip(), '%m/%d/%Y')
+        except ValueError:
+            try:
+                date_obj = datetime.strptime(date_str.strip(), '%m/%d/%y')
+            except ValueError:
+                logger.warning(f"Could not parse date: {date_str}")
+                return None
+
+        date_iso = date_obj.strftime('%Y-%m-%d')
+
+        # Search through all years in the mapping
+        for year_str, weeks in self.week_mapping.items():
+            for week_entry in weeks:
+                if week_entry['from'] <= date_iso <= week_entry['to']:
+                    week_num = week_entry['week']
+                    # Use the year from the week entry's 'from' or 'to' date
+                    # that matches the target year
+                    week_code = f"{year_str}-{week_num:02d}"
+                    return week_code
+
+        # Fallback: try Python's isocalendar for dates outside cached range
+        iso_year, iso_week, _ = date_obj.isocalendar()
+        week_code = f"{iso_year}-{iso_week:02d}"
+        logger.warning(f"Date {date_str} not found in cache, using isocalendar: {week_code}")
+        return week_code
+
+    # =========================================================================
+    # CSV PARSING
+    # =========================================================================
+
+    def parse_downloaded_csv(self, csv_path):
+        """
+        Parse the Tableau crosstab CSV export.
+
+        The CSV is UTF-16 encoded, tab-delimited with structure:
+        Row 1: Header with "Date" labels for each date column
+        Row 2: "Current Date - Week", "Date Week Tool Tip", "Indicator breakout", year headers...
+        Rows 3+: Data rows - 3 rows per date (West, East, Gulf)
+                 Each row has exactly ONE non-empty value in columns D+.
+
+        Returns: {date_str: {"East": val, "West": val, "Gulf": val}} or None
+        """
+        logger.info(f"Parsing downloaded CSV: {csv_path}")
+
+        try:
+            # Try UTF-16 first (Tableau default), then UTF-8 as fallback
+            content = None
+            for encoding in ['utf-16', 'utf-16-le', 'utf-8-sig', 'utf-8']:
+                try:
+                    with open(csv_path, 'r', encoding=encoding) as f:
+                        content = f.read()
+                    logger.info(f"  Successfully read CSV with encoding: {encoding}")
+                    break
+                except (UnicodeDecodeError, UnicodeError):
+                    continue
+
+            if content is None:
+                logger.error("Failed to read CSV with any encoding")
+                return None
+
+            lines = content.strip().split('\n')
+            if len(lines) < 3:
+                logger.error(f"CSV has too few lines: {len(lines)}")
+                return None
+
+            logger.info(f"  CSV has {len(lines)} lines")
+
+            # Parse data rows (skip first 2 header rows)
+            parsed_data = {}
+            skipped = 0
+
+            for i, line in enumerate(lines[2:], start=3):
+                fields = line.split('\t')
+
+                if len(fields) < 4:
+                    skipped += 1
+                    continue
+
+                # Column A: Current Date - Week (e.g., "2/17/2026")
+                # Column B: Date Week Tool Tip (e.g., "07/27/2021")
+                # Column C: Indicator breakout (e.g., "West", "East", "Gulf")
+                date_tool_tip = fields[1].strip()
+                indicator = fields[2].strip()
+
+                if not date_tool_tip or not indicator:
+                    skipped += 1
+                    continue
+
+                # Validate indicator is one of our expected regions
+                if indicator not in config.REGION_TO_COLUMN:
+                    skipped += 1
+                    continue
+
+                # Find the non-empty value in columns D onwards
+                value = None
+                for field in fields[3:]:
+                    field = field.strip()
+                    if field:
+                        try:
+                            value = int(float(field))
+                            break
+                        except (ValueError, TypeError):
+                            continue
+
+                if value is None:
+                    skipped += 1
+                    continue
+
+                # Build the data structure grouped by date
+                if date_tool_tip not in parsed_data:
+                    parsed_data[date_tool_tip] = {}
+
+                parsed_data[date_tool_tip][indicator] = value
+
+            logger.info(f"  Parsed {len(parsed_data)} unique dates ({skipped} rows skipped)")
+
+            # Log a few sample entries
+            dates_sorted = sorted(parsed_data.keys(),
+                                  key=lambda d: datetime.strptime(d.strip(), '%m/%d/%Y'))
+            if dates_sorted:
+                latest_3 = dates_sorted[-3:]
+                for d in latest_3:
+                    logger.debug(f"    {d}: {parsed_data[d]}")
+
+            return parsed_data
+
+        except Exception as e:
+            logger.error(f"Error parsing CSV: {e}")
+            return None
+
+    # =========================================================================
+    # WEEK MAPPING OF PARSED DATA
+    # =========================================================================
+
+    def map_dates_to_weeks(self, parsed_data):
+        """
+        Convert parsed date-keyed data to week-code-keyed data.
+
+        Input:  {"07/27/2021": {"East": 22, "West": 38, "Gulf": 2}, ...}
+        Output: {"2021-30": {"East": 22, "West": 38, "Gulf": 2}, ...}
+        """
+        if not parsed_data:
+            return None
+
+        week_data = {}
+        unmapped = 0
+
+        for date_str, values in parsed_data.items():
+            week_code = self.date_to_week_code(date_str)
+            if week_code is None:
+                unmapped += 1
+                continue
+
+            # If multiple dates map to the same week, keep the latest one
+            # (shouldn't happen since data is weekly snapshots)
+            if week_code in week_data:
+                logger.debug(f"  Duplicate week {week_code} for date {date_str}, overwriting")
+
+            week_data[week_code] = values
+
+        logger.info(f"Mapped {len(week_data)} weeks ({unmapped} dates unmapped)")
+        return week_data
+
+    # =========================================================================
+    # MASTER DATA MANAGEMENT
+    # =========================================================================
+
+    def load_master_data(self):
+        """
+        Load the master CSV file preserving the 2-row header.
+        Returns: (header_lines, data_rows) or (None, None)
+
+        header_lines: list of 2 raw header line strings
+        data_rows: list of lists [week_code, east_val, west_val, gulf_val]
+        """
+        if not os.path.exists(config.MASTER_DATA_FILE):
+            logger.warning(f"Master file not found: {config.MASTER_DATA_FILE}")
+            # Return default headers with empty data
+            header1 = ',' + ','.join(config.OUTPUT_COLUMN_CODES)
+            header2 = ',' + ','.join(config.OUTPUT_COLUMN_DESCRIPTIONS)
+            return [header1, header2], []
+
+        try:
+            with open(config.MASTER_DATA_FILE, 'r', encoding='utf-8') as f:
+                lines = f.read().strip().split('\n')
+
+            if len(lines) < 2:
+                logger.warning("Master file has fewer than 2 header lines")
+                header1 = ',' + ','.join(config.OUTPUT_COLUMN_CODES)
+                header2 = ',' + ','.join(config.OUTPUT_COLUMN_DESCRIPTIONS)
+                return [header1, header2], []
+
+            header_lines = lines[:2]
+            data_rows = []
+
+            for line in lines[2:]:
+                parts = line.strip().split(',')
+                if parts and parts[0]:
+                    data_rows.append(parts)
+
+            logger.info(f"Loaded master: {len(data_rows)} data rows")
+            if data_rows:
+                logger.info(f"  Date range: {data_rows[0][0]} to {data_rows[-1][0]}")
+
+            return header_lines, data_rows
+
+        except Exception as e:
+            logger.error(f"Error loading master: {e}")
+            return None, None
+
+    def get_last_master_week(self):
+        """Get the last week code from the master CSV."""
+        header_lines, data_rows = self.load_master_data()
+        if data_rows:
+            return data_rows[-1][0]
+        return None
+
+    def save_master_data(self, header_lines, data_rows):
+        """Save master CSV with 2-row headers and data."""
+        os.makedirs(config.MASTER_DATA_DIR, exist_ok=True)
+
+        try:
+            with open(config.MASTER_DATA_FILE, 'w', encoding='utf-8', newline='') as f:
+                # Write header lines
+                for header in header_lines:
+                    f.write(header.rstrip('\n') + '\n')
+
+                # Write data rows
+                for row in data_rows:
+                    # Pad row to match column count if needed
+                    while len(row) < len(config.OUTPUT_COLUMN_CODES) + 1:
+                        row.append('')
+                    f.write(','.join(row[:len(config.OUTPUT_COLUMN_CODES) + 1]) + '\n')
+
+            logger.info(f"Master saved: {len(data_rows)} rows -> {config.MASTER_DATA_FILE}")
+
+        except Exception as e:
+            logger.error(f"Error saving master: {e}")
+
+    def update_master(self, week_data):
+        """
+        Merge new week data into the master CSV.
+
+        week_data: {"2026-09": {"East": 5, "West": 1, "Gulf": 2}, ...}
+        Returns: (header_lines, data_rows) or (None, None)
+        """
+        if not week_data:
+            logger.warning("No week data to update master with")
+            return self.load_master_data()
+
+        header_lines, data_rows = self.load_master_data()
+        if header_lines is None:
+            return None, None
+
+        # Build set of existing week codes for fast lookup
+        existing_weeks = set()
+        for row in data_rows:
+            if row:
+                existing_weeks.add(row[0])
+
+        # Find new weeks
+        new_rows = []
+        for week_code, values in week_data.items():
+            if week_code in existing_weeks:
+                continue
+
+            # Build row in column order: week_code, east, west, gulf
+            row = [week_code]
+            for col_code in config.OUTPUT_COLUMN_CODES:
+                # Find the region name for this column code
+                region = None
+                for reg_name, reg_code in config.REGION_TO_COLUMN.items():
+                    if reg_code == col_code:
+                        region = reg_name
+                        break
+
+                if region and region in values:
+                    row.append(str(values[region]))
+                else:
+                    row.append('')
+
+            new_rows.append(row)
+
+        if not new_rows:
+            logger.info("No new weeks to add to master")
+            return header_lines, data_rows
+
+        logger.info(f"Adding {len(new_rows)} new weeks to master:")
+        for row in new_rows:
+            logger.info(f"  {row[0]}: East={row[1]}, West={row[2]}, Gulf={row[3]}")
+
+        # Merge and sort by week code
+        all_rows = data_rows + new_rows
+        all_rows.sort(key=lambda r: r[0] if r else '')
+
+        # Save updated master
+        self.save_master_data(header_lines, all_rows)
+
+        return header_lines, all_rows
+Update Todos
+
+Create config.py with all settings, column mappings, and Tableau selectors
+
+Create logger_setup.py with dual file+console logging
+
+Create scraper.py with week mapping and BTS Tableau scraping
+
+Create parser.py with CSV parsing, week mapping, and master update logic
+
+Create file_generator.py for XLS/META/ZIP output generation
+
+Create orchestrator.py as main entry point
+
+Create requirements.txt
+Write D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\file_generator.py
+161 lines
+"""
+FREIGHTINFO_MARAD Runbook - File Generator
+Generates XLS DATA, XLS META, and ZIP output files from master data.
+"""
+
+import os
+import shutil
+import logging
+import zipfile
+
+import xlwt
+
+import config
+
+logger = logging.getLogger(__name__)
+
+
+class FREIGHTINFOFileGenerator:
+
+    def __init__(self):
+        pass
+
+    def create_xls_file(self, header_lines, data_rows, output_dir):
+        """
+        Generate XLS DATA file from master data.
+        Mirrors the master CSV structure: 2-row header + data rows.
+        """
+        os.makedirs(output_dir, exist_ok=True)
+        filepath = os.path.join(output_dir, config.DATA_FILE_PATTERN)
+
+        try:
+            wb = xlwt.Workbook()
+            ws = wb.add_sheet('DATA')
+
+            # Write header row 1: column codes
+            header1_parts = header_lines[0].split(',')
+            for col_idx, val in enumerate(header1_parts):
+                ws.write(0, col_idx, val.strip())
+
+            # Write header row 2: column descriptions
+            header2_parts = header_lines[1].split(',')
+            for col_idx, val in enumerate(header2_parts):
+                ws.write(1, col_idx, val.strip())
+
+            # Write data rows
+            for row_idx, row in enumerate(data_rows, start=2):
+                # Column 0: week code (string)
+                if row:
+                    ws.write(row_idx, 0, row[0])
+
+                # Columns 1+: values (as integers where possible)
+                for col_idx in range(1, min(len(row), len(config.OUTPUT_COLUMN_CODES) + 1)):
+                    val = row[col_idx].strip() if col_idx < len(row) else ''
+                    if val:
+                        try:
+                            ws.write(row_idx, col_idx, int(val))
+                        except (ValueError, TypeError):
+                            ws.write(row_idx, col_idx, val)
+                    else:
+                        ws.write(row_idx, col_idx, '')
+
+            wb.save(filepath)
+            logger.info(f"DATA XLS created: {filepath}")
+            return filepath
+
+        except Exception as e:
+            logger.error(f"Error creating DATA XLS: {e}")
+            return None
+
+    def create_meta_file(self, output_dir):
+        """Generate XLS META file with static metadata from config."""
+        os.makedirs(output_dir, exist_ok=True)
+        filepath = os.path.join(output_dir, config.META_FILE_PATTERN)
+
+        try:
+            wb = xlwt.Workbook()
+            ws = wb.add_sheet('META')
+
+            # Write header row
+            for col_idx, col_name in enumerate(config.META_COLUMNS):
+                ws.write(0, col_idx, col_name)
+
+            # Write metadata rows (one per timeseries)
+            for row_idx, meta_row in enumerate(config.META_ROWS, start=1):
+                for col_idx, col_name in enumerate(config.META_COLUMNS):
+                    ws.write(row_idx, col_idx, meta_row.get(col_name, ''))
+
+            wb.save(filepath)
+            logger.info(f"META XLS created: {filepath}")
+            return filepath
+
+        except Exception as e:
+            logger.error(f"Error creating META XLS: {e}")
+            return None
+
+    def create_zip_file(self, data_file, meta_file, output_dir):
+        """Create ZIP containing DATA and META XLS files."""
+        os.makedirs(output_dir, exist_ok=True)
+        filepath = os.path.join(output_dir, config.ZIP_FILE_PATTERN)
+
+        try:
+            with zipfile.ZipFile(filepath, 'w', zipfile.ZIP_DEFLATED) as zf:
+                if data_file and os.path.exists(data_file):
+                    zf.write(data_file, os.path.basename(data_file))
+                if meta_file and os.path.exists(meta_file):
+                    zf.write(meta_file, os.path.basename(meta_file))
+
+            logger.info(f"ZIP created: {filepath}")
+            return filepath
+
+        except Exception as e:
+            logger.error(f"Error creating ZIP: {e}")
+            return None
+
+    def copy_to_latest(self, files, latest_dir):
+        """Copy generated files to the 'latest' directory."""
+        os.makedirs(latest_dir, exist_ok=True)
+
+        # Remove existing files in latest
+        for existing in os.listdir(latest_dir):
+            existing_path = os.path.join(latest_dir, existing)
+            if os.path.isfile(existing_path):
+                os.remove(existing_path)
+
+        for file_type, filepath in files.items():
+            if filepath and os.path.exists(filepath):
+                dest = os.path.join(latest_dir, os.path.basename(filepath))
+                shutil.copy2(filepath, dest)
+                logger.info(f"  Copied to latest: {os.path.basename(filepath)}")
+
+    def generate_files(self, header_lines, data_rows):
+        """
+        Main method: generate all output files.
+        Returns dict with file paths.
+        """
+        logger.info("=" * 70)
+        logger.info("Generating output files...")
+        logger.info(f"Output directory: {config.OUTPUT_DIR}")
+        logger.info("=" * 70)
+
+        output_files = {}
+
+        # Create DATA XLS
+        data_file = self.create_xls_file(header_lines, data_rows, config.OUTPUT_DIR)
+        output_files['data'] = data_file
+
+        # Create META XLS
+        meta_file = self.create_meta_file(config.OUTPUT_DIR)
+        output_files['meta'] = meta_file
+
+        # Create ZIP
+        if data_file and meta_file:
+            zip_file = self.create_zip_file(data_file, meta_file, config.OUTPUT_DIR)
+            output_files['zip'] = zip_file
+
+        # Copy to latest
+        self.copy_to_latest(output_files, config.LATEST_OUTPUT_DIR)
+
+        logger.info("File generation complete")
+        return output_files
+Update Todos
+
+Create config.py with all settings, column mappings, and Tableau selectors
+
+Create logger_setup.py with dual file+console logging
+
+Create scraper.py with week mapping and BTS Tableau scraping
+
+Create parser.py with CSV parsing, week mapping, and master update logic
+
+Create file_generator.py for XLS/META/ZIP output generation
+
+Create orchestrator.py as main entry point
+
+Create requirements.txt
+Write D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\orchestrator.py
+172 lines
+"""
+FREIGHTINFO_MARAD Runbook - Orchestrator
+Main entry point: 5-step pipeline for weekly containership data collection.
+"""
+
+import sys
+import logging
+
+import config
+from logger_setup import setup_logging
+from scraper import FREIGHTINFOScraper
+from parser import FREIGHTINFOParser
+from file_generator import FREIGHTINFOFileGenerator
+
+logger = logging.getLogger(__name__)
+
+
+def print_banner():
+    print()
+    print('=' * 70)
+    print(' FREIGHTINFO_MARAD - Freight Information Maritime Administration')
+    print(' Number of Containerships Anchored off U.S. Ports (Weekly)')
+    print('=' * 70)
+    print()
+
+
+def print_configuration():
+    print('Configuration:')
+    print('-' * 70)
+    print(f'  Source URL:    {config.BASE_URL}')
+    print(f'  Week Source:   {config.WEEK_URL_TEMPLATE.format(year="[current+2]")}')
+    print(f'  Master Data:   {config.MASTER_DATA_FILE}')
+    print(f'  Output Dir:    {config.OUTPUT_DIR}')
+    print(f'  Downloads Dir: {config.DOWNLOADS_DIR}')
+    print(f'  Timestamp:     {config.RUN_TIMESTAMP}')
+    print(f'  Browser Mode:  {"Selenium" if config.USE_BROWSER else "HTTP"}')
+    print(f'  Headless:      {config.HEADLESS_MODE}')
+    print('-' * 70)
+    print()
+
+
+def main():
+    """Execute the 5-step pipeline."""
+    log_file = setup_logging()
+    print_banner()
+    print_configuration()
+
+    scraper = FREIGHTINFOScraper()
+    parser = FREIGHTINFOParser()
+    generator = FREIGHTINFOFileGenerator()
+
+    # =========================================================================
+    # STEP 1: Check Master Data
+    # =========================================================================
+    print()
+    logger.info('=' * 70)
+    logger.info('STEP 1: Checking Master Data')
+    logger.info('=' * 70)
+
+    last_week = parser.get_last_master_week()
+    if last_week:
+        logger.info(f"Last week in master: {last_week}")
+    else:
+        logger.info("Master is empty or missing - will create fresh")
+
+    # =========================================================================
+    # STEP 2: Fetch/Verify Week Mapping
+    # =========================================================================
+    print()
+    logger.info('=' * 70)
+    logger.info('STEP 2: Fetching Week Mapping Data')
+    logger.info('=' * 70)
+
+    if not scraper.fetch_week_data():
+        logger.error("Failed to fetch week mapping data")
+        if not config.CONTINUE_ON_ERROR:
+            return 1
+
+    if not parser.load_week_mapping():
+        logger.error("Failed to load week mapping")
+        return 1
+
+    # =========================================================================
+    # STEP 3: Fetch Chart Data from BTS Tableau
+    # =========================================================================
+    print()
+    logger.info('=' * 70)
+    logger.info('STEP 3: Fetching Chart Data from BTS')
+    logger.info('=' * 70)
+
+    csv_path = scraper.fetch_chart_data()
+
+    if not csv_path:
+        logger.warning("No CSV data downloaded from BTS")
+        # Still generate output from existing master if available
+        header_lines, data_rows = parser.load_master_data()
+        if header_lines and data_rows:
+            logger.info("Generating output from existing master data...")
+            output_files = generator.generate_files(header_lines, data_rows)
+            _print_summary(data_rows, output_files)
+            return 0
+        else:
+            logger.error("No master data available and no new data downloaded")
+            return 1
+
+    # =========================================================================
+    # STEP 4: Parse CSV & Update Master
+    # =========================================================================
+    print()
+    logger.info('=' * 70)
+    logger.info('STEP 4: Parsing Data & Updating Master')
+    logger.info('=' * 70)
+
+    # Parse the downloaded CSV
+    parsed_data = parser.parse_downloaded_csv(csv_path)
+    if not parsed_data:
+        logger.error("Failed to parse downloaded CSV")
+        return 1
+
+    # Map dates to week codes
+    week_data = parser.map_dates_to_weeks(parsed_data)
+    if not week_data:
+        logger.error("Failed to map dates to weeks")
+        return 1
+
+    # Update master with new weeks
+    header_lines, data_rows = parser.update_master(week_data)
+    if header_lines is None:
+        logger.error("Failed to update master data")
+        return 1
+
+    # =========================================================================
+    # STEP 5: Generate Output Files
+    # =========================================================================
+    print()
+    logger.info('=' * 70)
+    logger.info('STEP 5: Generating Output Files')
+    logger.info('=' * 70)
+
+    output_files = generator.generate_files(header_lines, data_rows)
+    _print_summary(data_rows, output_files)
+
+    return 0
+
+
+def _print_summary(data_rows, output_files):
+    """Print execution summary."""
+    print()
+    logger.info('=' * 70)
+    logger.info('EXECUTION SUMMARY')
+    logger.info('=' * 70)
+    logger.info(f"  Master data rows: {len(data_rows)}")
+    if data_rows:
+        logger.info(f"  Date range: {data_rows[0][0]} to {data_rows[-1][0]}")
+    logger.info(f"  Output files:")
+    for file_type, filepath in output_files.items():
+        if filepath:
+            logger.info(f"    {file_type}: {filepath}")
+    logger.info('=' * 70)
+
+
+if __name__ == '__main__':
+    try:
+        exit_code = main()
+        sys.exit(exit_code)
+    except KeyboardInterrupt:
+        logger.info("Interrupted by user")
+        sys.exit(130)
+    except Exception as e:
+        logger.exception(f"Unexpected error: {e}")
+        sys.exit(1)
+Update Todos
+
+Create config.py with all settings, column mappings, and Tableau selectors
+
+Create logger_setup.py with dual file+console logging
+
+Create scraper.py with week mapping and BTS Tableau scraping
+
+Create parser.py with CSV parsing, week mapping, and master update logic
+
+Create file_generator.py for XLS/META/ZIP output generation
+
+Create orchestrator.py as main entry point
+
+Create requirements.txt
+Write D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\requirements.txt
+6 lines
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+xlwt>=1.3.0
+selenium>=4.10.0
+undetected-chromedriver>=3.5.0
+Update Todos
+
+Create config.py with all settings, column mappings, and Tableau selectors
+
+Create logger_setup.py with dual file+console logging
+
+Create scraper.py with week mapping and BTS Tableau scraping
+
+Create parser.py with CSV parsing, week mapping, and master update logic
+
+Create file_generator.py for XLS/META/ZIP output generation
+
+Create orchestrator.py as main entry point
+
+Create requirements.txt
+All 7 files are created. Here's a summary of what was built:
+
+Files Created
+File	Purpose
+config.py	All settings, URLs, column mappings, Tableau selectors, META_ROWS
+logger_setup.py	Dual file+console logging (matches NOAADDF_A pattern)
+scraper.py	Week mapping from epochconverter + BTS Tableau Selenium download
+parser.py	UTF-16 CSV parsing, date→week mapping, master CSV updates
+file_generator.py	XLS DATA/META + ZIP in timestamped + latest folders
+orchestrator.py	5-step pipeline entry point
+requirements.txt	Python dependencies
+Pipeline Flow
+
+Step 1: Check master → get last week code (e.g., 2026-08)
+Step 2: Fetch/cache week mapping JSON from epochconverter.com (3 years)
+Step 3: Selenium → BTS Tableau → Download → Crosstab → CSV
+Step 4: Parse CSV (UTF-16, tab-delimited) → map dates to weeks → append new weeks to master
+Step 5: Generate XLS DATA + META + ZIP → output/{timestamp}/ + output/latest/
+Key Design Decisions
+Week cache: Stored as week_mapping.json, refreshed when current year + 2 years not covered
+CSV parsing: Handles UTF-16 encoding, extracts the single non-empty value per row from diagonal columns
+Incremental updates: Only new weeks (not in master) are appended, sorted chronologically
+Fallback: If BTS download fails, still generates output from existing master data
+Tableau selectors: All use data-tb-test-id attributes (stable across Tableau updates)
+Run with: python orchestrator.py from the project directory.
