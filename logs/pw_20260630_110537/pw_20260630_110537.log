@@ -1,0 +1,9 @@
+2026-06-30 11:05:37,123 [INFO] Log → D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\logs\pw_20260630_110537\pw_20260630_110537.log
+2026-06-30 11:05:37,123 [INFO] ============================================================
+2026-06-30 11:05:37,123 [INFO] PLAYWRIGHT HIGHLIGHT SCAN  x=580→740
+2026-06-30 11:05:37,123 [INFO] ============================================================
+2026-06-30 11:05:50,537 [INFO] Navigating to https://www.bts.gov/freight-indicators#anchored-offshore
+2026-06-30 11:06:02,175 [INFO] Looking for iframe with 'ContainershipsAnchored' in src ...
+2026-06-30 11:06:09,529 [INFO]   Found frame: https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored?:embed=y&:showVizHome=no&:hos
+2026-06-30 11:06:19,734 [INFO] Waiting 10 s for Tableau to initialise ...
+2026-06-30 11:06:19,735 [INFO] Locating canvas inside iframe ...

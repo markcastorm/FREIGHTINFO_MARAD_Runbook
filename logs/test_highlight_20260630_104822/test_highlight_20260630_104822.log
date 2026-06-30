@@ -1,0 +1,66 @@
+2026-06-30 10:48:22,117 [INFO] Log file: D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\logs\test_highlight_20260630_104822\test_highlight_20260630_104822.log
+2026-06-30 10:48:22,118 [INFO] ============================================================
+2026-06-30 10:48:22,118 [INFO] HIGHLIGHT SCAN  x=580→740  (East → West → Gulf)
+2026-06-30 10:48:22,119 [INFO] ============================================================
+2026-06-30 10:48:24,554 [INFO] patching driver executable C:\Users\Mark Castro\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2026-06-30 10:48:29,652 [INFO] Loading https://www.bts.gov/freight-indicators#anchored-offshore
+2026-06-30 10:48:45,499 [INFO] Switched to iframe — waiting 8 s for Tableau init...
+2026-06-30 10:48:55,048 [INFO] Canvas: 744×423px
+2026-06-30 10:48:57,459 [INFO] Highlight button aria-pressed=false
+2026-06-30 10:48:58,309 [INFO] → Clicked  (aria-pressed now: true)
+2026-06-30 10:48:58,316 [INFO] 
+──────────────────────────────────────────────────
+2026-06-30 10:48:58,316 [INFO] PASS: East
+2026-06-30 10:48:58,318 [INFO] ──────────────────────────────────────────────────
+2026-06-30 10:49:00,307 [INFO] Clicked 'East' legend item (aria-selected=false)
+2026-06-30 10:49:00,374 [INFO] [East] 81 x-pos × 7 y-pos = 567 moves @ 40ms
+2026-06-30 10:49:15,856 [INFO]   [East] 21/567 moves | 0 hits
+2026-06-30 10:49:31,737 [INFO]   [East] 49/567 moves | 0 hits
+2026-06-30 10:49:49,879 [INFO]   [East] 91/567 moves | 0 hits
+2026-06-30 10:50:06,323 [INFO]   [East] 133/567 moves | 0 hits
+2026-06-30 10:50:23,068 [INFO]   [East] 175/567 moves | 0 hits
+2026-06-30 10:50:39,398 [INFO]   [East] 217/567 moves | 0 hits
+2026-06-30 10:50:55,834 [INFO]   [East] 259/567 moves | 0 hits
+2026-06-30 10:51:12,176 [INFO]   [East] 301/567 moves | 0 hits
+2026-06-30 10:51:28,486 [INFO]   [East] 343/567 moves | 0 hits
+2026-06-30 10:51:45,112 [INFO]   [East] 385/567 moves | 0 hits
+2026-06-30 10:52:01,962 [INFO]   [East] 427/567 moves | 0 hits
+2026-06-30 10:52:18,484 [INFO]   [East] 469/567 moves | 0 hits
+2026-06-30 10:52:34,843 [INFO]   [East] 511/567 moves | 0 hits
+2026-06-30 10:52:50,525 [INFO]   [East] 553/567 moves | 0 hits
+2026-06-30 10:52:56,030 [INFO] [East] Scan done → 0 unique tooltips
+2026-06-30 10:52:56,030 [INFO] 
+──────────────────────────────────────────────────
+2026-06-30 10:52:56,030 [INFO] PASS: West
+2026-06-30 10:52:56,031 [INFO] ──────────────────────────────────────────────────
+2026-06-30 10:52:57,359 [ERROR] select_region(West) error: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=149.0.7827.197)
+Stacktrace:
+	undetected_chromedriver!GetHandleVerifier [0x12da543+103f3]
+	undetected_chromedriver!GetHandleVerifier [0x12da584+10434]
+	undetected_chromedriver!(No symbol) [0x10da700]
+	undetected_chromedriver!(No symbol) [0x10c999e]
+	undetected_chromedriver!(No symbol) [0x10e8079]
+	undetected_chromedriver!(No symbol) [0x114c64c]
+	undetected_chromedriver!(No symbol) [0x1162df9]
+	undetected_chromedriver!(No symbol) [0x1145e66]
+	undetected_chromedriver!(No symbol) [0x1119159]
+	undetected_chromedriver!(No symbol) [0x1119f24]
+	undetected_chromedriver!GetHandleVerifier [0x1564bba+29aa6a]
+	undetected_chromedriver!GetHandleVerifier [0x1560119+295fc9]
+	undetected_chromedriver!GetHandleVerifier [0x158103e+2b6eee]
+	undetected_chromedriver!GetHandleVerifier [0x12f37f6+296a6]
+	undetected_chromedriver!GetHandleVerifier [0x12fa91d+307cd]
+	undetected_chromedriver!GetHandleVerifier [0x12e2d18+18bc8]
+	undetected_chromedriver!GetHandleVerifier [0x12e2ec5+18d75]
+	undetected_chromedriver!GetHandleVerifier [0x12cc05f+1f0f]
+	KERNEL32!BaseThreadInitThunk [0x76646839+19]
+	ntdll!RtlGetFullPathName_UEx [0x772c906f+4bf]
+	ntdll!RtlGetFullPathName_UEx [0x772c903d+48d]
+
+2026-06-30 10:52:57,359 [WARNING] Skipping West
+2026-06-30 10:52:57,359 [INFO] 
+──────────────────────────────────────────────────
+2026-06-30 10:52:57,359 [INFO] PASS: Gulf
+2026-06-30 10:52:57,359 [INFO] ──────────────────────────────────────────────────

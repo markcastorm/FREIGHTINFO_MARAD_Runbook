@@ -1,0 +1,7 @@
+2026-06-30 11:51:19,748 [INFO] Log → D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\logs\pixel_20260630_115119\pixel_20260630_115119.log
+2026-06-30 11:51:19,748 [INFO] ============================================================
+2026-06-30 11:51:19,748 [INFO] PIXEL SCAN  x=580→740  (pixel-exact line tracking)
+2026-06-30 11:51:19,749 [INFO] ============================================================
+2026-06-30 11:51:22,373 [INFO] Navigating → https://www.bts.gov/freight-indicators#anchored-offshore
+2026-06-30 11:51:34,890 [INFO] Searching for Tableau iframe ...
+2026-06-30 11:51:55,483 [ERROR] Iframe not found

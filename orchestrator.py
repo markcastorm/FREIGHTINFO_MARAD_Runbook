@@ -3,8 +3,11 @@ FREIGHTINFO_MARAD Runbook - Orchestrator
 Main entry point: 5-step pipeline for weekly containership data collection.
 """
 
+import os
 import sys
+import time
 import logging
+import shutil
 
 import config
 from logger_setup import setup_logging
@@ -81,14 +84,39 @@ def main():
         return 1
 
     # =========================================================================
-    # STEP 3: Fetch Chart Data from BTS Tableau
+    # STEP 3: Fetch Chart Data from BTS Tableau (with retries)
     # =========================================================================
     print()
     logger.info('=' * 70)
     logger.info('STEP 3: Fetching Chart Data from BTS')
     logger.info('=' * 70)
 
-    csv_path = scraper.fetch_chart_data()
+    last_date = parser.get_last_data_date()
+
+    csv_path = None
+    for attempt in range(1, config.MAX_SCRAPER_ATTEMPTS + 1):
+        if attempt > 1:
+            logger.info(
+                f"Waiting {config.RETRY_DELAY_SECONDS}s before retry "
+                f"(attempt {attempt}/{config.MAX_SCRAPER_ATTEMPTS}) ..."
+            )
+            time.sleep(config.RETRY_DELAY_SECONDS)
+        csv_path = scraper.fetch_chart_data(last_date=last_date)
+        if csv_path is not None:
+            break
+        logger.warning(f"Attempt {attempt} failed")
+
+    if csv_path == "NO_NEW_DATA":
+        logger.info("Scraper confirmed no new data points on the website.")
+        logger.info("Master data is already up to date.")
+        # Still generate output from existing master
+        header_lines, data_rows = parser.load_master_data()
+        if header_lines and data_rows:
+            logger.info("Generating output from current master data...")
+            output_files = generator.generate_files(header_lines, data_rows)
+            _print_summary(data_rows, output_files)
+            return 0
+        return 0
 
     if not csv_path:
         logger.warning("No CSV data downloaded from BTS")
@@ -139,6 +167,7 @@ def main():
 
     output_files = generator.generate_files(header_lines, data_rows)
     _print_summary(data_rows, output_files)
+    _prune_old_runs()
 
     return 0
 
@@ -157,6 +186,42 @@ def _print_summary(data_rows, output_files):
         if filepath:
             logger.info(f"    {file_type}: {filepath}")
     logger.info('=' * 70)
+
+
+def _prune_old_runs():
+    """
+    Remove the oldest timestamped run directories from logs/, downloads/, and output/,
+    keeping only the most recent MAX_KEEP_RUNS entries. Skips 'latest/' in output/.
+    Does nothing if MAX_KEEP_RUNS is 0.
+    """
+    if not config.MAX_KEEP_RUNS:
+        return
+
+    dirs_to_prune = [
+        config.LOG_DIR.rsplit(os.sep, 1)[0],       # .../logs/
+        config.DOWNLOADS_DIR.rsplit(os.sep, 1)[0],  # .../downloads/
+        config.OUTPUT_DIR.rsplit(os.sep, 1)[0],     # .../output/
+    ]
+
+    for parent in dirs_to_prune:
+        if not os.path.isdir(parent):
+            continue
+        # Collect timestamped dirs (numeric names like 20260630_143845), skip 'latest'
+        entries = sorted([
+            e for e in os.listdir(parent)
+            if os.path.isdir(os.path.join(parent, e)) and e != 'latest'
+        ])
+        to_delete = entries[:-config.MAX_KEEP_RUNS] if len(entries) > config.MAX_KEEP_RUNS else []
+        for name in to_delete:
+            path = os.path.join(parent, name)
+            try:
+                shutil.rmtree(path)
+                logger.debug(f"Pruned old run dir: {path}")
+            except Exception as e:
+                logger.warning(f"Could not prune {path}: {e}")
+
+    if any(os.path.isdir(d.rsplit(os.sep, 1)[0]) for d in dirs_to_prune):
+        logger.info(f"Run history pruned — kept last {config.MAX_KEEP_RUNS} runs")
 
 
 if __name__ == '__main__':

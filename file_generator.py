@@ -8,7 +8,8 @@ import shutil
 import logging
 import zipfile
 
-import xlwt
+import openpyxl
+from openpyxl.styles import Font
 
 import config
 
@@ -22,75 +23,75 @@ class FREIGHTINFOFileGenerator:
 
     def create_xls_file(self, header_lines, data_rows, output_dir):
         """
-        Generate XLS DATA file from master data.
-        Mirrors the master CSV structure: 2-row header + data rows.
+        Generate XLSX DATA file from master data.
         """
         os.makedirs(output_dir, exist_ok=True)
         filepath = os.path.join(output_dir, config.DATA_FILE_PATTERN)
 
         try:
-            wb = xlwt.Workbook()
-            ws = wb.add_sheet('DATA')
+            wb = openpyxl.Workbook()
+            ws = wb.active
+            ws.title = 'DATA'
 
             # Write header row 1: column codes
             header1_parts = header_lines[0].split(',')
-            for col_idx, val in enumerate(header1_parts):
-                ws.write(0, col_idx, val.strip())
+            for col_idx, val in enumerate(header1_parts, start=1):
+                ws.cell(row=1, column=col_idx, value=val.strip())
 
             # Write header row 2: column descriptions
             header2_parts = header_lines[1].split(',')
-            for col_idx, val in enumerate(header2_parts):
-                ws.write(1, col_idx, val.strip())
+            for col_idx, val in enumerate(header2_parts, start=1):
+                ws.cell(row=2, column=col_idx, value=val.strip())
 
             # Write data rows
-            for row_idx, row in enumerate(data_rows, start=2):
-                # Column 0: week code (string)
+            for row_idx, row in enumerate(data_rows, start=3):
                 if row:
-                    ws.write(row_idx, 0, row[0])
+                    ws.cell(row=row_idx, column=1, value=row[0])
 
-                # Columns 1+: values (as integers where possible)
                 for col_idx in range(1, min(len(row), len(config.OUTPUT_COLUMN_CODES) + 1)):
                     val = row[col_idx].strip() if col_idx < len(row) else ''
                     if val:
                         try:
-                            ws.write(row_idx, col_idx, int(val))
+                            ws.cell(row=row_idx, column=col_idx + 1, value=int(val))
                         except (ValueError, TypeError):
-                            ws.write(row_idx, col_idx, val)
+                            ws.cell(row=row_idx, column=col_idx + 1, value=val)
                     else:
-                        ws.write(row_idx, col_idx, '')
+                        ws.cell(row=row_idx, column=col_idx + 1, value='')
 
             wb.save(filepath)
-            logger.info(f"DATA XLS created: {filepath}")
+            logger.info(f"DATA XLSX created: {filepath}")
             return filepath
 
         except Exception as e:
-            logger.error(f"Error creating DATA XLS: {e}")
+            logger.error(f"Error creating DATA XLSX: {e}")
             return None
 
     def create_meta_file(self, output_dir):
-        """Generate XLS META file with static metadata from config."""
+        """Generate XLSX META file with static metadata from config."""
         os.makedirs(output_dir, exist_ok=True)
         filepath = os.path.join(output_dir, config.META_FILE_PATTERN)
 
         try:
-            wb = xlwt.Workbook()
-            ws = wb.add_sheet('META')
+            wb = openpyxl.Workbook()
+            ws = wb.active
+            ws.title = 'META'
 
             # Write header row
-            for col_idx, col_name in enumerate(config.META_COLUMNS):
-                ws.write(0, col_idx, col_name)
+            for col_idx, col_name in enumerate(config.META_COLUMNS, start=1):
+                cell = ws.cell(row=1, column=col_idx, value=col_name)
+                cell.font = Font(bold=True)
 
-            # Write metadata rows (one per timeseries)
-            for row_idx, meta_row in enumerate(config.META_ROWS, start=1):
-                for col_idx, col_name in enumerate(config.META_COLUMNS):
-                    ws.write(row_idx, col_idx, meta_row.get(col_name, ''))
+            # Write metadata rows
+            for row_idx, meta_row in enumerate(config.META_ROWS, start=2):
+                for col_idx, col_name in enumerate(config.META_COLUMNS, start=1):
+                    ws.cell(row=row_idx, column=col_idx, value=meta_row.get(col_name, ''))
 
             wb.save(filepath)
-            logger.info(f"META XLS created: {filepath}")
+            logger.info(f"META XLSX created: {filepath}")
             return filepath
 
         except Exception as e:
-            logger.error(f"Error creating META XLS: {e}")
+            logger.error(f"Error creating META XLSX: {e}")
             return None
 
     def create_zip_file(self, data_file, meta_file, output_dir):

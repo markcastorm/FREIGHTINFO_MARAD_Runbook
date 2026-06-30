@@ -1,0 +1,40 @@
+2026-06-30 11:09:04,547 [INFO] Log → D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\logs\pw_20260630_110904\pw_20260630_110904.log
+2026-06-30 11:09:04,547 [INFO] ============================================================
+2026-06-30 11:09:04,547 [INFO] PLAYWRIGHT HIGHLIGHT SCAN  x=580→740
+2026-06-30 11:09:04,547 [INFO] ============================================================
+2026-06-30 11:09:06,902 [INFO] Navigating to https://www.bts.gov/freight-indicators#anchored-offshore
+2026-06-30 11:09:19,679 [INFO] Looking for iframe with 'ContainershipsAnchored' in src ...
+2026-06-30 11:09:26,794 [INFO]   Found frame: https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored?:embed=y&:showVizHome=no&:hos
+2026-06-30 11:09:26,999 [INFO] Waiting 15 s for Tableau to fully render ...
+2026-06-30 11:09:42,013 [INFO] Locating canvas inside iframe ...
+2026-06-30 11:09:42,150 [INFO] Frame status: {'url': 'https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored?%3Aembed=y&%3AshowVizHome=no&%3Ahost_url=https%3A%2F%2Fexplore.dot.gov%2F&%3Aembed_code_version=3&%3Atabs=no&%3Atoolbar=yes&%3AshowAppBanner=false&%3Adisplay_spinner=no&%3AloadOrderID=5', 'title': 'Workbook: Freight Indicators', 'canvases': [{'w': 30, 'h': 39, 'cls': '', 'vis': True}, {'w': 744, 'h': 423, 'cls': 'tabCanvas tab-widget', 'vis': True}, {'w': 744, 'h': 423, 'cls': 'tabCanvas tab-widget', 'vis': True}, {'w': 744, 'h': 423, 'cls': 'tabCanvas tab-widget', 'vis': True}], 'denied': False}
+2026-06-30 11:09:42,253 [INFO] Canvas found via '.tab-tvView canvas': x=496 y=271 w=744 h=423
+2026-06-30 11:09:42,254 [INFO] Enabling legend highlight mode ...
+2026-06-30 11:09:43,894 [INFO]   Hovered legend panel
+2026-06-30 11:09:44,263 [INFO]   Controls state: {'ctrl_opacity': '1', 'ctrl_pointer': 'auto', 'ctrl_display': 'block', 'btn_pressed': 'false', 'btn_class': 'tabLegendHighlighterButton tabLegendTitleControlsButtons tabHighlightDisabled'}
+2026-06-30 11:09:46,655 [INFO]   Highlight button clicked → aria-pressed=true
+2026-06-30 11:09:46,674 [INFO] 
+──────────────────────────────────────────────────
+2026-06-30 11:09:46,682 [INFO] REGION PASS: East
+2026-06-30 11:09:46,683 [INFO] ──────────────────────────────────────────────────
+2026-06-30 11:09:49,408 [INFO]   Clicked 'East' item → aria-selected=true
+2026-06-30 11:09:49,408 [INFO]   Scanning 81 x-pos × 7 y-pos = 567 moves
+2026-06-30 11:09:58,177 [INFO]     [East] 6/23/2026 → Gulf=2
+2026-06-30 11:10:00,714 [INFO]     [East] 6/23/2026 → Gulf=2
+2026-06-30 11:10:05,350 [INFO]     [East] 6/16/2026 → West=2
+2026-06-30 11:10:06,273 [INFO]     [East] 6/9/2026 → East=2
+2026-06-30 11:10:07,859 [INFO]     [East] 6/2/2026 → Gulf=2
+2026-06-30 11:10:08,555 [INFO]   140/567 moves | 5 hits
+2026-06-30 11:10:08,653 [INFO]     [East] 5/26/2026 → West=2
+2026-06-30 11:10:10,045 [INFO]     [East] 5/12/2026 → East=2
+2026-06-30 11:10:12,944 [INFO]     [East] 4/28/2026 → Gulf=2
+2026-06-30 11:10:15,625 [INFO]     [East] 4/21/2026 → West=1
+2026-06-30 11:10:16,476 [INFO]     [East] 3/31/2026 → East=10
+2026-06-30 11:10:17,826 [INFO]     [East] 4/7/2026 → West=0
+2026-06-30 11:10:20,034 [INFO]     [East] 3/17/2026 → East=11
+2026-06-30 11:10:21,268 [INFO]     [East] 3/24/2026 → Gulf=2
+2026-06-30 11:10:25,974 [INFO]     [East] 3/3/2026 → West=3
+2026-06-30 11:10:26,152 [INFO]     [East] 3/3/2026 → East=9
+2026-06-30 11:10:32,435 [INFO]     [East] 2/24/2026 → Gulf=3
+2026-06-30 11:12:40,099 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-868' coro=<Frame.evaluate() done, defined at C:\Users\Mark Castro\AppData\Local\Programs\Python\Python311\Lib\site-packages\playwright\_impl\_frame.py:318> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Mark Castro\AppData\Local\Programs\Python\Python311\Lib\site-packages\playwright\_impl\_sync_base.py:111, ProtocolCallback.__init__.<locals>.cb() at C:\Users\Mark Castro\AppData\Local\Programs\Python\Python311\Lib\site-packages\playwright\_impl\_connection.py:230]>

@@ -17,7 +17,7 @@ RUN_DATE = datetime.now().strftime('%Y%m%d')
 # =============================================================================
 BASE_URL = "https://www.bts.gov/freight-indicators#anchored-offshore"
 WEEK_URL_TEMPLATE = "https://www.epochconverter.com/weeks/{year}"
-YEARS_TO_CACHE = 3  # Pre-fetch 3 years of week data
+YEARS_TO_CACHE = 3
 
 # =============================================================================
 # Project Directories
@@ -33,7 +33,7 @@ LATEST_OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'output', 'latest')
 LOG_DIR = os.path.join(PROJECT_ROOT, 'logs', RUN_TIMESTAMP)
 
 # =============================================================================
-# Column Mapping (must match master CSV exactly)
+# Column Mapping
 # =============================================================================
 OUTPUT_COLUMN_CODES = [
     'USA.CONTAINERSHIP_PORT_REGION_EAST.W',
@@ -47,7 +47,6 @@ OUTPUT_COLUMN_DESCRIPTIONS = [
     'USA.Containership port region Gulf',
 ]
 
-# Map region names from downloaded CSV to column codes
 REGION_TO_COLUMN = {
     'East': 'USA.CONTAINERSHIP_PORT_REGION_EAST.W',
     'West': 'USA.CONTAINERSHIP_PORT_REGION_WEST.W',
@@ -55,44 +54,40 @@ REGION_TO_COLUMN = {
 }
 
 # =============================================================================
-# Selenium / Browser Configuration
+# Browser / Scraper Configuration
 # =============================================================================
 USE_BROWSER = True
-HEADLESS_MODE = False
-WAIT_TIMEOUT = 60
-PAGE_LOAD_DELAY = 5
+HEADLESS_MODE = True          # False only for local debugging
+WAIT_TIMEOUT = 30
+PAGE_LOAD_DELAY = 3
+TABLEAU_IFRAME_KEYWORD = 'ContainershipsAnchored'
 
-# Tableau iframe identification
-TABLEAU_IFRAME_KEYWORD = 'ContainershipsAnchored'  # URL fragment to identify the correct iframe
+# Scanning tuning
+MAX_SCAN_UNIQUE_DATES = 52
+MAX_SCRAPER_ATTEMPTS = 3      # retry on transient Access Denied / network errors
+RETRY_DELAY_SECONDS = 45      # seconds to wait between retry attempts
+CONTINUE_ON_ERROR = True
 
-# Tableau element selectors
-TABLEAU_TITLE_SELECTOR = 'h2.tab-tvTitle'
-TABLEAU_TITLE_TEXT = 'Number of Containerships Anchored off U.S. Ports'
-DOWNLOAD_BUTTON_SELECTOR = '[data-tb-test-id="viz-viewer-toolbar-button-download"]'
-CROSSTAB_MENU_ITEM_SELECTOR = '[data-tb-test-id="download-flyout-download-crosstab-MenuItem"]'
-CSV_RADIO_SELECTOR = '[data-tb-test-id="crosstab-options-dialog-radio-csv-RadioButton"]'
-CSV_RADIO_LABEL_SELECTOR = '[data-tb-test-id="crosstab-options-dialog-radio-csv-Label"]'
-EXPORT_BUTTON_SELECTOR = '[data-tb-test-id="export-crosstab-export-Button"]'
-LOADING_SPINNER_SELECTOR = '#loadingSpinner'
+# Output retention — keep logs/downloads/output dirs for last N runs; 0 = keep all
+MAX_KEEP_RUNS = 14
 
-# =============================================================================
-# HTTP Configuration (for week data scraping)
-# =============================================================================
-REQUEST_TIMEOUT = 30
-MAX_RETRIES = 3
-RETRY_DELAY = 5.0
+# Chart canvas x-pixel range for pixel-scan
+# Each year ≈ 137 canvas pixels; x=5 is ~Jan 2021, x=740 is the latest data point.
+CHART_X_END = 740           # Rightmost data pixel (latest week)
+CHART_X_START_FULL = 5      # Full historical scan (all years)
+CHART_X_START_RECENT = 640  # Incremental scan backstop (~6 months)
 
 # =============================================================================
 # File Naming Patterns
 # =============================================================================
 DATASET_NAME = 'FREIGHTINFO_MARAD'
-DATA_FILE_PATTERN = f'FREIGHTINFO_MARAD_DATA_{RUN_DATE}.xls'
-META_FILE_PATTERN = f'FREIGHTINFO_MARAD_META_{RUN_DATE}.xls'
+DATA_FILE_PATTERN = f'FREIGHTINFO_MARAD_DATA_{RUN_DATE}.xlsx'
+META_FILE_PATTERN = f'FREIGHTINFO_MARAD_META_{RUN_DATE}.xlsx'
 ZIP_FILE_PATTERN = f'FREIGHTINFO_MARAD_{RUN_DATE}.zip'
 LOG_FILE_PATTERN = f'freightinfo_marad_{RUN_TIMESTAMP}.log'
 
 # =============================================================================
-# Logging Configuration
+# Logging
 # =============================================================================
 DEBUG_MODE = True
 LOG_LEVEL = 'DEBUG' if DEBUG_MODE else 'INFO'
@@ -100,12 +95,7 @@ LOG_TO_CONSOLE = True
 LOG_TO_FILE = True
 
 # =============================================================================
-# Processing
-# =============================================================================
-CONTINUE_ON_ERROR = True
-
-# =============================================================================
-# Metadata Configuration (17 columns matching NOAADDF_A pattern)
+# Metadata
 # =============================================================================
 META_COLUMNS = [
     'CODE', 'CODE_MNEMONIC', 'DESCRIPTION', 'FREQUENCY', 'MULTIPLIER',

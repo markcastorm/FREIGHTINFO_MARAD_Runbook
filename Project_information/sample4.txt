@@ -1,0 +1,1407 @@
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="is-ultimenu js no-touchevents is-ultimenu--hover is-ultidesktop" style="--vh: 10.65px;"><head>
+    <meta charset="utf-8">
+<script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/69e2a55d/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-CSLL4ZEK4L&amp;cx=c&amp;gtm=4e6641"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-TS9639848Y&amp;cx=c&amp;gtm=4e6641"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-NQ5ZN114SB&amp;cx=c&amp;gtm=4e6641"></script><script src="https://www.youtube.com/iframe_api"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NX5ZB78W"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-18660041-1"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-18660041-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path"});gtag("config", "G-TS9639848Y", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location"});//gtag('config', 'G-G4Y2DGXG7K');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NX5ZB78W');
+</script>
+<meta name="description" content="The U.S. Department of Transportation has convened an interagency working group, led by the Bureau of Transportation Statistics, to develop timely information on supply chain activity. The working group includes relevant DOT modes and the U.S. Departments of Agriculture, Energy, Commerce and Labor. BTS freight information is organized into four sections: Port Congestion - Inside the Gate, Port Congestion - Outside the Gate, Freight Movement, Transportation Labor and Capacity Tightness">
+<link rel="canonical" href="https://www.bts.gov/freight-indicators">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Latest Supply Chain and Freight Indicators">
+<meta name="twitter:description" content="The U.S. Department of Transportation has convened an interagency working group, led by the Bureau of Transportation Statistics, to develop timely information on supply chain activity. The working group includes relevant DOT modes and the U.S. Departments of Agriculture, Energy, Commerce and Labor. BTS freight information is organized into four sections: Port Congestion - Inside the Gate, Port Congestion - Outside the Gate, Freight Movement, Transportation Labor and Capacity Tightness">
+<meta name="twitter:site" content="@USDOT">
+<meta name="twitter:creator" content="@USDOT">
+<meta name="twitter:image" content="https://www.bts.gov/themes/custom/dot_cms/images/seal_dot.png">
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="icon" href="/themes/custom/dot_cms/favicon_dot.png" type="image/png">
+
+    <title>Latest Supply Chain and Freight Indicators | Bureau of Transportation Statistics</title>
+    <link rel="stylesheet" media="all" href="/sites/bts.dot.gov/files/css/css_57o0Ir7iLatl-XJjIFU5SJAc7kWBfvtDgN06oCvGfzI.css?delta=0&amp;language=en&amp;theme=bts&amp;include=eJx1kNFuwzAIRX_Ii1-m_Y6FbZKhErCAtOvfr0u3tYu0F8Q9IOBSVcPDYJQKZqS5GkJvtq011WNNtGOq4XlWCbig64rlbScLawV-8bgyybIjHSjFQby0LqmdsFOoFZKOEpW1nfJTnpoyw3C6V5oapq5R2npchx9x23HK3bYBPH3LL2xQZkLupaM3oxGkkv_hpbmnVTvwYfydHfzc4V9HAwyW23fe_eeUB5k2GVtl8nfsT41lMer5oKffP78mv3rgmis4po2DVpQtNzCMKYxAFn7iuzN_aJ3nBnIGn7wBI0k6E14873G6WdgYPwGb48Mh">
+<link rel="stylesheet" media="all" href="/sites/bts.dot.gov/files/css/css_t9u9G3MvOiNMFHIH64rVJhK5IjBr368aYXANV_Kg9S8.css?delta=1&amp;language=en&amp;theme=bts&amp;include=eJx1kNFuwzAIRX_Ii1-m_Y6FbZKhErCAtOvfr0u3tYu0F8Q9IOBSVcPDYJQKZqS5GkJvtq011WNNtGOq4XlWCbig64rlbScLawV-8bgyybIjHSjFQby0LqmdsFOoFZKOEpW1nfJTnpoyw3C6V5oapq5R2npchx9x23HK3bYBPH3LL2xQZkLupaM3oxGkkv_hpbmnVTvwYfydHfzc4V9HAwyW23fe_eeUB5k2GVtl8nfsT41lMer5oKffP78mv3rgmis4po2DVpQtNzCMKYxAFn7iuzN_aJ3nBnIGn7wBI0k6E14873G6WdgYPwGb48Mh">
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==">
+<link rel="stylesheet" media="all" href="/sites/bts.dot.gov/files/css/css_t6fv9-XymMGLQbJ0yWVFcLRgPH6uAn1zF8lyoBqfarI.css?delta=4&amp;language=en&amp;theme=bts&amp;include=eJx1kNFuwzAIRX_Ii1-m_Y6FbZKhErCAtOvfr0u3tYu0F8Q9IOBSVcPDYJQKZqS5GkJvtq011WNNtGOq4XlWCbig64rlbScLawV-8bgyybIjHSjFQby0LqmdsFOoFZKOEpW1nfJTnpoyw3C6V5oapq5R2npchx9x23HK3bYBPH3LL2xQZkLupaM3oxGkkv_hpbmnVTvwYfydHfzc4V9HAwyW23fe_eeUB5k2GVtl8nfsT41lMer5oKffP78mv3rgmis4po2DVpQtNzCMKYxAFn7iuzN_aJ3nBnIGn7wBI0k6E14873G6WdgYPwGb48Mh">
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&amp;display=swap">
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap">
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap">
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&amp;display=swap">
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/231491","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"UA-18660041-1","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowDisplay":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":false,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"(.\\gov)|(.\\mil)|(addthis.com)|(usmma.edu)|(medium.com)|(facebook.com)|(twitter.com)|(flickr.com)|(linkedin.com)|(youtube.com)|(instagram.com)|(medium.com)|(greatlakes-seaway.com)|(afloatjobs.vet)","extInclude":"","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"mailto","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":[],"extExcludeNoreferrer":""}},"collapsiblock":{"active_pages":false,"slide_speed":200,"cookie_lifetime":null,"switcher_enabled":null,"switcher_class":null},"user":{"uid":0,"permissionsHash":"4292a785f6ddb0cd7363e78286c90545c3b9083d3f8bf6d7cd6a9ac4bc34d003"}}</script>
+<script src="/sites/bts.dot.gov/files/js/js_dtVF93kCfcthGCCLFro0LjMJ2iBU3hPFpjifDzD3qWE.js?scope=header&amp;delta=0&amp;language=en&amp;theme=bts&amp;include=eJxdjlEOwyAMQy9Ex5FQgAixugSRILW3H9q6n_4lz7bsaOoLJBI2tQu1FZcEoK41QtLukwx2fHZqOdwKBwL8j21_tjy24rvPY3bC635dESlYiUa4rKbV9gDukEx4juhzlGV60xn6kMSqMryNWgqP8BWd2uonSONgfHSQsfoo-doSSNVNWD24Tf8_Pg9TXYg"></script>
+
+    <!-- DAP Implementation -->
+    <script async="" type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOT&amp;subagency=BTS&amp;yt=true"></script>
+  <script>bazadebezolkohpepadr="843521260"</script><script type="text/javascript" src="https://www.bts.gov/akam/13/32471df2" defer=""></script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-CSLL4ZEK4L"></script><script charset="utf-8" src="https://gov1.siteintercept.qualtrics.com/dxjsmodule/37.cdc98ab0106da9694571.chunk.js?Q_CLIENTVERSION=2.50.0&amp;Q_CLIENTTYPE=web&amp;Q_BRANDID=www.bts.gov"></script><script charset="utf-8" src="https://gov1.siteintercept.qualtrics.com/dxjsmodule/12.2652744dd261a9e74352.chunk.js?Q_CLIENTVERSION=2.50.0&amp;Q_CLIENTTYPE=web&amp;Q_BRANDID=www.bts.gov"></script><script charset="utf-8" src="https://gov1.siteintercept.qualtrics.com/dxjsmodule/7.b55f63101d775cd98e58.chunk.js?Q_CLIENTVERSION=2.50.0&amp;Q_CLIENTTYPE=web&amp;Q_BRANDID=dotocio"></script><script charset="utf-8" src="https://gov1.siteintercept.qualtrics.com/dxjsmodule/1.e19b3c699aef1ff301d5.chunk.js?Q_CLIENTVERSION=2.50.0&amp;Q_CLIENTTYPE=web&amp;Q_BRANDID=dotocio"></script><style></style></head>
+  <body class="layout-no-sidebars page-node-231491 path-freight-indicators path-node node--type-article scrolled scrolldown" data-new-gr-c-s-check-loaded="14.1299.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1299.0">
+  <noscript>Please enable JavaScript to use this site.</noscript>
+    <a href="#main" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NX5ZB78W" height="0" width="0" style="display:none;visibility:hidden;"></iframe>
+</noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    <div id="page-wrapper" class="page-wrapper">
+  <div id="page" class="page">
+
+     <section class="usa-banner">
+  <h1 class="sr-only">USA Banner</h1>
+  <div class="usa-banner-inner container">
+    <div class="row">
+      <div class="usa-accordion col" id="accordion">
+        <header class="usa-banner-header" id="headingOne">
+          <div aria-controls="collapseOne" aria-expanded="false" class="collapsed small row" data-target="#collapseOne" data-toggle="collapse" role="complementary">
+            <div class="usa-banner-guidance-gov usa-width-one-full col-sm d-flex">
+              <div class="usa-media_block-icon">
+                <img class="usa-banner-flag" src="/themes/custom/dot_cms/images/assets/us_flag_small.svg" alt="U.S. flag">
+              </div>
+              <div class="usa-media_block-body">
+                <p>An official website of the United States government <button class="usa-accordion-button usa-banner-button"><span class="usa-banner-button-text">Here's how you know</span></button></p>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="usa-banner-content container">
+          <div aria-labelledby="headingOne" class="collapse row" data-parent="#accordion" id="collapseOne">
+            <div class="usa-banner-guidance-gov usa-width-one-half col-sm d-flex">
+              <div class="usa-media_block-icon">
+                <img class="usa-banner-icon" src="/themes/custom/dot_cms/images/assets/icon-dot-gov.svg" alt="Official US Government Icon">
+              </div>
+              <div class="usa-media_block-body">
+                <p><small><strong>Official websites use .gov</strong><br>A <strong>.gov</strong> website belongs to an official government organization in the United States.</small></p>
+              </div>
+            </div>
+            <div class="usa-banner-guidance-ssl usa-width-one-half col-sm d-flex">
+              <div class="usa-media_block-icon">
+                <img class="usa-banner-icon" src="/themes/custom/dot_cms/images/assets/icon-https.svg" alt="Secure Site Icon">
+              </div>
+              <div class="usa-media_block-body">
+                <p><small><strong>Secure .gov websites use HTTPS</strong><br>
+                  A <strong>lock</strong> ( <span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-title banner-lock-description"><title id="banner-lock-title">Lock</title><desc id="banner-lock-description">A locked padlock</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"></path></svg></span> ) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                </small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+    <div class="region region-site-notification">
+    
+    <div class="block block--site-notification block--emergency block-views block-views-blocksite-notification-block-notification-emergency w-100 clearfix">
+    
+
+
+  </div>
+  
+          <div class="block block--site-notification block--warning block-views block-views-blocksite-notification-block-notification-warning w-100 clearfix">
+      
+
+
+    </div>
+  
+  </div>
+
+ <style>
+.dot-ribbon {
+	background: #15396c;
+	color: white;
+	height: 1.75rem;
+	display: flex;
+	align-items: center;
+	font-size: .8rem;
+	position: relative;
+	z-index: 100;
+}
+.dot-ribbon svg {
+	width: 17px;
+	opacity: .5;
+	margin-right: 6px;
+}
+.dot-ribbon a:link,
+.dot-ribbon a:hover,
+.dot-ribbon a:visited,
+.dot-ribbon a:active {
+	color: white;
+}
+</style>
+<div class="dot-ribbon">
+	<div class="container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.82 37.1" role="img">
+			<title>U.S. Department of Transportation</title>
+			<desc>U.S. Department of Transportation Icon</desc>
+			<defs><style>.cls-1{fill:#FFFFFF !important;}</style></defs><title>United States Department of Transportation</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M4.46,6.35a8.38,8.38,0,0,1,8.15-2.94c2.71.55,4.26,2.77,4.78,5.43a6.31,6.31,0,0,1-2.75,6.79c-3.68,2.1-8,3.74-8.86,8.5A13.42,13.42,0,0,0,8.47,34.4C3.81,31.8,1.13,26.6.25,21.23A18,18,0,0,1,4.46,6.35"></path><path class="cls-1" d="M14.41,36.71A8.65,8.65,0,0,1,7.85,30.9a6.51,6.51,0,0,1,2.13-7,5.85,5.85,0,0,1,7.05-1c3.61,2.23,7.17,5.31,11.56,3.64A12.82,12.82,0,0,0,35.81,19C36,24.49,33,29.5,29,33a16.57,16.57,0,0,1-14.55,3.72"></path><path class="cls-1" d="M34.73,12.39a9.12,9.12,0,0,1-1.53,8.8c-1.79,2.17-4.42,2.47-6.91,1.63A6.18,6.18,0,0,1,21.92,17c0-4.35.81-9.1-2.8-12.17A12.51,12.51,0,0,0,9.05,2.33c4.47-2.92,10.27-2.89,15.22-1A17.36,17.36,0,0,1,34.73,12.39"></path></g></g>
+		</svg>
+		<a href="https://www.transportation.gov">United States Department of Transportation</a>
+</div>
+</div>
+
+ <header id="header" class="header site-header site-masthead bg-primary" role="banner" aria-label="Site header">
+  <div class="container">
+    <div class="row">
+              <nav class="navbar navbar-dark navbar-expand-lg" id="navbar-main">
+                <a href="/" title="Home" rel="home" class="navbar-brand bts-brand mx-0 mt-lg-5">
+              <img src="/themes/custom/bts/logo_bts.svg" alt="Home" class="img-fluid">
+            
+    </a>
+    
+
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                      <div class="form-inline navbar-form">
+                <section class="region region-header-form">
+      <nav aria-labelledby="block-header-utility-menu" id="block-header-utility" class="block block-menu navigation menu--utility">
+            
+  <h2 class="sr-only" id="block-header-utility-menu">Header - Utility</h2>
+  
+
+        
+              <ul id="block-header-utility" block="block-header-utility" class="clearfix nav justify-content-end">
+                    <li class="nav-item ml-3 my-2">
+                <a href="http://transportation.libanswers.com/" class="ext" data-extlink="" target="_blank" rel="noopener" title="(opens in a new window)">Ask-A-Librarian<svg focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append" aria-label="(link is external)" viewBox="0 0 80 40" role="img" aria-hidden="false"><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+              </li>
+                <li class="nav-item ml-3 my-2">
+                <a href="/A-Z-Index" data-drupal-link-system-path="node/224996">A-Z Index</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-custombtsheadersearch" class="block block-fixed-block-content block-fixed-block-contentcustom-bts-header-search">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="usasearch-search-block-form block block-usasearch block-usasearch-search-form-block" data-drupal-selector="usasearch-search-block-form" id="block-usasearch-form">
+   <div class="search__wrapper">
+      <form block="block-usasearch-form" action="https://search.usa.gov/search" method="GET" id="usasearch-search-block-form" accept-charset="UTF-8">
+         <fieldset class="js-form-item js-form-type-search form-type-search js-form-item-query form-item-query form-no-label form-group" aria-labelledby="headerquery">
+            <legend class="d-none">Search DOT</legend>
+            <legend class="d-none">Search DOT</legend><label for="query" class="sr-only">Search</label>
+            <input id="query" title="Enter the terms you wish to search for." placeholder="Search" class="usagov-search-autocomplete form-search form-control ui-autocomplete-input" autocomplete="off" aria-autocomplete="list" aria-haspopup="" data-drupal-selector="edit-query" type="search" name="query" value="" size="60" maxlength="128">
+         </fieldset>
+         <input data-drupal-selector="edit-affiliate" type="hidden" name="affiliate" value="dot-bts" class="form-control">
+         <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit btn btn-primary form-control">
+      </form>
+   </div>
+</div></div>
+      
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                    <div class="collapse navbar-collapse" id="CollapsingNavbar">
+              <div id="block-ultimenu-main-navigation" class="block block-ultimenu block-ultimenu-blockultimenu-main">
+  
+    
+      <div class="content">
+      <ul id="ultimenu-main" data-ultimenu="main" class="ultimenu ultimenu--offcanvas is-ultihover is-ulticaret--triangle ultimenu--main ultimenu--htb ultimenu--horizontal ultimenu--on" data-once="ultimenu"><li class="ultimenu__item uitem has-ultimenu"><a href="/explore-topics-and-geography" data-drupal-link-system-path="node/224296" class="ultimenu__link">Topics and Geography<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-3 row region-ultimenu-main-topics-and-geography">
+      <nav aria-labelledby="block-main-topics-1-menu" id="block-main-topics-1" class="block block-menu navigation menu--main--topics-1">
+      
+  <h2 id="block-main-topics-1-menu">Topics</h2>
+  
+
+        
+              <ul block="block-main-topics-1" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/explore-topics-and-geography/introduction-transportation-statistics" class="nav-link nav-link--explore-topics-and-geography-introduction-transportation-statistics" data-drupal-link-system-path="node/229016">Introduction to Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/airlines-airports-and-aviation" class="nav-link nav-link--topics-airlines-airports-and-aviation" data-drupal-link-system-path="node/186">Airlines, Airports, and Aviation</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/energy-and-environment" class="nav-link nav-link--topics-energy-and-environment" data-drupal-link-system-path="node/266">Energy and Environment</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/freight-transportation" class="nav-link nav-link--topics-freight-transportation" data-drupal-link-system-path="node/316">Freight Transportation</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/infrastructure" class="nav-link nav-link--topics-infrastructure" data-drupal-link-system-path="node/261">Infrastructure</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/passenger-travel" class="nav-link nav-link--topics-passenger-travel" data-drupal-link-system-path="node/231">Passenger Travel</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/transportation-safety" class="nav-link nav-link--topics-transportation-safety">Safety</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/statistical-policy" class="nav-link nav-link--statistical-policy" data-drupal-link-system-path="node/169991">Statistical Policies and Methods</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/transportation-system-performance" class="nav-link nav-link--topics-transportation-system-performance" data-drupal-link-system-path="node/276">System Performance</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/transportation-and-economy" class="nav-link nav-link--topics-transportation-and-economy" data-drupal-link-system-path="node/311">Transportation and the Economy</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  <nav aria-labelledby="block-main-topics-2-menu" id="block-main-topics-2" class="block block-menu navigation menu--main--topics-2">
+      
+  <h2 id="block-main-topics-2-menu">Geography</h2>
+  
+
+        
+              <ul block="block-main-topics-2" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/maps" class="nav-link nav-link--maps" data-drupal-link-system-path="node/224311">Transportation Maps and Geospatial Data</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/product/geospatial-application-and-map-gallery" class="nav-link nav-link--product-geospatial-application-and-map-gallery" data-drupal-link-system-path="node/224276">Map Gallery</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/international" class="nav-link nav-link--topics-international" data-drupal-link-system-path="node/241">International</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/national" class="nav-link nav-link--topics-national" data-drupal-link-system-path="node/281">National</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/content/state-transportation-numbers" class="nav-link nav-link--content-state-transportation-numbers">By State</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ctp" class="nav-link nav-link--ctp" data-drupal-link-system-path="node/199386">By County</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/congressionaldistricts" class="nav-link nav-link--congressionaldistricts" data-drupal-link-system-path="node/235416">Congressional District Transportation Profiles</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  <nav aria-labelledby="block-main-topics-3-menu" id="block-main-topics-3" class="block block-menu navigation menu--main--topics-3">
+      
+  <h2 id="block-main-topics-3-menu">Modes</h2>
+  
+
+        
+              <ul block="block-main-topics-3" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/topics/airlines-and-airports" class="nav-link nav-link--topics-airlines-and-airports">Aviation</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/highway" class="nav-link nav-link--topics-highway">Highway</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/rail" class="nav-link nav-link--topics-rail">Rail</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/maritime-and-inland-waterways" class="nav-link nav-link--topics-maritime-and-inland-waterways">Maritime and Inland Waterways</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/pipelines" class="nav-link nav-link--topics-pipelines">Pipelines</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/transit" class="nav-link nav-link--topics-transit" data-drupal-link-system-path="node/301">Transit</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/bicycle-and-pedestrian" class="nav-link nav-link--topics-bicycle-and-pedestrian">Bicycles and Pedestrian</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li><li class="ultimenu__item uitem has-ultimenu"><a href="/browse-statistical-products-and-data" data-drupal-link-system-path="node/224301" class="ultimenu__link">Statistical Products and Data<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-3 row region-ultimenu-main-statistical-products-and">
+      <nav aria-labelledby="block-main-statistical-1-menu" id="block-main-statistical-1" class="block block-menu navigation menu--main--statistical-1">
+            
+  <h2 class="sr-only" id="block-main-statistical-1-menu">Main - Statistical 1</h2>
+  
+
+        
+              <ul block="block-main-statistical-1" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/information-gallery" class="nav-link nav-link--information-gallery" data-drupal-link-system-path="node/6">Information Gallery</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/bts-publications/z-index" class="nav-link nav-link--browse-statistical-products-and-data-bts-publications-z-index">A-Z Index</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/airline-data-downloads" class="nav-link nav-link--airline-data-downloads" data-drupal-link-system-path="node/117081">Airline Information for Download</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/national-transportation-atlas-of-the-united-states" class="nav-link nav-link--national-transportation-atlas-of-the-united-states" data-drupal-link-system-path="node/243036">Atlas</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/jswi-2e7b" class="nav-link nav-link-https--databtsgov-stories-s-jswi-2e7b">Border Crossing Data</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/cfs" class="nav-link nav-link--cfs" data-drupal-link-system-path="node/238591">Commodity Flow Survey</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/congressionaldistricts" class="nav-link nav-link--congressionaldistricts" data-drupal-link-system-path="node/235416">Congressional District Transportation Profiles</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ctp" class="nav-link nav-link--ctp" data-drupal-link-system-path="node/199386">County Transportation Profiles</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/" class="nav-link nav-link-https--databtsgov-">Data Inventory</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/data-spotlights" class="nav-link nav-link--data-spotlights" data-drupal-link-system-path="node/121801">Data Spotlights</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/surveys/evius/evius-electrical-vehicle-inventory-and-use" class="nav-link nav-link--browse-statistical-products-and-data-surveys-evius-evius-electrical-vehicle-inventory-and-use">Electric Vehicle Inventory and Use Survey (eVIUS)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/faf" class="nav-link nav-link--faf" data-drupal-link-system-path="node/243631">Freight Analysis Framework</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/product/freight-facts-and-figures" class="nav-link nav-link--product-freight-facts-and-figures" data-drupal-link-system-path="node/76">Freight Facts and Figures</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  <nav aria-labelledby="block-main-statistical-2-menu" id="block-main-statistical-2" class="block block-menu navigation menu--main--statistical-2">
+            
+  <h2 class="sr-only" id="block-main-statistical-2-menu">Main - Statistical 2</h2>
+  
+
+        
+              <ul block="block-main-statistical-2" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/flow" class="nav-link nav-link--flow" data-drupal-link-system-path="node/234506">Freight Logistics Optimization Works (FLOW)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/product/geospatial-application-and-map-gallery" class="nav-link nav-link--product-geospatial-application-and-map-gallery" data-drupal-link-system-path="node/224276">GIS Applications</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/statistical-products/intermodal-transportation-database" class="nav-link nav-link--browse-statistical-products-and-data-statistical-products-intermodal-transportation-database" data-drupal-link-system-path="node/22096">Intermodal Transportation Database</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/latch" class="nav-link nav-link--latch" data-drupal-link-system-path="node/10026">Local Area Transportation Characteristics (LATCH dataset)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/m9eb-yevh" class="nav-link nav-link-https--databtsgov-stories-s-m9eb-yevh">Monthly Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/NCFO" class="nav-link nav-link--ncfo" data-drupal-link-system-path="node/117646">National Census of Ferry Operators</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/national-transportation-statistics" class="nav-link nav-link--topics-national-transportation-statistics" data-drupal-link-system-path="node/326">National Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/geospatial/national-transportation-atlas-database" class="nav-link nav-link--geospatial-national-transportation-atlas-database">National Transportation Atlas Database</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/statistical-products/national-transportation-data-archive" class="nav-link nav-link--browse-statistical-products-and-data-statistical-products-national-transportation-data-archive" data-drupal-link-system-path="node/117291">National Transportation Data Archives</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/osra" class="nav-link nav-link--osra" data-drupal-link-system-path="node/233951">Ocean Shipping Reform Act (OSRA)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/pocketguide" class="nav-link nav-link--pocketguide" data-drupal-link-system-path="node/118881">Pocket Guide</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ports" class="nav-link nav-link--ports" data-drupal-link-system-path="node/239846">Port Performance Freight Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/precursor-data" class="nav-link nav-link--precursor-data" data-drupal-link-system-path="node/238376">Precursor Safety Data Program</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/preliminary-estimates/preliminary-estimates" class="nav-link nav-link--browse-statistical-products-and-data-preliminary-estimates-preliminary-estimates" data-drupal-link-system-path="node/238811">Preliminary Estimates</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  <nav aria-labelledby="block-main-statistical-3-menu" id="block-main-statistical-3" class="block block-menu navigation menu--main--statistical-3">
+            
+  <h2 class="sr-only" id="block-main-statistical-3-menu">Main - Statistical 3</h2>
+  
+
+        
+              <ul block="block-main-statistical-3" class="clearfix nav navbar-nav active">
+                    <li class="nav-item">
+                          <a href="https://safeocs.gov/index.htm" class="nav-link nav-link-https--safeocsgov-indexhtm">SafeOCS</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/product/state-transportation-statistics" class="nav-link nav-link--product-state-transportation-statistics" data-drupal-link-system-path="node/91">State Transportation Statistics</a>
+              </li>
+                <li class="nav-item active">
+                          <a href="/freight-indicators" class="nav-link active nav-link--freight-indicators is-active" data-drupal-link-system-path="node/231491" aria-current="page">Supply Chain Indicators</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/surveys/annual-tank-car-facility-survey/annual-tank-car-facility-survey-program" class="nav-link nav-link--surveys-annual-tank-car-facility-survey-annual-tank-car-facility-survey-program" data-drupal-link-system-path="node/120171">Tank Car Data</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/covid-19/week-in-transportation" class="nav-link nav-link--covid-19-week-in-transportation" data-drupal-link-system-path="node/229296">The Week in Transportation</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/kijm-95mr" class="nav-link nav-link-https--databtsgov-stories-s-kijm-95mr">TransBorder Freight Data</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/28tb-cpjy" class="nav-link nav-link-https--databtsgov-stories-s-28tb-cpjy">Transportation Economic Trends</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/tpfs" class="nav-link nav-link--tpfs" data-drupal-link-system-path="node/237426">Transportation Public Finance Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/Transportation-as-an-Economic-Indicator/9czv-tjte" class="nav-link nav-link-https--databtsgov-stories-s-transportation-as-an-economic-indicator-9czv-tjte">Transportation Services Index</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/tsar" class="nav-link nav-link--tsar" data-drupal-link-system-path="node/120771">Transportation Statistics Annual Reports</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/tvar" class="nav-link nav-link--tvar" data-drupal-link-system-path="node/238531">Transportation Vulnerability and Resilience (TVAR)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/vius" class="nav-link nav-link--vius" data-drupal-link-system-path="node/226021">Vehicle Inventory and Use Survey (VIUS)</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li><li class="ultimenu__item uitem has-ultimenu"><a href="/ntl" data-drupal-link-system-path="node/229051" class="ultimenu__link">National Transportation Library<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-1 row region-ultimenu-main-national-transportation">
+      <nav aria-labelledby="block-main-library-menu" id="block-main-library" class="block block-menu navigation menu--main--library">
+            
+  <h2 class="sr-only" id="block-main-library-menu">Main - Library</h2>
+  
+
+        
+              <ul block="block-main-library" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="https://rosap.ntl.bts.gov" class="nav-link nav-link-https--rosapntlbtsgov">Digital Repository (ROSA P)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://rosap.ntl.bts.gov/cbrowse?pid=dot%3A35533&amp;parentId=dot%3A35533" class="nav-link nav-link-https--rosapntlbtsgov-cbrowsepiddot3a35533parentiddot3a35533">BTS Products in the NTL</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/national-transportation-library-ntl-archives" class="nav-link nav-link--national-transportation-library-ntl-archives" data-drupal-link-system-path="node/238176">Archives and U.S. DOT History</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ntl/submitting-content" class="nav-link nav-link--ntl-submitting-content" data-drupal-link-system-path="node/118441">Submitting Content to the NTL</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://transportation.libguides.com/NTLsubjects" class="nav-link nav-link-https--transportationlibguidescom-ntlsubjects ext" data-extlink="" target="_blank" rel="noopener" title="(opens in a new window)">Research Tools<svg focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append" aria-label="(link is external)" viewBox="0 0 80 40" role="img" aria-hidden="false"><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://transportation.libguides.com/ntkn" class="nav-link nav-link-https--transportationlibguidescom-ntkn ext" data-extlink="" target="_blank" rel="noopener" title="(opens in a new window)">National Transportation Knowledge Network<svg focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append" aria-label="(link is external)" viewBox="0 0 80 40" role="img" aria-hidden="false"><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ntl/public-access" class="nav-link nav-link--ntl-public-access" data-drupal-link-system-path="node/118861">Public Access</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://fdd.bts.gov/freight-data-dictionary/" class="nav-link nav-link-https--fddbtsgov-freight-data-dictionary-">Freight Data Dictionary</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ntl/policies" class="nav-link nav-link--ntl-policies" data-drupal-link-system-path="node/118466">NTL Policies</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ntl/about" class="nav-link nav-link--ntl-about" data-drupal-link-system-path="node/118461">About the NTL</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li><li class="ultimenu__item uitem has-ultimenu"><a href="/newsroom" data-drupal-link-system-path="node/230276" class="ultimenu__link">Newsroom<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-1 row region-ultimenu-main-newsroom">
+      <nav aria-labelledby="block-main-newsroom-menu" id="block-main-newsroom" class="block block-menu navigation menu--main--newsroom">
+            
+  <h2 class="sr-only" id="block-main-newsroom-menu">Main - Newsroom</h2>
+  
+
+        
+              <ul block="block-main-newsroom" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/statistical-releases" class="nav-link nav-link--statistical-releases" data-drupal-link-system-path="statistical-releases">News and Statistical Releases</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Release Schedule</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li><li class="ultimenu__item uitem has-ultimenu"><a href="/learn-about-bts-and-our-work" data-drupal-link-system-path="node/224306" class="ultimenu__link">About BTS<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-1 row region-ultimenu-main-about-bts">
+      <nav aria-labelledby="block-main-about-menu" id="block-main-about" class="block block-menu navigation menu--main--about">
+            
+  <h2 class="sr-only" id="block-main-about-menu">Main - About</h2>
+  
+
+        
+              <ul block="block-main-about" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/about-BTS" class="nav-link nav-link--about-bts" data-drupal-link-system-path="node/239971">Overview</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/local-outreach" class="nav-link nav-link--local-outreach" data-drupal-link-system-path="node/232331">Local Outreach</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/jobs" class="nav-link nav-link--jobs" data-drupal-link-system-path="node/233181">Jobs and Internships</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/about-bts/legislative-mandates" class="nav-link nav-link--learn-about-bts-and-our-work-about-bts-legislative-mandates" data-drupal-link-system-path="node/29861">Legislative Mandates </a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/bts-strategic-plan-0" class="nav-link nav-link--learn-about-bts-and-our-work-bts-strategic-plan-0" data-drupal-link-system-path="node/225096">BTS Strategic Plan</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/staff-directory" class="nav-link nav-link--staff-directory">Staff Directory</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/acts" class="nav-link nav-link--acts" data-drupal-link-system-path="node/28751">Advisory Council on Transportation Statistics </a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/about-bts/port-performance-working-group" class="nav-link nav-link--learn-about-bts-and-our-work-about-bts-port-performance-working-group" data-drupal-link-system-path="node/29306">Port Performance Working Group </a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/history-bts" class="nav-link nav-link--learn-about-bts-and-our-work-history-bts" data-drupal-link-system-path="node/30416">History of BTS</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/acronyms-and-terms-guide" class="nav-link nav-link--learn-about-bts-and-our-work-acronyms-and-terms-guide" data-drupal-link-system-path="node/238291">Acronyms and Terms Guide</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://www.youtube.com/@bureauoftransportationstat1034/videos" class="nav-link nav-link-https--wwwyoutubecom-bureauoftransportationstat1034-videos">BTS Videos</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li></ul>
+    </div>
+  </div>
+<div id="block-ultimenu-mobile-navigation" class="block block-ultimenu block-ultimenu-blockultimenu-main">
+  
+    
+      <div class="content">
+      <ul id="ultimenu-main" data-ultimenu="main" class="ultimenu ultimenu--offcanvas is-ulticaret--triangle ultimenu--main ultimenu--htb ultimenu--horizontal ultimenu--on is-ultihover" data-once="ultimenu"><li class="ultimenu__item uitem has-ultimenu"><a href="/explore-topics-and-geography" data-drupal-link-system-path="node/224296" class="ultimenu__link">Topics and Geography<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-3 row region-ultimenu-main-topics-and-geography">
+      <nav aria-labelledby="block-main-topics-1-menu" id="block-main-topics-1" class="block block-menu navigation menu--main--topics-1">
+      
+  <h2 id="block-main-topics-1-menu">Topics</h2>
+  
+
+        
+              <ul block="block-main-topics-1" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/explore-topics-and-geography/introduction-transportation-statistics" class="nav-link nav-link--explore-topics-and-geography-introduction-transportation-statistics" data-drupal-link-system-path="node/229016">Introduction to Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/airlines-airports-and-aviation" class="nav-link nav-link--topics-airlines-airports-and-aviation" data-drupal-link-system-path="node/186">Airlines, Airports, and Aviation</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/energy-and-environment" class="nav-link nav-link--topics-energy-and-environment" data-drupal-link-system-path="node/266">Energy and Environment</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/freight-transportation" class="nav-link nav-link--topics-freight-transportation" data-drupal-link-system-path="node/316">Freight Transportation</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/infrastructure" class="nav-link nav-link--topics-infrastructure" data-drupal-link-system-path="node/261">Infrastructure</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/passenger-travel" class="nav-link nav-link--topics-passenger-travel" data-drupal-link-system-path="node/231">Passenger Travel</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/transportation-safety" class="nav-link nav-link--topics-transportation-safety">Safety</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/statistical-policy" class="nav-link nav-link--statistical-policy" data-drupal-link-system-path="node/169991">Statistical Policies and Methods</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/transportation-system-performance" class="nav-link nav-link--topics-transportation-system-performance" data-drupal-link-system-path="node/276">System Performance</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/transportation-and-economy" class="nav-link nav-link--topics-transportation-and-economy" data-drupal-link-system-path="node/311">Transportation and the Economy</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  <nav aria-labelledby="block-main-topics-2-menu" id="block-main-topics-2" class="block block-menu navigation menu--main--topics-2">
+      
+  <h2 id="block-main-topics-2-menu">Geography</h2>
+  
+
+        
+              <ul block="block-main-topics-2" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/maps" class="nav-link nav-link--maps" data-drupal-link-system-path="node/224311">Transportation Maps and Geospatial Data</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/product/geospatial-application-and-map-gallery" class="nav-link nav-link--product-geospatial-application-and-map-gallery" data-drupal-link-system-path="node/224276">Map Gallery</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/international" class="nav-link nav-link--topics-international" data-drupal-link-system-path="node/241">International</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/national" class="nav-link nav-link--topics-national" data-drupal-link-system-path="node/281">National</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/content/state-transportation-numbers" class="nav-link nav-link--content-state-transportation-numbers">By State</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ctp" class="nav-link nav-link--ctp" data-drupal-link-system-path="node/199386">By County</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/congressionaldistricts" class="nav-link nav-link--congressionaldistricts" data-drupal-link-system-path="node/235416">Congressional District Transportation Profiles</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  <nav aria-labelledby="block-main-topics-3-menu" id="block-main-topics-3" class="block block-menu navigation menu--main--topics-3">
+      
+  <h2 id="block-main-topics-3-menu">Modes</h2>
+  
+
+        
+              <ul block="block-main-topics-3" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/topics/airlines-and-airports" class="nav-link nav-link--topics-airlines-and-airports">Aviation</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/highway" class="nav-link nav-link--topics-highway">Highway</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/rail" class="nav-link nav-link--topics-rail">Rail</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/maritime-and-inland-waterways" class="nav-link nav-link--topics-maritime-and-inland-waterways">Maritime and Inland Waterways</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/pipelines" class="nav-link nav-link--topics-pipelines">Pipelines</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/transit" class="nav-link nav-link--topics-transit" data-drupal-link-system-path="node/301">Transit</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/bicycle-and-pedestrian" class="nav-link nav-link--topics-bicycle-and-pedestrian">Bicycles and Pedestrian</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li><li class="ultimenu__item uitem has-ultimenu"><a href="/browse-statistical-products-and-data" data-drupal-link-system-path="node/224301" class="ultimenu__link">Statistical Products and Data<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-3 row region-ultimenu-main-statistical-products-and">
+      <nav aria-labelledby="block-main-statistical-1-menu" id="block-main-statistical-1" class="block block-menu navigation menu--main--statistical-1">
+            
+  <h2 class="sr-only" id="block-main-statistical-1-menu">Main - Statistical 1</h2>
+  
+
+        
+              <ul block="block-main-statistical-1" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/information-gallery" class="nav-link nav-link--information-gallery" data-drupal-link-system-path="node/6">Information Gallery</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/bts-publications/z-index" class="nav-link nav-link--browse-statistical-products-and-data-bts-publications-z-index">A-Z Index</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/airline-data-downloads" class="nav-link nav-link--airline-data-downloads" data-drupal-link-system-path="node/117081">Airline Information for Download</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/national-transportation-atlas-of-the-united-states" class="nav-link nav-link--national-transportation-atlas-of-the-united-states" data-drupal-link-system-path="node/243036">Atlas</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/jswi-2e7b" class="nav-link nav-link-https--databtsgov-stories-s-jswi-2e7b">Border Crossing Data</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/cfs" class="nav-link nav-link--cfs" data-drupal-link-system-path="node/238591">Commodity Flow Survey</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/congressionaldistricts" class="nav-link nav-link--congressionaldistricts" data-drupal-link-system-path="node/235416">Congressional District Transportation Profiles</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ctp" class="nav-link nav-link--ctp" data-drupal-link-system-path="node/199386">County Transportation Profiles</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/" class="nav-link nav-link-https--databtsgov-">Data Inventory</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/data-spotlights" class="nav-link nav-link--data-spotlights" data-drupal-link-system-path="node/121801">Data Spotlights</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/surveys/evius/evius-electrical-vehicle-inventory-and-use" class="nav-link nav-link--browse-statistical-products-and-data-surveys-evius-evius-electrical-vehicle-inventory-and-use">Electric Vehicle Inventory and Use Survey (eVIUS)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/faf" class="nav-link nav-link--faf" data-drupal-link-system-path="node/243631">Freight Analysis Framework</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/product/freight-facts-and-figures" class="nav-link nav-link--product-freight-facts-and-figures" data-drupal-link-system-path="node/76">Freight Facts and Figures</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  <nav aria-labelledby="block-main-statistical-2-menu" id="block-main-statistical-2" class="block block-menu navigation menu--main--statistical-2">
+            
+  <h2 class="sr-only" id="block-main-statistical-2-menu">Main - Statistical 2</h2>
+  
+
+        
+              <ul block="block-main-statistical-2" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/flow" class="nav-link nav-link--flow" data-drupal-link-system-path="node/234506">Freight Logistics Optimization Works (FLOW)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/product/geospatial-application-and-map-gallery" class="nav-link nav-link--product-geospatial-application-and-map-gallery" data-drupal-link-system-path="node/224276">GIS Applications</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/statistical-products/intermodal-transportation-database" class="nav-link nav-link--browse-statistical-products-and-data-statistical-products-intermodal-transportation-database" data-drupal-link-system-path="node/22096">Intermodal Transportation Database</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/latch" class="nav-link nav-link--latch" data-drupal-link-system-path="node/10026">Local Area Transportation Characteristics (LATCH dataset)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/m9eb-yevh" class="nav-link nav-link-https--databtsgov-stories-s-m9eb-yevh">Monthly Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/NCFO" class="nav-link nav-link--ncfo" data-drupal-link-system-path="node/117646">National Census of Ferry Operators</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/topics/national-transportation-statistics" class="nav-link nav-link--topics-national-transportation-statistics" data-drupal-link-system-path="node/326">National Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/geospatial/national-transportation-atlas-database" class="nav-link nav-link--geospatial-national-transportation-atlas-database">National Transportation Atlas Database</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/statistical-products/national-transportation-data-archive" class="nav-link nav-link--browse-statistical-products-and-data-statistical-products-national-transportation-data-archive" data-drupal-link-system-path="node/117291">National Transportation Data Archives</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/osra" class="nav-link nav-link--osra" data-drupal-link-system-path="node/233951">Ocean Shipping Reform Act (OSRA)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/pocketguide" class="nav-link nav-link--pocketguide" data-drupal-link-system-path="node/118881">Pocket Guide</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ports" class="nav-link nav-link--ports" data-drupal-link-system-path="node/239846">Port Performance Freight Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/precursor-data" class="nav-link nav-link--precursor-data" data-drupal-link-system-path="node/238376">Precursor Safety Data Program</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/browse-statistical-products-and-data/preliminary-estimates/preliminary-estimates" class="nav-link nav-link--browse-statistical-products-and-data-preliminary-estimates-preliminary-estimates" data-drupal-link-system-path="node/238811">Preliminary Estimates</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  <nav aria-labelledby="block-main-statistical-3-menu" id="block-main-statistical-3" class="block block-menu navigation menu--main--statistical-3">
+            
+  <h2 class="sr-only" id="block-main-statistical-3-menu">Main - Statistical 3</h2>
+  
+
+        
+              <ul block="block-main-statistical-3" class="clearfix nav navbar-nav active">
+                    <li class="nav-item">
+                          <a href="https://safeocs.gov/index.htm" class="nav-link nav-link-https--safeocsgov-indexhtm">SafeOCS</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/product/state-transportation-statistics" class="nav-link nav-link--product-state-transportation-statistics" data-drupal-link-system-path="node/91">State Transportation Statistics</a>
+              </li>
+                <li class="nav-item active">
+                          <a href="/freight-indicators" class="nav-link active nav-link--freight-indicators is-active" data-drupal-link-system-path="node/231491" aria-current="page">Supply Chain Indicators</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/surveys/annual-tank-car-facility-survey/annual-tank-car-facility-survey-program" class="nav-link nav-link--surveys-annual-tank-car-facility-survey-annual-tank-car-facility-survey-program" data-drupal-link-system-path="node/120171">Tank Car Data</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/covid-19/week-in-transportation" class="nav-link nav-link--covid-19-week-in-transportation" data-drupal-link-system-path="node/229296">The Week in Transportation</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/kijm-95mr" class="nav-link nav-link-https--databtsgov-stories-s-kijm-95mr">TransBorder Freight Data</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/28tb-cpjy" class="nav-link nav-link-https--databtsgov-stories-s-28tb-cpjy">Transportation Economic Trends</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/tpfs" class="nav-link nav-link--tpfs" data-drupal-link-system-path="node/237426">Transportation Public Finance Statistics</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://data.bts.gov/stories/s/Transportation-as-an-Economic-Indicator/9czv-tjte" class="nav-link nav-link-https--databtsgov-stories-s-transportation-as-an-economic-indicator-9czv-tjte">Transportation Services Index</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/tsar" class="nav-link nav-link--tsar" data-drupal-link-system-path="node/120771">Transportation Statistics Annual Reports</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/tvar" class="nav-link nav-link--tvar" data-drupal-link-system-path="node/238531">Transportation Vulnerability and Resilience (TVAR)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/vius" class="nav-link nav-link--vius" data-drupal-link-system-path="node/226021">Vehicle Inventory and Use Survey (VIUS)</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li><li class="ultimenu__item uitem has-ultimenu"><a href="/ntl" data-drupal-link-system-path="node/229051" class="ultimenu__link">National Transportation Library<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-1 row region-ultimenu-main-national-transportation">
+      <nav aria-labelledby="block-main-library-menu" id="block-main-library" class="block block-menu navigation menu--main--library">
+            
+  <h2 class="sr-only" id="block-main-library-menu">Main - Library</h2>
+  
+
+        
+              <ul block="block-main-library" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="https://rosap.ntl.bts.gov" class="nav-link nav-link-https--rosapntlbtsgov">Digital Repository (ROSA P)</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://rosap.ntl.bts.gov/cbrowse?pid=dot%3A35533&amp;parentId=dot%3A35533" class="nav-link nav-link-https--rosapntlbtsgov-cbrowsepiddot3a35533parentiddot3a35533">BTS Products in the NTL</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/national-transportation-library-ntl-archives" class="nav-link nav-link--national-transportation-library-ntl-archives" data-drupal-link-system-path="node/238176">Archives and U.S. DOT History</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ntl/submitting-content" class="nav-link nav-link--ntl-submitting-content" data-drupal-link-system-path="node/118441">Submitting Content to the NTL</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://transportation.libguides.com/NTLsubjects" class="nav-link nav-link-https--transportationlibguidescom-ntlsubjects ext" data-extlink="" target="_blank" rel="noopener" title="(opens in a new window)">Research Tools<svg focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append" aria-label="(link is external)" viewBox="0 0 80 40" role="img" aria-hidden="false"><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://transportation.libguides.com/ntkn" class="nav-link nav-link-https--transportationlibguidescom-ntkn ext" data-extlink="" target="_blank" rel="noopener" title="(opens in a new window)">National Transportation Knowledge Network<svg focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append" aria-label="(link is external)" viewBox="0 0 80 40" role="img" aria-hidden="false"><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ntl/public-access" class="nav-link nav-link--ntl-public-access" data-drupal-link-system-path="node/118861">Public Access</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://fdd.bts.gov/freight-data-dictionary/" class="nav-link nav-link-https--fddbtsgov-freight-data-dictionary-">Freight Data Dictionary</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ntl/policies" class="nav-link nav-link--ntl-policies" data-drupal-link-system-path="node/118466">NTL Policies</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/ntl/about" class="nav-link nav-link--ntl-about" data-drupal-link-system-path="node/118461">About the NTL</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li><li class="ultimenu__item uitem has-ultimenu"><a href="/newsroom" data-drupal-link-system-path="node/230276" class="ultimenu__link">Newsroom<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-1 row region-ultimenu-main-newsroom">
+      <nav aria-labelledby="block-main-newsroom-menu" id="block-main-newsroom" class="block block-menu navigation menu--main--newsroom">
+            
+  <h2 class="sr-only" id="block-main-newsroom-menu">Main - Newsroom</h2>
+  
+
+        
+              <ul block="block-main-newsroom" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/statistical-releases" class="nav-link nav-link--statistical-releases" data-drupal-link-system-path="statistical-releases">News and Statistical Releases</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Release Schedule</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li><li class="ultimenu__item uitem has-ultimenu"><a href="/learn-about-bts-and-our-work" data-drupal-link-system-path="node/224306" class="ultimenu__link">About BTS<span class="ultimenu__caret caret" aria-hidden="true"><i></i></span></a><section class="ultimenu__flyout is-htb d-lg-flex p-0">
+              <section class="ultimenu__region region region--count-1 row region-ultimenu-main-about-bts">
+      <nav aria-labelledby="block-main-about-menu" id="block-main-about" class="block block-menu navigation menu--main--about">
+            
+  <h2 class="sr-only" id="block-main-about-menu">Main - About</h2>
+  
+
+        
+              <ul block="block-main-about" class="clearfix nav navbar-nav">
+                    <li class="nav-item">
+                          <a href="/about-BTS" class="nav-link nav-link--about-bts" data-drupal-link-system-path="node/239971">Overview</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/local-outreach" class="nav-link nav-link--local-outreach" data-drupal-link-system-path="node/232331">Local Outreach</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/jobs" class="nav-link nav-link--jobs" data-drupal-link-system-path="node/233181">Jobs and Internships</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/about-bts/legislative-mandates" class="nav-link nav-link--learn-about-bts-and-our-work-about-bts-legislative-mandates" data-drupal-link-system-path="node/29861">Legislative Mandates </a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/bts-strategic-plan-0" class="nav-link nav-link--learn-about-bts-and-our-work-bts-strategic-plan-0" data-drupal-link-system-path="node/225096">BTS Strategic Plan</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/staff-directory" class="nav-link nav-link--staff-directory">Staff Directory</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/acts" class="nav-link nav-link--acts" data-drupal-link-system-path="node/28751">Advisory Council on Transportation Statistics </a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/about-bts/port-performance-working-group" class="nav-link nav-link--learn-about-bts-and-our-work-about-bts-port-performance-working-group" data-drupal-link-system-path="node/29306">Port Performance Working Group </a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/history-bts" class="nav-link nav-link--learn-about-bts-and-our-work-history-bts" data-drupal-link-system-path="node/30416">History of BTS</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/learn-about-bts-and-our-work/acronyms-and-terms-guide" class="nav-link nav-link--learn-about-bts-and-our-work-acronyms-and-terms-guide" data-drupal-link-system-path="node/238291">Acronyms and Terms Guide</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://www.youtube.com/@bureauoftransportationstat1034/videos" class="nav-link nav-link-https--wwwyoutubecom-bureauoftransportationstat1034-videos">BTS Videos</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          </section></li></ul><button data-ultimenu-button="#ultimenu-main" class="button button--ultimenu button--ultiburger" aria-label="Menu Main navigation (Mobile)"><span class="bars">Menu Main navigation (Mobile)</span></button>
+    </div>
+  </div>
+
+
+          </div>
+                      </nav>
+          </div><!-- row -->
+  </div><!-- container -->
+  <!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+  <script type="text/javascript">
+    (function(){var g=function(e,h,f,g){
+    this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
+    this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
+    this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
+    this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g;document.body&&document.body.appendChild(a)}};
+    this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
+  try{(new g(100,"r","QSI_S_ZN_5zoA3vXq9g9IftP","https://zn5zoa3vxq9g9iftp-dotocio.gov1.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_5zoA3vXq9g9IftP")).start()}catch(i){}})();
+  </script><div id="ZN_5zoA3vXq9g9IftP"><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+  <!--END WEBSITE FEEDBACK SNIPPET-->
+
+</header>
+
+    <main id="main" class="main" role="main" aria-label="Site main">
+
+              <div class="container">
+            <div id="block-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+      
+
+  <nav role="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+          <a href="/">Home</a>
+        </li>
+              </ol>
+  </nav>
+
+    </div>
+  </div>
+
+
+        </div>
+      
+      
+      
+      
+      <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                  <div id="main" class="container">
+
+            <div class="row row-offcanvas row-offcanvas-left clearfix">
+
+                              <!-- Sidebar First Region -->
+                <div class="sidebar col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 order-first">
+                  <aside class="sidebar_first section" role="complementary">
+                    
+  <aside id="dot-region-view-mode--article" class="dot-region-view-mode dot-region-view-mode--article sidebar_first section" role="complementary">
+    <!-- Editorial Category Menu Starts -->
+          <div id="sidenav" class="sidenav">
+        <h1 class="sidenav-header text-white" id="nav-header">In This Section</h1>
+        <nav class="wrapper__sidenav dot_left_nav" role="navigation" aria-labelledby="nav-header">
+          
+            <div class="field field--name-field-editorial-category field--type-entity-reference field--label-hidden field__item">
+
+            <div class="field field--name-field-left-nav-menu field--type-entity-reference field--label-hidden field__item">
+              <ul class="clearfix nav active">
+                    <li class="nav-item">
+                <a href="/data-spotlights" class="nav-link" data-drupal-link-system-path="node/121801">Data Spotlight</a>
+              </li>
+                <li class="nav-item">
+                <a href="/twit" class="nav-link">The Week in Transportation</a>
+              </li>
+                <li class="nav-item">
+                <a href="/freight-indicators" class="nav-link is-active" data-drupal-link-system-path="node/231491" aria-current="page">Latest Supply Chain and Freight Indicators</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://data.bts.gov/stories/s/m9eb-yevh" class="nav-link">Monthly Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                <a href="/topics/national-transportation-statistics" class="nav-link" data-drupal-link-system-path="node/326">National Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                <a href="/product/state-transportation-statistics" class="nav-link" data-drupal-link-system-path="node/91">State Transportation Statistics</a>
+              </li>
+                <li class="nav-item">
+                <a href="/ctp" class="nav-link" data-drupal-link-system-path="node/199386">County Transportation Statistics</a>
+              </li>
+        </ul>
+  
+
+</div>
+      
+</div>
+      
+        </nav>
+      </div>
+      <!-- Editorial Category Menu Ends -->
+   <div id="sidecontent" class="sidecontent js-complete">
+     <!-- Related Content Starts -->
+     <div class="wrapper__related_links">
+     
+        
+        
+        
+        
+        
+              </div>
+      <!-- Related Content Ends -->
+      <!-- Contact Info Block Starts -->
+      
+                  <div class="wrapper__contact_info">
+            
+
+  <div data-history-node-id="1571" class="node node--type-contact-info node--view-mode-contact-block card mb-5 clearfix">
+    <address class="node__content card-body clearfix">
+          <h2 class="sidebar__title pt-0">
+            <div class="field field--name-field-header field--type-string field--label-hidden field__item">Contact Us</div>
+      </h2>
+          <p>
+                  
+            </p><div class="field field--name-field-name field--type-string field--label-hidden field__item">Bureau of Transportation Statistics (BTS)</div>
+      
+                                          
+      <div class="field field--name-field-address field--type-address field--label-hidden field__items">
+              <div class="field__item"><p class="address" translate="no"><span class="address-line1">1200 New Jersey Avenue, SE</span><br>
+<span class="locality">Washington</span>, <span class="administrative-area">DC</span> <span class="postal-code">20590</span><br>
+<span class="country">United States</span></p></div>
+          </div>
+  
+              <p></p>
+      <p>
+                          <strong>Phone:</strong> <a href="tel:800-853-1351" class="tel">800-853-1351<i class="fas fa-phone" title="(link calls phone number)"></i></a><br>
+                          <strong>Alt Phone:</strong> <a href="tel:202-366-3282" class="tel">202-366-3282<i class="fas fa-phone" title="(link calls phone number)"></i></a><br>
+                                  <strong>Business Hours:</strong><br>8:30am-5:00pm ET, M-F<br>
+              </p>
+              <p class="mt-2">If you are deaf, hard of hearing, or have a speech disability, please dial 7-1-1 to access telecommunications relay services.</p>
+                          <div class="contact-us-social-media">
+          <ul class="contact-us-social-media-items list-unstyled">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                <li><a href="https://transportation.libanswers.com/form?queue_id=1810" class="ext" data-extlink="" target="_blank" rel="noopener" title="(opens in a new window)">Submit questions or inquiries<svg focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append" aria-label="(link is external)" viewBox="0 0 80 40" role="img" aria-hidden="false"><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a></li>
+                                                                                        </ul>
+        </div>
+          </address>
+  </div>
+
+          </div>
+        
+            <!-- Contact Info Block Ends -->
+    </div>
+  </aside>
+
+
+                  </aside>
+                </div>
+                <!-- Main Content Region -->
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="content" role="main">
+                  <section class="section pb-5">
+                    <a id="main-content" tabindex="-1"></a>
+                      <div data-drupal-messages-fallback="" class="hidden"></div><div id="block-mainpagecontent" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+
+<article data-history-node-id="231491" class="node node--type-article node--view-mode-full content__core clearfix">
+  <div class="node__content mt-0 clearfix">
+        
+    
+
+    
+      <h1 class="page__title node__title mt-0"><span class="field field--name-title field--type-string field--label-hidden">Latest Supply Chain and Freight Indicators</span>
+</h1>
+    
+
+    
+          <div class="mb-4"> Tuesday, June 9, 2026</div>
+    
+          <div class="mb-4 clearfix">
+        
+        <p><a class="ck-anchor" id="top"></a>The U.S. Department of Transportation has convened an interagency working group, led by the Bureau of Transportation Statistics, to develop timely information on supply chain activity. The working group includes relevant DOT modes and the U.S. Departments of Agriculture, Energy, Commerce and Labor.&nbsp;</p><p>Download the full supply chain dataset: <a href="https://data.bts.gov/Research-and-Statistics/Supply-Chain-and-Freight-Indicators/y5ut-ibwt/about_data">Supply Chain and Freight Indicators&nbsp;</a></p><p>Note: In May 2025, Canadian Pacific Kansas City (CPKC) started reporting data to reflect the April 14, 2023, merger of Canadian Pacific (CP) and Kansas City Southern (KCS). New charts representing CKPC data were added and new data for CKPC will be updated weekly from May 10, 2025. The charts for CP and KCS will not be updated in the future.</p><p>BTS freight information is organized into four sections:</p><ul><li data-list-item-id="e90d124f77ad627bc93a3037eb930abf9"><a href="#inside">Port Data - Inside the Gate</a></li><li data-list-item-id="e73691af178ba0f76ee24ed159ddacd12"><a href="#outside">Port Data - Outside the Gate</a></li><li data-list-item-id="ee043d5b1716a0f9580485066cfbf444d"><a href="#freight">Freight Movement</a></li><li data-list-item-id="ed780fd04b0fdf72f8f4211b9f0a2e0f6"><a href="#labor">Transportation Labor and Capacity Tightness</a></li><li data-list-item-id="e38d4b0dbd716da8ea512840399fc4600"><a href="#notes">Notes &amp; Sources</a></li></ul><p><a class="ck-anchor" id="inside"></a></p><h2>Port Data - Inside the Gate</h2><ul><li data-list-item-id="e57995c375405b31b5688c482eac0edbc"><a href="#container-capacity">Capacity of Containerships at U.S. Ports</a></li><li data-list-item-id="e4795510da947f771b05c0d31f9ebb47d"><a href="#loaded-import">Loaded Import Containers at Select U.S. Ports</a></li><li data-list-item-id="ef9a85f46590b7f6763989c045b747d04"><a href="#loaded-export">Loaded Export Containers at Select U.S. Ports</a></li><li data-list-item-id="e7644a097cb94084ade8676f86ebcb9e5"><a href="#empty-export">Empty Export Containers at Select U.S. Ports</a></li><li data-list-item-id="ea0e0e085fc483c13538dabe06411c8da"><a href="#empty-aggregate">Empty Export Containers at Select U.S. Ports by Month and Year</a></li><li data-list-item-id="e0247849a6bcb14d284d1d5d0f11fb29b"><a href="#anchored-offshore">Number of Containerships Anchored off U.S. Ports</a></li><li data-list-item-id="e2c1b6f592dbd432dd093e99eb84b459f"><a href="#containerized-exports">Containerized Exports at U.S. Ports</a></li><li data-list-item-id="e3793059eb57974c115c3715ff9123d17"><a href="#containerized-imports">Containerized Imports at U.S. Ports</a></li><li data-list-item-id="e341b7628b8b3bc6edad4c7e2797b7050"><a href="#awaiting-berths">Number of Containerships Waiting Berths at U.S. Ports</a></li></ul><p>&nbsp;</p><script type="text/javascript" src="https://explore.dot.gov/javascripts/api/viz_v1.js"></script><script type="text/javascript" src="https://explore.dot.gov/javascripts/api/viz_v1.js"></script><p><a class="ck-anchor" id="container-capacity"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" src="https://explore.dot.gov/views/FreightIndicators/ContainerShipCapacity?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=0" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true"></iframe></div><p><a class="ck-anchor" id="loaded-import"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" src="https://explore.dot.gov/views/FreightIndicators/LoadedImportContainers?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=1" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true"></iframe></div><p><a class="ck-anchor" id="loaded-export"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/LoadedExportContainers?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=2"></iframe></div><p><a class="ck-anchor" id="empty-export"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/EmptyExportContainers?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=3"></iframe></div><p><a class="ck-anchor" id="empty-aggregate"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/EmptyExportContainersbyyear?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=4"></iframe></div><p><a class="ck-anchor" id="anchored-offshore"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=5"></iframe></div><p><a class="ck-anchor" id="containerized-exports"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/ContainerizedExports?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=6"></iframe></div><p><a class="ck-anchor" id="containerized-imports"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/ContainerizedImports?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=7"></iframe></div><p><a class="ck-anchor" id="awaiting-berths"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/ContainershipsAwaiting?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=8"></iframe></div><p><a class="ck-anchor" id="outside"></a></p><h2>Port Data - Outside the Gate</h2><ul><li data-list-item-id="e00a0a81f377fee027b7a7b7f86a13a19"><a href="#rail-speed">Average Train Speed by Railroad</a></li><li data-list-item-id="e8ee1571d66dd6f62b7f71d3a2b397760"><a href="#avg-train-velocity">Average Train Velocity by Region by Railroad</a></li><li data-list-item-id="e0a4406d0365d99ed9ddb103c9ac9fef0"><a href="#rail-cars-online">Rail Cars on Line by Region by Railroad</a></li><li data-list-item-id="eba9737ada3de05efe777485a96f0b918"><a href="#rail-dwell">Average Terminal Dwell Time by Railroad</a></li><li data-list-item-id="e9a50dee02f1c55969500e7d581b3c639"><a href="#avg-terminal-dwell">Average Terminal Dwell Time by Region by Railroad</a></li><li data-list-item-id="e8fbc9a7f9cd5e164fa32d0babbffbb71"><a href="#avg-terminal-dwell-rr">Average Major Terminal Dwell Time by Region by Railroad</a></li><li data-list-item-id="e91692f4e46035add4cba7a5fb065c7a4"><a href="#truck-speed">Average Truck Speed at 10 Bottlenecks</a></li><li data-list-item-id="e6d90c201dd05362ee4bc250b84c53678"><a href="#average-pti">Average Planning Time Index (PTI) at 10 Bottlenecks</a></li><li data-list-item-id="e690ac41ab36237c53378ad29f5f75111"><a href="#truck-lalb">Average Truck Speed around Port of Los Angeles - Long Beach</a></li><li data-list-item-id="ecb67bc23501fdb8e00b957478ad16ae3"><a href="#truck-nynj">Average Truck Speed around Port of New York - New Jersey</a></li><li data-list-item-id="e7957dbfe521158a8bdd66363051f54c5"><a href="#pti-lalb">PTI around Port of Los Angeles - Long Beach</a></li><li data-list-item-id="e69f7eee0ed71b1f82b950da62935a150"><a href="#pti-nynj">PTI around Port of New York - New Jersey</a></li><li data-list-item-id="e76f3ac76561b709f1c7894264c2f19bc"><a href="#pti-lalb-tod">PTI by Time of Day around Port of Los Angeles - Long Beach</a></li><li data-list-item-id="e04f1dc8a88ad24f54242dae1c340f9af"><a href="#truck-lalb-tod">Average Truck Speed by Time of Day around Port of Los Angeles - Long Beach</a></li><li data-list-item-id="e063e1ef952422a1b819c6f3350c06fb8"><a href="#top">RETURN TO TOP OF PAGE</a></li></ul><p><a class="ck-anchor" id="rail-speed"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/AvgTrainSpeed?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=9"></iframe></div><p><a class="ck-anchor" id="avg-train-velocity"></a></p><div class="tableauPlaceholder" style="height: 1520px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 1520px;" height="1520" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/Velocity?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=10"></iframe></div><p><a class="ck-anchor" id="rail-cars-online"></a></p><div class="tableauPlaceholder" style="height: 1520px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 1520px;" height="1520" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/CarsonLine?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=11"></iframe></div><p><a class="ck-anchor" id="rail-dwell"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/AvgTerminalDwell?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=12"></iframe></div><p><a class="ck-anchor" id="avg-terminal-dwell"></a></p><div class="tableauPlaceholder" style="height: 1520px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 1520px;" height="1520" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/Dwell?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=13"></iframe></div><p><a class="ck-anchor" id="avg-terminal-dwell-rr"></a></p><div class="tableauPlaceholder" style="height: 1520px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 1520px;" height="1520" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/DwellDetail?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=14"></iframe></div><p><a class="ck-anchor" id="truck-speed"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/BottleneckTruckSpeeds?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=15"></iframe></div><p><a class="ck-anchor" id="average-pti"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/BottleneckPTI?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=16"></iframe></div><p><a class="ck-anchor" id="truck-lalb"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/LA-LBTruckSpeed?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=17"></iframe></div><p><a class="ck-anchor" id="truck-nynj"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/NY-NJTruckSpeed?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=18"></iframe></div><p><a class="ck-anchor" id="pti-lalb"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/PTILA-LB?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=19"></iframe></div><p><a class="ck-anchor" id="pti-nynj"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/PTINY-NJ?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=20"></iframe></div><p><a class="ck-anchor" id="pti-lalb-tod"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/PTILA-LBTime?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=21"></iframe></div><p><a class="ck-anchor" id="truck-lalb-tod"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/TruckSpeedLA-LBTime?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=22"></iframe></div><p><a class="ck-anchor" id="freight"></a></p><h2>Freight Movement</h2><ul><li data-list-item-id="e06a3c056bf7c7d47581375b61cc72850"><a href="#carloads">U.S. Total Rail Carloads</a></li><li data-list-item-id="e97dcca676cf06561f359eabd9bf69b66"><a href="#intermodal">U.S. Total Rail Intermodal</a></li><li data-list-item-id="e63842f5893a25a270bbc041129748c50"><a href="#container-flat">Containers on Rail Flat Cars</a></li><li data-list-item-id="ecbfbbeacec2a99c58130004c7666a3ed"><a href="#trailer-flat">Trailers on a Rail Flat Car</a></li><li data-list-item-id="eb620b67b263eb783dba3c6dd1a6571ff"><a href="#ivmt">Interstate Vehicle Miles Traveled: Percent Change from 2019</a></li><li data-list-item-id="ed5a535287136918c73757abec717ef18"><a href="#ftsi">Freight Transportation Services Index:&nbsp;2019,&nbsp;2020, 2021</a></li><li data-list-item-id="e80fca542ec5b8fbb6233993c1a885d0a"><a href="#NewCarriers">New Active Carriers Added to MCMIS</a></li><li data-list-item-id="e7ab65d10a4441535d1cc9c26f292c5c5"><a href="#top">RETURN TO TOP OF PAGE</a></li></ul><p><a class="ck-anchor" id="carloads"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/RailCarloads?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=23"></iframe></div><p><a class="ck-anchor" id="intermodal"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/RailIntermodal?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=24"></iframe></div><p><a class="ck-anchor" id="container-flat"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/ContainersonRailFlat?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=25"></iframe></div><p><a class="ck-anchor" id="trailer-flat"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/TrailersonRailFlat?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=26"></iframe></div><p><a class="ck-anchor" id="ivmt"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/InterstateVMT?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=27"></iframe></div><p><a class="ck-anchor" id="ftsi"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/FreightTSI?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=28"></iframe></div><p><a class="ck-anchor" id="NewCarriers"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/NewCarriers?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=29"></iframe></div><p><a class="ck-anchor" id="labor"></a></p><h2>Transportation Costs, Labor, and Demand</h2><ul><li data-list-item-id="e51696c37f9c56ccacf01c1bf997772f8"><a href="#openings-turnover">Transportation Job Openings and Labor Turnover</a></li><li data-list-item-id="e84cafde6afde49a5088ce87f81923587"><a href="#non-farm">Non-Farm Truck Transportation Employees</a></li><li data-list-item-id="e07f008925c6fdc106b416718eb0af3e4"><a href="#warehousing">Warehousing and Storage Employees</a></li><li data-list-item-id="ebc46e1c94fb2a24c2704dc4104dfaba6"><a href="#rail-employees">Rail Transportation Employees</a></li><li data-list-item-id="e23a9155af2cf3f86a4a4f714311ed4c6"><a href="#spot-rates">Truck Spot Rates by Truck Type</a></li><li data-list-item-id="e9da851421fb8b5a75a9da84bcc0f5e21"><a href="#ppi-trucking">Producer Price Index for Trucking by Generalized and Specialized Freigh</a>t</li><li data-list-item-id="eaa24da11d630c67b55935762226a86ad"><a href="#barge-rates">Downbound Grain Barge Rates</a></li><li data-list-item-id="e9c1c3121e95c7ed26e3e699b47025e21"><a href="#shanghai">Freight Rate per 40ft Container To Central China (Shanghai) from&nbsp;U.S. Midwest, U.S. West Coast</a></li><li data-list-item-id="e0b061a2ba08c1409513718ba88340ccd"><a href="#shanghai-la">Freight Rate per 40ft Container from Shanghai to LA</a></li><li data-list-item-id="ef7935c7f36f7b14810bb83afa0bc01b7"><a href="#i2s">Total Business: Inventory to Sales Ratio: 2019, 2020, 2021</a></li><li data-list-item-id="e69231ee79c41cc912f9964abb1b68285"><a href="#durable">Personal Consumption Expenditures on Durable Goods</a></li><li data-list-item-id="e94db3ffa467de58a546e1fe99a72a6b7"><a href="#goods-imports">U.S. Goods Imports, Nominal</a></li><li data-list-item-id="e056b99a72f860049c90a860b802efed4"><a href="#imports-indexed">U.S. Goods Imports, Indexed</a></li><li data-list-item-id="edb592f926d6ef34f75fa3baae86b9a93"><a href="#diesel-prices">U.S. Diesel Sales Prices</a></li><li data-list-item-id="e3ad6f4f8375a9d13cc32bcfda4c66741"><a href="#ppi-diesel">Producer Price Index: Diesel Fuel</a></li><li data-list-item-id="ef5fd74bd8391ca76ebb0b2c7460fc630"><a href="#top">RETURN TO TOP OF PAGE</a></li></ul><p><a class="ck-anchor" id="openings-turnover"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/JobOpeningsandTurnover?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=30"></iframe></div><p><a class="ck-anchor" id="non-farm"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/TruckEmployees?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=31"></iframe></div><p><a class="ck-anchor" id="warehousing"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/WarehouseEmployees?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=32"></iframe></div><p><a class="ck-anchor" id="rail-employees"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/RailEmployees?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=33"></iframe></div><p><a class="ck-anchor" id="spot-rates"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/SpotRates?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=34"></iframe></div><p><a class="ck-anchor" id="ppi-trucking"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/TruckingPPI?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=35"></iframe></div><p><a class="ck-anchor" id="barge-rates"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/BargeRates?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=36"></iframe></div><p><a class="ck-anchor" id="shanghai"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/40ftContainerRates?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=37"></iframe></div><p><a class="ck-anchor" id="shanghai-la"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/LA-boundContainerRates?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=38"></iframe></div><p><a class="ck-anchor" id="i2s"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/Inventory-SalesRatio?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=39"></iframe></div><p><a class="ck-anchor" id="durable"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/DurableGoods?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=40"></iframe></div><p><a class="ck-anchor" id="goods-imports"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/NominalImports?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=41"></iframe></div><p><a class="ck-anchor" id="imports-indexed"></a></p><div class="tableauPlaceholder" style="height: 640px; width: 820px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 820px; height: 640px;" height="640" width="820" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/IndexedImports?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:showAppBanner=false&amp;:display_spinner=no&amp;:loadOrderID=42"></iframe></div><p><a class="ck-anchor" id="diesel-prices"></a></p><div class="tableauPlaceholder" style="height: 627px; width: 800px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 800px; height: 627px;" height="627" width="800" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/USDieselPrices?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:iid=2&amp;:isGuestRedirectFromVizportal=y&amp;:display_spinner=no&amp;:loadOrderID=43"></iframe></div><p><a class="ck-anchor" id="ppi-diesel"></a></p><div class="tableauPlaceholder" style="height: 627px; width: 800px; position: relative; overflow: hidden; display: block;"><iframe frameborder="0" marginheight="0" marginwidth="0" title="Embedded Media" allowtransparency="true" allowfullscreen="true" class="tableauViz" style="display: block; margin: 0px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; width: 800px; height: 627px;" height="627" width="800" data-gtm-yt-inspected-17="true" data-gtm-yt-inspected-22="true" src="https://explore.dot.gov/views/FreightIndicators/DieselPPI?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fexplore.dot.gov%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:iid=1&amp;:isGuestRedirectFromVizportal=y&amp;:display_spinner=no&amp;:loadOrderID=44"></iframe></div><p><a href="#top">RETURN TO TOP OF PAGE</a></p><p><a class="ck-anchor" id="notes"></a></p><p style="margin-bottom:11px;margin-top:20px;"><span style="background-color:white;color:#194178;line-height:107%;"><strong>Notes</strong></span></p><p style="margin-bottom:11px;"><span style="background-color:white;color:#212529;line-height:normal;">These selected measures are provisional indicators of transportation activity and have not been reviewed for representativeness or other aspects of statistical quality. Additional measures will be added as they become available.</span></p><ul><li style="margin-bottom:11px;" data-list-item-id="e6739f60f8cdf6cd86733f6a0c24f6701"><small class="small"><strong>Capacity of Containerships Calling at U.S. Ports</strong>: this series is now based on CBP's Vessel Management System (VMS) data (previously based on AIS data from IHS). This VMS series counts only vessels entering port for an official reason, typically to load or unload cargo which makes the number lower since the previous AIS series counted any vessel entering a port. The current week is an estimate; data is subject to change as remaining data is received over subsequent weeks.&nbsp;</small></li><li style="margin-bottom:11px;" data-list-item-id="ec6248f0cd33f57033fa9b9c00b76c44d"><small class="small"><strong>Empty Export Containers (in TEUs), Aggregated Select U.S. Ports</strong>: Includes the ports of LA-LB, NY-NJ, Oakland, Sea-Tac, Port of VA, Charleston, Savannah, and Houston.&nbsp;</small></li><li style="margin-bottom:11px;" data-list-item-id="ead0c7e96da2ce6cdfefc3e236313ae75"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Containerships Anchored off U.S. Ports</strong>: This metric shows the number of container ships within US port boundaries, that are inbound (not outbound), that have automatic identification system (AIS) status "anchored" and are not moored/birthed. This metric is a snapshot; the vessels are counted using AIS live by U.S. Maritime Administration (MARAD) on Tuesday afternoons.</span></li><li style="margin-bottom:11px;" data-list-item-id="e2315abd6c0b7b3e6088a0f5161e81e60"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Containerized Imports and Exports</strong>: Includes data for all U.S. container ports. Data subject to revision due to data source gaps.</span></li><li style="margin-bottom:11px;" data-list-item-id="e11e1e74cd692c3e126a9b9c942bb1cf7"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Containerships Awaiting Berths</strong>: LA-LB totals include containerships in drift/holding areas. Data reported at more frequent intervals starting October 18, 2021.</span></li><li style="margin-bottom:11px;" data-list-item-id="ecdbbc24922bd1bf411a2c331ca6ecb20"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>NHS Weekday Peak Hour Travel Time Median Speed (mph)</strong>: The chart shows National Highway System roadways and Urban Interstate Highways weekday freight truck median speed compared to speed for the same month of previous years. Source: Federal Highway Administration, National Performance Management Research Data Set.</span></li><li style="margin-bottom:11px;" data-list-item-id="e3ff8787a231e168f697292bf043968b8"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>LA/LB and NY Port Area Reliability - Average Truck Speed on the National Highway System Within 5 Miles of Port (mph) and Planning Time Index on the National Highway System Within 5 Miles of Port: Planning Time Index (PTI):</strong> Ratio of 95th percentile truck speeds and free-flow truck speeds within five miles of port. Average Truck Speeds on the National Highway System within five miles of port. Source: Federal Highway Administration, National Performance Management Research Data Set.</span></li><li style="margin-bottom:11px;" data-list-item-id="e544e3bb3073110165c0e7664027ab525"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Average Weekday Truck Speed at Interstate Bottlenecks Locations (mph) and Planning Time Index at Interstate Bottleneck Locations: Planning Time Index (PTI):</strong> Ratio of 95th percentile truck speeds and free-flow truck speeds. Source: Federal Highway Administration, National Performance Management Research Data Set.</span></li><li style="margin-bottom:11px;" data-list-item-id="e35b1e5e0bd7eceacc3fbf5650c99db3d"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Rail Non-Intermodal Carloads and Intermodal Units</strong>: U.S. traffic excludes the U.S. operations of Canadian and Mexican railroads.</span></li><li style="margin-bottom:11px;" data-list-item-id="e3a1923de972f27b160315f050589a06d"><span style="color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Freight Transportation Service Index</strong>: Economically weighted volume of freight and passenger transportation services moved by the for-hire transportation sector in the U.S.</span></li><li style="margin-bottom:11px;" data-list-item-id="ef158d9f75cbe499b4d3c7b9c070640f5"><small class="small"><strong>New Active Carriers Added to MCMIS</strong>: For-hire carriers includes either for-hire only or for-hire and private operation. Private carriers only includes private carrier operations. There are additional operational categories so new active for-hire carriers and new active private carriers will not sum to the new active carriers total.</small></li><li style="margin-bottom:11px;" data-list-item-id="e8380190578afc21865a55402a8087ad6"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Job Openings and Labor Turnover: Transportation, Warehousing, and Utilities Sector (Seasonally Adjusted):</strong> Monthly job openings, hires, and separations (includes Quits, Layoffs, Other Separations) for Transportation, Warehousing, and Utilities (which includes Truck Transportation). When hires exceed separations, the industry experiences job growth, and Quits are a measure of employees' willingness to leave a job (e.g., generally as the economy improves). Data in this chart represents wage and salary workers only and excludes owner-operators and independent contractors.</span></li><li style="margin-bottom:11px;" data-list-item-id="ecd1236551810fe4c25fb951aae160fbc"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Month-to-Month Change in Employment - Truck Transportation Employees on Non-Farm Payroll (Seasonally Adjusted):</strong> Data in this chart represents wage and salary workers only, and excludes owner-operators and independent contractors. Source: Bureau of Labor Statistics, Current Employment Statistics</span></li><li style="margin-bottom:11px;" data-list-item-id="e3052c32090224ce59707a15e1244b882"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Truck Spot Rates</strong>: This data is for spot market trucking loads, which is approximately one-tenth of the overall common carrier trucking market. The data provider (DAT) is the largest clearinghouse for shipments that are not part of a pre-existing hauling contract. Dry van includes freight transported in enclosed cargo holds.</span></li><li style="margin-bottom:11px;" data-list-item-id="eeb5e1ec6279cd41f419e1f2b9cd56978"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Producer Price Index (PPI)</strong>: PPI data are survey data collected monthly and indexed to 12/2003=100. Respondents provide data on Tuesday of the week containing the 13th of the month.</span></li><li style="margin-bottom:11px;" data-list-item-id="e979eab64b4df4a6d3d3dc3baba85d5f8"><small class="small"><strong>Downbound Grain Barge Rates</strong>:&nbsp;Weekly barge rates for downbound freight originating from seven locations along the Mississippi River System, which includes the Mississippi River and its tributaries (e.g., Upper Mississippi River, Illinois River, Ohio River, etc.). The seven locations are: (1) "Twin Cities," a stretch along the Upper Mississippi; (2) "Mid-Mississippi," a stretch between eastern Iowa and western Illinois; (3) "Illinois River," along the lower portion of the Illinois River; (4) "St. Louis"; (5) "Cincinnati," along the middle third of the Ohio River; (6) "Lower Ohio," approximately the final third of the Ohio River; and (7) "Cairo-Memphis," from Cairo, IL, to Memphis, TN. Under the percent-of-tariff system, each city on the river has its own benchmark, with the northern most cities having the highest benchmarks. They are as follows: Twin Cities = 619; Mid-Mississippi = 532; St. Louis = 399; Illinois = 464; Cincinnati = 469; Lower Ohio = 446; and Cairo-Memphis = 314. Breaks in the&nbsp; lines&nbsp;indicate&nbsp;no&nbsp;rate&nbsp;record&nbsp;for&nbsp;that&nbsp;week&nbsp;at&nbsp;that&nbsp;location.</small></li><li style="margin-bottom:11px;" data-list-item-id="e49fe7ea928ef8390875dfbcd76e41878"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Ocean Freight Rates</strong>: Spot ocean freight rates for a single container transaction in the selected westbound transpacific trade routes.</span></li><li style="margin-bottom:11px;" data-list-item-id="e7b1f33a005270340b798c9885c502e86"><span style="color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Inventory-to-Sales Ratio</strong>: The ratio of total inventory at retailers, wholesalers, and manufacturers, divided by total sales. Data on inventory and sales are based on Census Bureau surveys. Data adjusted for seasonal, holiday and trading day differences but not for price changes.</span></li><li style="margin-bottom:11px;" data-list-item-id="ef227066f0820e4b276d5eb4bdf65767a"><strong>U.S. Diesel Sales Prices</strong>:&nbsp;Weighted average based on sampling of approximately 350 retail outlets, as reported for the week ending Monday.</li></ul><p style="margin-bottom:11px;margin-left:48px;">&nbsp;</p><p style="margin-bottom:11px;margin-top:20px;"><span style="background-color:white;color:#194178;line-height:15.75pt;"><strong>Sources</strong></span></p><ul><li style="margin-bottom:11px;" data-list-item-id="ed5cd8e0d325a1546de240da81bbbb793"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Capacity of Containerships</strong>: U.S. Maritime Administration (MARAD) Office of Policy and Plans, analysis of CBP VMS data</span></li><li style="margin-bottom:11px;" data-list-item-id="eaa8f1c743e1fd5a51f83eabffc9bbb41"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Import and Export Containers</strong>: Bureau of Transportation Statistics (BTS), analysis of TEU data published by U.S. Ports</span></li><li style="margin-bottom:11px;" data-list-item-id="e71f165f8cea45f1d8cd566020accb8fe"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Containerships Anchored off U.S. Ports</strong>: MARAD Office of Policy and Plans, analysis of IHS Automatic Identification System (AIS) live data</span></li><li style="margin-bottom:11px;" data-list-item-id="e96644574dab2cf9516834704f5e7e1b4"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Containerized Imports and Exports</strong>: MARAD Office of Policy and Plans, analysis of IHS Markit Port Import/Export Reporting Service (PIERS) data</span></li><li style="margin-bottom:11px;" data-list-item-id="ed982a0834c0e4474e7cdbd6501c2e48c"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Containerships Awaiting Berths</strong>: MARAD Office of Policy and Plans and Marine Exchange of SoCal</span></li><li style="margin-bottom:11px;" data-list-item-id="ed92fda7ac4d53128789ff836edf2441e"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Railroad Train Speed,&nbsp;Terminal Dwell Time, Rail Cars Online</strong>: Surface Transportation Board (STB), available at </span><a style="color:blue;text-decoration:underline;" href="https://www.stb.gov/reports-data/rail-service-data/"><span style="background-color:white;color:black;line-height:normal;tab-stops:list .5in;">https://www.stb.gov/reports-data/rail-service-data/</span></a></li><li style="margin-bottom:11px;" data-list-item-id="ee96df4cf249161181e303c7df32fee51"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>National Highway System (NHS) Speeds, Truck Speeds, Planning Time Index (PTI</strong>): Federal Highway Administration (FHWA), National Performance Management Research Data Set (NPMRDS)</span></li><li style="margin-bottom:11px;" data-list-item-id="e0b63cb60f2af0993e1f7c47cb8c61ce1"><span style="background-color:white;color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Rail Non-Intermodal Carloads and Intermodal Units, Containers and Trailers on Rail Flatcar</strong>: Association of American Railroads (AAR)</span></li><li style="margin-bottom:11px;" data-list-item-id="ec428d00bd975bcd6c402425c01c3ff6b"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Vehicle Miles Traveled</strong>: Federal Highway Administration (FHWA), Office of Highway Policy Information; seasonally adjusted data from Bureau of Transportation Statistics (BTS) calculations from FHWA Traffic Volume Trends</span></li><li style="margin-bottom:11px;" data-list-item-id="e1c38993ca05f4bc43414b80fcd9d5bc7"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Freight Transportation Services Index</strong> (TSI): BTS, available at </span><a style="color:blue;text-decoration:underline;" href="https://data.bts.gov/stories/s/Transportation-as-an-Economic-Indicator/9czv-tjte"><span style="line-height:107%;tab-stops:list .5in;">https://data.bts.gov/stories/s/Transportation-as-an-Economic-Indicator/9czv-tjte</span></a></li><li style="margin-bottom:11px;" data-list-item-id="eea5753d92560cc53cf7e9cb490b2e416"><strong>New Active Carriers Added to MCMIS</strong>: Federal Motor Carrier Safety Administration's Motor Carrier Management Information System (MCMIS)</li><li style="margin-bottom:11px;" data-list-item-id="e87e326de4db5ef90b07b6ea46eb36676"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Job Openings and Labor Turnover</strong>: U.S. Bureau of Labor Statistics (BLS), Job Openings and Labor Turnover Survey (JOLTS), available at </span><a style="color:blue;text-decoration:underline;" href="https://www.bls.gov/jlt/"><span style="line-height:107%;tab-stops:list .5in;">https://www.bls.gov/jlt/</span></a></li><li style="margin-bottom:11px;" data-list-item-id="edd4e8331958e7af5404c9c4d8db9a241"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Employees</strong>: BLS, Current Employment Statistics (CES), available at </span><a style="color:blue;text-decoration:underline;" href="https://www.bls.gov/ces/"><span style="line-height:107%;tab-stops:list .5in;">https://www.bls.gov/ces/</span></a></li><li style="margin-bottom:11px;" data-list-item-id="e12a7cfdb2d09e096663876f57ba992d8"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Truck Spot Rates</strong>: DAT Freight and Analytics</span></li><li style="margin-bottom:11px;" data-list-item-id="e0eebd2856fdc21cb03c49098c2f5f89d"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Producer Price Index</strong>: BLS, Producer Price Index by Industry, available at </span><a style="color:blue;text-decoration:underline;" href="https://www.bls.gov/ppi/"><span style="line-height:107%;tab-stops:list .5in;">https://www.bls.gov/ppi/</span></a></li><li style="margin-bottom:11px;" data-list-item-id="ec6edb5d6349e88e505d6a7419a3ed4b9"><strong>Downbound Grain Barge Rates</strong>: U.S. Department of Agriculture (USDA), Agriculture Market Services, Downbound grain barge rates.&nbsp;</li><li style="margin-bottom:11px;" data-list-item-id="e7af6bf3af153f4424710f07a0218bf19"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Ocean Freight Rates</strong>: USDA, Agricultural Market Service, Container Ocean Freight Rates from Drewry Supply Chain Advisors' Container Freight Rate Insight, available at </span><a style="color:blue;text-decoration:underline;" href="https://agtransport.usda.gov/Container/Container-Ocean-Freight-Rates/dtp5-fwp8"><span style="line-height:107%;tab-stops:list .5in;">https://agtransport.usda.gov/Container/Container-Ocean-Freight-Rates/dtp5-fwp8</span></a></li><li style="margin-bottom:11px;" data-list-item-id="eee83069277ca7d3d2a82e9fd9833a2ae"><span style="color:#212529;line-height:normal;tab-stops:list .5in;"><strong>Inventory-to-Sales Ratio</strong>: U.S. Census Bureau, Manufacturing and Trade Inventories and Sales, available at </span><a style="color:blue;text-decoration:underline;" href="https://www.census.gov/mtis/index.html"><span style="line-height:normal;tab-stops:list .5in;">https://www.census.gov/mtis/index.html</span></a></li><li style="margin-bottom:11px;" data-list-item-id="e2cf429bf2840ca6a31cd4b38b7a17703"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>Personal Consumption Expenditures</strong>: U.S. Bureau of Economic Analysis (BEA), available at </span><a style="color:blue;text-decoration:underline;" href="https://www.bea.gov/data/personal-consumption-expenditures-price-index"><span style="line-height:107%;tab-stops:list .5in;">https://www.bea.gov/data/personal-consumption-expenditures-price-index</span></a></li><li style="margin-bottom:11px;" data-list-item-id="e9c3774fae5a8010ef657246a67c9c79d"><span style="color:#212529;line-height:107%;tab-stops:list .5in;"><strong>U.S. Goods Imports</strong>: U.S. Census Bureau and U.S. Bureau of Economic Analysis, Foreign Trade, U.S. Imports of Goods by Customs Basis from World, available at </span><a style="color:blue;text-decoration:underline;" href="https://www.census.gov/foreign-trade/index.html"><span style="line-height:107%;tab-stops:list .5in;">https://www.census.gov/foreign-trade/index.html</span></a></li><li style="margin-bottom:11px;" data-list-item-id="ee07888bb879da95f848e0d4d4353c6da"><strong>U.S. Diesel Sales Prices</strong>:&nbsp;U.S. Energy Information Administration (EIA), US Diesel Sales Price Not Seasonally Adjusted, available at&nbsp;<a href="https://www.eia.gov/petroleum/gasdiesel/">https://www.eia.gov/petroleum/gasdiesel/</a></li><li style="margin-bottom:11px;" data-list-item-id="ebd02e4ee245cab2df6ee69d35c4e3eb4"><strong>Producer Price Index: Diesel Fuel</strong>:&nbsp;BLS, Producer Price Index by Commodity: Fuels and Related Products and Power: No. 2 Diesel Fuel, available at&nbsp;<a href="https://www.bls.gov/ppi/">https://www.bls.gov/ppi/</a></li></ul><p style="margin-bottom:11px;margin-left:8px;"><a href="#top">RETURN TO TOP OF PAGE</a></p>
+      </div>
+              <div class="supplemental-content mb-4 w-100 clearfix">
+          
+
+  <div class="w-100">
+    
+      
+                              <div class="inline-img-wrapper ">
+              
+            </div>
+                  
+        
+      </div>
+
+        </div>
+      
+    
+    
+    <aside class="subcontent section w-100 clearfix" role="complementary">
+      <!-- This block where the sidecontent is located @media (max-width:800px) -->
+    </aside>
+
+  </div>
+</article>
+
+    </div>
+  </div>
+
+
+                  </section>
+                </div>
+              
+              
+              
+              <!-- Sub Content Region -->
+                          </div>
+          </div>
+              </div>
+
+      
+          </main>
+
+     <footer class="site-footer">
+      <div class="container">
+              <div class="site-footer__top">
+            <section class="region region-footer-left">
+    <div id="block-footer-contact-info" class="block block-fixed-block-content block-fixed-block-contentfooter-contact-info">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>U.S. DEPARTMENT OF TRANSPORTATION</p>
+
+<p><strong>Bureau of Transportation Statistics</strong></p>
+
+<p>1200 NEW JERSEY AVENUE, SE</p>
+
+<p>WASHINGTON, DC 20590</p>
+
+<p>800-853-1351</p>
+</div>
+      
+    </div>
+  </div>
+
+  </section>
+
+            <section class="region region-footer-right">
+    <div id="block-bts-footer-social" class="block block-fixed-block-content block-fixed-block-contentbts-footer-social">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a class="subscribe-button" href="https://public.govdelivery.com/accounts/USDOT/subscriber/new?category_id=USDOT_C17">Subscribe to email updates</a></p>
+
+<ul class="footer-social">
+	<li><a href="https://twitter.com/bts_usdot"><span class="fontawesome-icon-inline"><i class="fa-brands fa-x-twitter"></i></span></a></li>
+	<li><a href="https://www.linkedin.com/company/bureau-of-transportation-statistics-bts"><span class="fontawesome-icon-inline"><i class="fa-brands fa-linkedin-in" aria-label="linkedin"></i></span></a></li>
+	<li><a href="https://www.instagram.com/bts_usdot"><span class="fontawesome-icon-inline"><i class="fa-brands fa-instagram" aria-label="instagram"></i></span></a></li>
+	<li><a href="https://www.youtube.com/@bureauoftransportationstat1034/videos"><span class="fontawesome-icon-inline"><i class="fa-brands fa-youtube"></i></span></a></li>
+	<li><a href="https://public.govdelivery.com/accounts/USDOT/subscriber/new?category_id=USDOT_C17"><span class="fontawesome-icon-inline"><i class="fa-solid fa-envelope"></i></span></a></li>
+</ul>
+</div>
+      
+    </div>
+  </div>
+
+  </section>
+
+        </div>
+                    <div class="site-footer__bottom">
+            <section class="region region-footer-first">
+      <nav aria-labelledby="block-newfooternav1-menu" id="block-newfooternav1" class="block block-menu navigation menu--new-footer-nav-1">
+      
+  <h2 id="block-newfooternav1-menu">About</h2>
+  
+
+        
+              <ul block="block-newfooternav1" class="clearfix nav">
+                    <li class="nav-item">
+                <a href="/about-BTS" class="nav-link nav-link--about-bts" data-drupal-link-system-path="node/239971">About BTS</a>
+              </li>
+                <li class="nav-item">
+                <a href="/learn-about-bts-and-our-work/contact-us" class="nav-link nav-link--learn-about-bts-and-our-work-contact-us" data-drupal-link-system-path="node/117496">Contact Us</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://transportation.libanswers.com/" class="nav-link nav-link-https--transportationlibanswerscom- ext" data-extlink="" target="_blank" rel="noopener" title="(opens in a new window)">FAQs<svg focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append" aria-label="(link is external)" viewBox="0 0 80 40" role="img" aria-hidden="false"><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+              </li>
+                <li class="nav-item">
+                <a href="/jobs" class="nav-link nav-link--jobs" data-drupal-link-system-path="node/233181">Jobs and Internships</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/administrations/research-and-technology" class="nav-link nav-link-https--wwwtransportationgov-administrations-research-and-technology">DOT Research and Technology (OST-R)</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+            <section class="region region-footer-second">
+      <nav aria-labelledby="block-newfooternav2-menu" id="block-newfooternav2" class="block block-menu navigation menu--new-footer-nav-2">
+      
+  <h2 id="block-newfooternav2-menu">Resources</h2>
+  
+
+        
+              <ul block="block-newfooternav2" class="clearfix nav">
+                    <li class="nav-item">
+                <a href="https://transportation.libanswers.com/form.php?queue_id=1810" class="nav-link nav-link-https--transportationlibanswerscom-formphpqueue-id1810 ext" data-extlink="" target="_blank" rel="noopener" title="(opens in a new window)">Ask a Librarian<svg focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append" aria-label="(link is external)" viewBox="0 0 80 40" role="img" aria-hidden="false"><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+              </li>
+                <li class="nav-item">
+                <a href="https://data.bts.gov/" class="nav-link nav-link-https--databtsgov-">BTS Open Data Catalog</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://ntl.bts.gov/" class="nav-link nav-link-https--ntlbtsgov-">National Transportation Library</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transtats.bts.gov/ONTIME/" class="nav-link nav-link-https--wwwtranstatsbtsgov-ontime-">Search for On-Time Flight Data</a>
+              </li>
+                <li class="nav-item">
+                <a href="/learn-about-bts-and-our-work/acronyms-and-terms-guide" class="nav-link nav-link--learn-about-bts-and-our-work-acronyms-and-terms-guide" data-drupal-link-system-path="node/238291">Acronyms and Terms Guide</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+            <section class="region region-footer-third">
+      <nav aria-labelledby="block-newfooternav3-menu" id="block-newfooternav3" class="block block-menu navigation menu--new-footer-nav-3">
+      
+  <h2 id="block-newfooternav3-menu">Policies, Rights and Legal</h2>
+  
+
+        
+              <ul block="block-newfooternav3" class="clearfix nav">
+                    <li class="nav-item">
+                <a href="https://www.transportation.gov/about" class="nav-link nav-link-https--wwwtransportationgov-about">About DOT</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/budget/dot-budget-and-performance" class="nav-link nav-link-https--wwwtransportationgov-budget-dot-budget-and-performance">Budget and Performance</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.civilrights.dot.gov/" class="nav-link nav-link-https--wwwcivilrightsdotgov-">Civil Rights</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/mission/office-secretary/office-chief-information-officer/digital-accessibility-statement" class="nav-link nav-link-https--wwwtransportationgov-mission-office-secretary-office-chief-information-officer-digital-accessibility-statement">Digital Accessibility</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/ethics" class="nav-link nav-link-https--wwwtransportationgov-ethics">Ethics</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/foia" class="nav-link nav-link-https--wwwtransportationgov-foia">FOIA</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/dot-information-dissemination-quality-guidelines" class="nav-link nav-link-https--wwwtransportationgov-dot-information-dissemination-quality-guidelines">Information Quality</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.civilrights.dot.gov/civil-rights-awareness-enforcement/employment-related/affirmative-employment/no-fear-act" class="nav-link nav-link-https--wwwcivilrightsdotgov-civil-rights-awareness-enforcement-employment-related-affirmative-employment-no-fear-act">No FEAR Act</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.oig.dot.gov/" class="nav-link nav-link-https--wwwoigdotgov-">Office of Inspector General</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/dot-website-privacy-policy" class="nav-link nav-link-https--wwwtransportationgov-dot-website-privacy-policy">Privacy Policy</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.usa.gov/" class="nav-link nav-link-https--wwwusagov-">USA.gov</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/web-policies" class="nav-link nav-link-https--wwwtransportationgov-web-policies">Web Policies and Notices</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.transportation.gov/web-standards" class="nav-link nav-link-https--wwwtransportationgov-web-standards">Web Standards</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </section>
+
+          
+          
+        </div>
+          </div>
+  </footer>
+
+  </div>
+</div>
+
+  </div>
+
+    
+  <script src="/sites/bts.dot.gov/files/js/js_eBIBZ53K5GoNzreqD_AclJfqyTKGSI4wnw0R9RFk2dw.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=bts&amp;include=eJxdjlEOwyAMQy9Ex5FQgAixugSRILW3H9q6n_4lz7bsaOoLJBI2tQu1FZcEoK41QtLukwx2fHZqOdwKBwL8j21_tjy24rvPY3bC635dESlYiUa4rKbV9gDukEx4juhzlGV60xn6kMSqMryNWgqP8BWd2uonSONgfHSQsfoo-doSSNVNWD24Tf8_Pg9TXYg"></script>
+<script src="/modules/contrib/collapsiblock/theme/dist/collapsiblock.js?tgdzml" type="module"></script>
+<script src="/sites/bts.dot.gov/files/js/js_Trx00g-VsYrl-fg0oOXeg9K1BHwLhirCwm2ZUurhoUU.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=bts&amp;include=eJxdjlEOwyAMQy9Ex5FQgAixugSRILW3H9q6n_4lz7bsaOoLJBI2tQu1FZcEoK41QtLukwx2fHZqOdwKBwL8j21_tjy24rvPY3bC635dESlYiUa4rKbV9gDukEx4juhzlGV60xn6kMSqMryNWgqP8BWd2uonSONgfHSQsfoo-doSSNVNWD24Tf8_Pg9TXYg"></script>
+<script src="/modules/contrib/purge_ajax_processor/js/trigger_purge.js?tgdzml" defer="" async=""></script>
+<script src="/sites/bts.dot.gov/files/js/js_vgLQrCE30LD3Az57ZUypsv5wvhlN1y1IM1fUIUTegzg.js?scope=footer&amp;delta=4&amp;language=en&amp;theme=bts&amp;include=eJxdjlEOwyAMQy9Ex5FQgAixugSRILW3H9q6n_4lz7bsaOoLJBI2tQu1FZcEoK41QtLukwx2fHZqOdwKBwL8j21_tjy24rvPY3bC635dESlYiUa4rKbV9gDukEx4juhzlGV60xn6kMSqMryNWgqP8BWd2uonSONgfHSQsfoo-doSSNVNWD24Tf8_Pg9TXYg"></script>
+
+  <noscript><img src="https://www.bts.gov/akam/13/pixel_32471df2?a=dD0yNjc4YThjYzk4ZDIwMWY2NzJhMzQyY2M3ZDg2MmQ1MmNhZDE3YTE0JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript>
+
+<button data-ultimenu-button="#ultimenu-main" class="button button--ultimenu button--ultiburger" aria-label="Menu Main navigation (Desktop)"><span class="bars">Menu Main navigation (Desktop)</span></button><script type="text/javascript" src="https://zn5zoa3vxq9g9iftp-dotocio.gov1.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_5zoA3vXq9g9IftP"></script><script src="https://gov1.siteintercept.qualtrics.com/dxjsmodule/CoreModule.js?Q_CLIENTVERSION=2.50.0&amp;Q_CLIENTTYPE=web&amp;Q_BRANDID=dotocio" defer=""></script><script src="https://gov1.siteintercept.qualtrics.com/dxjsmodule/PopOverModule.js?Q_CLIENTVERSION=2.50.0&amp;Q_CLIENTTYPE=web&amp;Q_BRANDID=dotocio" defer=""></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true" style="visibility: visible !important;"></grammarly-desktop-integration></html>

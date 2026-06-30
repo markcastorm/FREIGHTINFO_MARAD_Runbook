@@ -1,0 +1,1 @@
+<script type='module' src='https://explore.dot.gov/javascripts/api/tableau.embedding.3.latest.min.js'></script><tableau-viz id='tableau-viz' src='https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored' width='800' height='627' hide-tabs toolbar='bottom' ></tableau-viz>

@@ -1,0 +1,18 @@
+2026-06-30 13:53:59,122 [INFO] Log → D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\logs\pixel_20260630_135359\pixel_20260630_135359.log
+2026-06-30 13:53:59,122 [INFO] ============================================================
+2026-06-30 13:53:59,122 [INFO] PIXEL SCAN  x=580→740  (pixel-exact line tracking)
+2026-06-30 13:53:59,123 [INFO] ============================================================
+2026-06-30 13:54:01,553 [INFO] Navigating → https://www.bts.gov/freight-indicators#anchored-offshore
+2026-06-30 13:54:15,380 [INFO] Searching for Tableau iframe ...
+2026-06-30 13:54:21,918 [INFO]   Frame: https://explore.dot.gov/views/FreightIndicators/ContainershipsAnchored?:embed=y&:showVizHome=no&:hos
+2026-06-30 13:54:22,036 [INFO] Waiting 15 s for Tableau to render ...
+2026-06-30 13:54:37,102 [INFO] Frame: {'title': 'Workbook: Freight Indicators', 'denied': False, 'canvases': [{'w': 30, 'h': 39, 'cls': ''}, {'w': 744, 'h': 423, 'cls': 'tabCanvas tab-widget'}, {'w': 744, 'h': 423, 'cls': 'tabCanvas tab-widget'}, {'w': 744, 'h': 423, 'cls': 'tabCanvas tab-widget'}]}
+2026-06-30 13:54:37,189 [INFO] Canvas: page_x=496 page_y=271 w=744 h=423
+2026-06-30 13:54:37,189 [INFO] Enabling highlight mode ...
+2026-06-30 13:54:41,371 [INFO]   Highlight btn aria-pressed=true
+2026-06-30 13:54:41,376 [INFO] 
+──────────────────────────────────────────────────
+REGION: East
+──────────────────────────────────────────────────
+2026-06-30 13:54:44,537 [INFO]   Legend item 'East' → aria-selected=true
+2026-06-30 13:54:44,538 [INFO]   Scanning 161 columns (pixel-exact y tracking)...

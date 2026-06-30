@@ -270,6 +270,55 @@ class FREIGHTINFOParser:
             return data_rows[-1][0]
         return None
 
+    def get_last_data_date(self):
+        """
+        Returns the 'to' date of the last COMPLETE master week as the scrape cutoff.
+
+        If the trailing rows have empty region cells (partial capture from a prior run),
+        the cutoff is backed up to the last fully-complete row so those incomplete
+        weeks are re-covered by the scan and their missing values can be backfilled.
+        """
+        _, data_rows = self.load_master_data()
+        if not data_rows:
+            return None
+
+        if not self.week_mapping:
+            self.load_week_mapping()
+        if not self.week_mapping:
+            return None
+
+        # Find last row where all 3 region values are present
+        n_cols = len(config.OUTPUT_COLUMN_CODES) + 1  # week_code + 3 regions
+        last_complete_idx = len(data_rows) - 1
+        while last_complete_idx >= 0:
+            row = data_rows[last_complete_idx]
+            padded = (row + [''] * n_cols)[:n_cols]
+            if all(padded[i].strip() for i in range(1, n_cols)):
+                break
+            last_complete_idx -= 1
+
+        if last_complete_idx < 0:
+            return None  # no complete rows at all — trigger full scan
+
+        incomplete_count = len(data_rows) - 1 - last_complete_idx
+        if incomplete_count > 0:
+            logger.info(
+                f"Last {incomplete_count} master row(s) have empty cells — "
+                f"cutoff backed up so they are re-scanned and backfilled"
+            )
+
+        last_complete_week = data_rows[last_complete_idx][0]
+        try:
+            year_str, week_num_str = last_complete_week.split('-')
+            week_num = int(week_num_str)
+            for w in self.week_mapping.get(year_str, []):
+                if w['week'] == week_num:
+                    return datetime.strptime(w['to'], '%Y-%m-%d')
+        except Exception as e:
+            logger.debug(f"Could not determine last data date: {e}")
+
+        return None
+
     def save_master_data(self, header_lines, data_rows):
         """Save master CSV with 2-row headers and data."""
         os.makedirs(config.MASTER_DATA_DIR, exist_ok=True)
@@ -294,9 +343,14 @@ class FREIGHTINFOParser:
 
     def update_master(self, week_data):
         """
-        Append only NEW weeks (after master's last week) to the master CSV.
+        Update master CSV with new data from the scan.
 
-        week_data: {"2026-09": {"East": 5, "West": 1, "Gulf": 2}, ...}
+        Two operations:
+        1. BACKFILL — for weeks already in master with empty region cells,
+           fill in any values that the latest scan captured for them.
+        2. APPEND  — add weeks that appear after the master's last week.
+
+        week_data: {"2026-26": {"East": 5, "West": 1, "Gulf": 2}, ...}
         Returns: (header_lines, data_rows) or (None, None)
         """
         if not week_data:
@@ -307,50 +361,64 @@ class FREIGHTINFOParser:
         if header_lines is None:
             return None, None
 
-        # Determine the last week in master — only append weeks AFTER this
         last_master_week = data_rows[-1][0] if data_rows else None
         if last_master_week:
             logger.info(f"Master's last week: {last_master_week}")
         else:
             logger.info("Master is empty, will add all downloaded data")
 
-        # Find new weeks: must be AFTER the master's last week
+        # Build index so we can find existing rows in O(1)
+        row_index = {row[0]: i for i, row in enumerate(data_rows)}
+
+        # Build a reverse lookup: column code → region name
+        col_to_region = {v: k for k, v in config.REGION_TO_COLUMN.items()}
+
         new_rows = []
+        backfill_count = 0
+
         for week_code, values in week_data.items():
-            # Only add weeks strictly after the master's last week
-            if last_master_week and week_code <= last_master_week:
-                continue
+            if week_code in row_index:
+                # Week already exists — backfill any empty region cells
+                row = data_rows[row_index[week_code]]
+                filled = []
+                for col_pos, col_code in enumerate(config.OUTPUT_COLUMN_CODES, start=1):
+                    region = col_to_region.get(col_code)
+                    if region and region in values:
+                        while len(row) <= col_pos:
+                            row.append('')
+                        if not row[col_pos].strip():
+                            row[col_pos] = str(values[region])
+                            filled.append(f"{region}={values[region]}")
+                if filled:
+                    backfill_count += 1
+                    logger.info(f"  Backfilled {week_code}: {', '.join(filled)}")
 
-            # Build row in column order: week_code, east, west, gulf
-            row = [week_code]
-            for col_code in config.OUTPUT_COLUMN_CODES:
-                # Find the region name for this column code
-                region = None
-                for reg_name, reg_code in config.REGION_TO_COLUMN.items():
-                    if reg_code == col_code:
-                        region = reg_name
-                        break
+            elif last_master_week is None or week_code > last_master_week:
+                # Genuinely new week — append
+                row = [week_code]
+                for col_code in config.OUTPUT_COLUMN_CODES:
+                    region = col_to_region.get(col_code)
+                    row.append(str(values[region]) if region and region in values else '')
+                new_rows.append(row)
+            # else: old week already complete — skip
 
-                if region and region in values:
-                    row.append(str(values[region]))
-                else:
-                    row.append('')
+        if backfill_count:
+            logger.info(f"Backfilled {backfill_count} incomplete week(s) in master")
 
-            new_rows.append(row)
-
-        if not new_rows:
-            logger.info("No new weeks to add to master")
+        if not new_rows and not backfill_count:
+            logger.info("No new or incomplete weeks to update")
             return header_lines, data_rows
 
-        logger.info(f"Adding {len(new_rows)} new weeks to master:")
-        for row in new_rows:
-            logger.info(f"  {row[0]}: East={row[1]}, West={row[2]}, Gulf={row[3]}")
+        if new_rows:
+            logger.info(f"Adding {len(new_rows)} new week(s) to master:")
+            for row in new_rows:
+                east = row[1] if len(row) > 1 else ''
+                west = row[2] if len(row) > 2 else ''
+                gulf = row[3] if len(row) > 3 else ''
+                logger.info(f"  {row[0]}: East={east}, West={west}, Gulf={gulf}")
 
-        # Merge and sort by week code
         all_rows = data_rows + new_rows
         all_rows.sort(key=lambda r: r[0] if r else '')
-
-        # Save updated master
         self.save_master_data(header_lines, all_rows)
 
         return header_lines, all_rows

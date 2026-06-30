@@ -1,24 +1,72 @@
 """
 FREIGHTINFO_MARAD Runbook - Scraper
-Handles two scraping tasks:
-1. Week mapping from epochconverter.com (cached as JSON)
-2. BTS Tableau chart data download via Selenium
+Extracts weekly vessel count data via Playwright pixel-scan of the BTS Tableau chart.
+
+Strategy: Tableau "Highlight Selected Items" legend button is activated so only
+one region's line is vivid (high colour saturation) at a time. For each x column
+canvas.getImageData() finds the highest-saturation pixel (= highlighted line) and
+the mouse is moved exactly there. Three passes (East / West / Gulf) give clean,
+region-specific tooltips without any y-position guessing.
 """
 
 import os
 import re
 import json
-import time
-import glob
 import logging
 from datetime import datetime
 
 import requests
 from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
 import config
 
 logger = logging.getLogger(__name__)
+
+# ── JS: find highest-saturation pixel in canvas column x (= highlighted line) ──
+_FIND_LINE_JS = """
+(colX) => {
+    var best = null, bestArea = 0;
+    document.querySelectorAll('canvas').forEach(function(c) {
+        var a = c.width * c.height;
+        if (a > bestArea) { bestArea = a; best = c; }
+    });
+    if (!best) return null;
+    var ctx = best.getContext('2d');
+    if (!ctx) return null;
+    var h = best.height;
+    var data = ctx.getImageData(colX, 0, 1, h).data;
+    var bestY = -1, bestSat = -1, bestR = 0, bestG = 0, bestB = 0;
+    for (var y = 5; y < h - 5; y++) {
+        var i = y * 4;
+        var r = data[i], g = data[i+1], b = data[i+2], a = data[i+3];
+        if (a < 80) continue;
+        var mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+        if (mx === 0) continue;
+        var sat  = (mx - mn) / mx;
+        var luma = (r * 299 + g * 587 + b * 114) / 1000;
+        if (sat > 0.15 && luma < 230 && sat > bestSat) {
+            bestSat = sat; bestY = y; bestR = r; bestG = g; bestB = b;
+        }
+    }
+    if (bestY < 0) return null;
+    return { y: bestY, r: bestR, g: bestG, b: bestB, sat: Math.round(bestSat * 100) };
+}
+"""
+
+# ── JS: poll tooltip for vessel data ──────────────────────────────────────────
+_POLL_JS = """
+() => {
+    var sels = ['.tab-tooltip', '.tab-beautified-tooltip', '.tab-glass-content'];
+    for (var s of sels) {
+        var el = document.querySelector(s);
+        if (el && el.innerText && el.innerText.includes('Vessels')) {
+            return el.innerText.trim();
+        }
+    }
+    return null;
+}
+"""
 
 
 class FREIGHTINFOScraper:
@@ -29,409 +77,426 @@ class FREIGHTINFOScraper:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
                           '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         })
-        self.driver = None
 
     # =========================================================================
     # WEEK MAPPING (epochconverter.com)
     # =========================================================================
 
-    def _needs_week_refresh(self):
-        """Check if week_mapping.json needs to be refreshed."""
-        if not os.path.exists(config.WEEK_CACHE_FILE):
-            logger.info("Week mapping file not found, will fetch fresh data")
-            return True
-
-        try:
-            with open(config.WEEK_CACHE_FILE, 'r') as f:
-                data = json.load(f)
-
-            current_year = datetime.now().year
-            required_years = [str(current_year + i) for i in range(config.YEARS_TO_CACHE)]
-
-            for year in required_years:
-                if year not in data:
-                    logger.info(f"Week mapping missing year {year}, will refresh")
-                    return True
-
-            logger.info("Week mapping cache is up to date")
-            return False
-
-        except (json.JSONDecodeError, KeyError) as e:
-            logger.warning(f"Week mapping file corrupted: {e}")
-            return True
-
-    def _parse_week_table(self, html_content, target_year):
-        """Parse the week number table from epochconverter HTML."""
-        soup = BeautifulSoup(html_content, 'html.parser')
-        table = soup.find('table', class_='infotable')
-
-        if not table:
-            logger.error("Could not find week table in HTML")
-            return None
-
-        weeks = []
-        rows = table.find('tbody').find_all('tr')
-
-        for row in rows:
-            cells = row.find_all('td')
-            if len(cells) < 3:
-                continue
-
-            week_text = cells[0].get_text(strip=True)
-            from_text = cells[1].get_text(separator=' ', strip=True)
-            to_text = cells[2].get_text(separator=' ', strip=True)
-
-            # Parse week number: "Week 01" or "Week 52, 2025"
-            week_match = re.match(r'Week\s+(\d+)', week_text)
-            if not week_match:
-                continue
-
-            week_num = int(week_match.group(1))
-
-            # Skip entries from other years (e.g., "Week 52, 2025" on the 2026 page)
-            if ',' in week_text:
-                other_year_match = re.search(r',\s*(\d{4})', week_text)
-                if other_year_match and other_year_match.group(1) != str(target_year):
-                    continue
-
-            # Parse dates: "December 29, 2025" -> "2025-12-29"
-            try:
-                from_date = datetime.strptime(from_text, '%B %d, %Y').strftime('%Y-%m-%d')
-                to_date = datetime.strptime(to_text, '%B %d, %Y').strftime('%Y-%m-%d')
-            except ValueError as e:
-                logger.warning(f"Could not parse date in week {week_num}: {e}")
-                continue
-
-            weeks.append({
-                'week': week_num,
-                'from': from_date,
-                'to': to_date,
-            })
-
-        logger.info(f"  Parsed {len(weeks)} weeks for year {target_year}")
-        return weeks
-
     def fetch_week_data(self):
-        """Fetch and cache week mapping data from epochconverter.com."""
-        if not self._needs_week_refresh():
-            logger.info("Using cached week mapping data")
-            return True
-
-        logger.info("Fetching week mapping data from epochconverter.com...")
-
-        current_year = datetime.now().year
-        years_to_fetch = [current_year + i for i in range(config.YEARS_TO_CACHE)]
-
-        week_data = {}
-
-        # Load existing data if available (to preserve older years)
+        """Fetch and cache week mapping data."""
         if os.path.exists(config.WEEK_CACHE_FILE):
             try:
                 with open(config.WEEK_CACHE_FILE, 'r') as f:
-                    week_data = json.load(f)
-            except (json.JSONDecodeError, IOError):
-                week_data = {}
+                    data = json.load(f)
+                if str(datetime.now().year) in data:
+                    logger.info("Using cached week mapping data")
+                    return True
+            except Exception:
+                pass
 
-        for year in years_to_fetch:
+        logger.info("Fetching week mapping data from epochconverter.com...")
+        current_year = datetime.now().year
+        years = [current_year, current_year + 1, current_year + 2]
+        week_data = {}
+
+        for year in years:
             url = config.WEEK_URL_TEMPLATE.format(year=year)
-            logger.info(f"  Fetching week data for {year}: {url}")
-
-            for attempt in range(1, config.MAX_RETRIES + 1):
-                try:
-                    response = self.session.get(url, timeout=config.REQUEST_TIMEOUT)
-                    response.raise_for_status()
-
-                    weeks = self._parse_week_table(response.text, year)
-                    if weeks:
-                        week_data[str(year)] = weeks
-                        break
-                    else:
-                        logger.warning(f"  No weeks parsed for {year}, attempt {attempt}")
-
-                except requests.RequestException as e:
-                    logger.warning(f"  Attempt {attempt}/{config.MAX_RETRIES} failed for {year}: {e}")
-                    if attempt < config.MAX_RETRIES:
-                        time.sleep(config.RETRY_DELAY)
-
-        if not week_data:
-            logger.error("Failed to fetch any week data")
-            return False
-
-        # Save to JSON cache
-        with open(config.WEEK_CACHE_FILE, 'w') as f:
-            json.dump(week_data, f, indent=2)
-
-        logger.info(f"Week mapping saved: {len(week_data)} years cached")
-        return True
-
-    # =========================================================================
-    # SELENIUM HELPERS
-    # =========================================================================
-
-    def get_chrome_version_from_registry(self):
-        """Get installed Chrome version from Windows Registry."""
-        import winreg
-
-        logger.info("Checking Windows Registry for Chrome version...")
-
-        registry_paths = [
-            (winreg.HKEY_CURRENT_USER, r"Software\Google\Chrome\BLBeacon"),
-            (winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\WOW6432Node\Google\Update\Clients\{8A69D345-D564-463c-AFF1-A69D9E530F96}"),
-            (winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Google\Chrome\BLBeacon"),
-        ]
-
-        for hkey, path in registry_paths:
             try:
-                key = winreg.OpenKey(hkey, path)
-                version, _ = winreg.QueryValueEx(key, "version")
-                winreg.CloseKey(key)
+                resp = self.session.get(url, timeout=15)
+                resp.raise_for_status()
+                soup = BeautifulSoup(resp.text, 'html.parser')
+                table = soup.find('table', class_='infotable')
+                if not table:
+                    continue
+                weeks = []
+                for row in table.find('tbody').find_all('tr'):
+                    cells = row.find_all('td')
+                    if len(cells) < 3:
+                        continue
+                    try:
+                        wk_match = re.match(r'Week\s+(\d+)', cells[0].get_text(strip=True))
+                        if not wk_match:
+                            continue
+                        wk_num = int(wk_match.group(1))
+                        f_date = datetime.strptime(
+                            cells[1].get_text(separator=' ', strip=True), '%B %d, %Y'
+                        ).strftime('%Y-%m-%d')
+                        t_date = datetime.strptime(
+                            cells[2].get_text(separator=' ', strip=True), '%B %d, %Y'
+                        ).strftime('%Y-%m-%d')
+                        weeks.append({'week': wk_num, 'from': f_date, 'to': t_date})
+                    except Exception:
+                        continue
+                if weeks:
+                    week_data[str(year)] = weeks
+            except Exception as e:
+                logger.warning(f"Failed to fetch week data for {year}: {e}")
 
-                major_version = int(version.split('.')[0])
-                logger.info(f"Found Chrome version: {version} (major: {major_version})")
-                return major_version
-            except (FileNotFoundError, OSError):
+        if week_data:
+            with open(config.WEEK_CACHE_FILE, 'w') as f:
+                json.dump(week_data, f, indent=2)
+            return True
+        return False
+
+    # =========================================================================
+    # BROWSER SETUP (Playwright)
+    # =========================================================================
+
+    def _make_browser(self, p):
+        """Launch Playwright Chromium with anti-detection settings."""
+        browser = p.chromium.launch(
+            headless=config.HEADLESS_MODE,
+            slow_mo=20,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--no-sandbox',
+                '--disable-features=IsolateOrigins,site-per-process',
+            ]
+        )
+        context = browser.new_context(
+            viewport={'width': 1440, 'height': 900},
+            locale='en-US',
+            timezone_id='America/New_York',
+            user_agent=(
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                'AppleWebKit/537.36 (KHTML, like Gecko) '
+                'Chrome/149.0.0.0 Safari/537.36'
+            ),
+            extra_http_headers={
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'sec-ch-ua': '"Google Chrome";v="149", "Chromium";v="149", "Not?A_Brand";v="24"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"Windows"',
+                'Sec-Fetch-Dest': 'document',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'none',
+            }
+        )
+        context.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+            Object.defineProperty(navigator, 'plugins',   { get: () => [1,2,3,4,5] });
+            Object.defineProperty(navigator, 'languages', { get: () => ['en-US','en'] });
+            window.chrome = { runtime: {}, loadTimes: () => {}, csi: () => {}, app: {} };
+        """)
+        return browser, context
+
+    # =========================================================================
+    # TOOLTIP PARSING
+    # =========================================================================
+
+    def _parse_tooltip(self, text):
+        """Parse tooltip text → (region, date_str, value) or None."""
+        r = re.search(r'Port Region:\s*(East|West|Gulf)', text, re.I)
+        d = re.search(r'Date:\s*(\d{1,2}/\d{1,2}/\d{4})', text)
+        v = re.search(r'#\s*of\s*Vessels:\s*(\d+)', text)
+        if r and d and v:
+            return r.group(1).strip(), d.group(1).strip(), int(v.group(1))
+        return None
+
+    # =========================================================================
+    # THREE-PASS PIXEL SCAN
+    # =========================================================================
+
+    def _pixel_scan(self, page, frame, box, x_start, x_end, last_date=None):
+        """
+        Highlight each region in turn and scan the chart pixel-by-pixel (right→left).
+
+        For each x column, getImageData() identifies the vivid (high-saturation)
+        pixel which is the highlighted line; the mouse moves exactly there and
+        the tooltip is read. Per-region dedup prevents duplicate date entries.
+
+        When last_date is provided, each region pass exits as soon as we've collected
+        at least one new date AND the target-region tooltip crosses into already-known
+        territory (date ≤ last_date). This keeps incremental runs to the minimum
+        necessary x range rather than always scanning a fixed historical window.
+
+        Returns: {date_str: {"East": val, "West": val, "Gulf": val}}
+        """
+        all_raw = []
+
+        for region in ['East', 'West', 'Gulf']:
+            logger.info(f"  Region pass: {region}")
+
+            try:
+                item = frame.locator('.tabLegendItem').filter(has_text=region).first
+                item.hover(timeout=5000)
+                page.wait_for_timeout(300)
+                item.click(timeout=5000)
+                page.wait_for_timeout(1500)
+            except PWTimeout as e:
+                logger.warning(f"  Could not select legend item '{region}': {e}")
                 continue
 
-        logger.warning("Chrome version not found in registry")
-        return None
+            region_seen = set()
+            found_target = set()    # dates where we captured the correct target region
+            new_target_dates = set()  # subset of found_target that are after last_date
+            hits = 0
+            canvas_h = int(box['height'])
 
-    def setup_driver(self):
-        """Initialize undetected ChromeDriver with download directory configured."""
-        import undetected_chromedriver as uc
+            for x in range(x_end, x_start - 1, -1):
+                pixel = frame.evaluate(_FIND_LINE_JS, x)
+                if not pixel:
+                    continue
 
-        os.makedirs(config.DOWNLOADS_DIR, exist_ok=True)
+                y = pixel['y']
+                abs_x = box['x'] + x
 
-        options = uc.ChromeOptions()
+                page.mouse.move(abs_x, box['y'] + y)
+                page.wait_for_timeout(35)
 
-        if config.HEADLESS_MODE:
-            options.add_argument('--headless=new')
+                result = frame.evaluate(_POLL_JS)
+                if result and result not in region_seen:
+                    region_seen.add(result)
+                    parsed = self._parse_tooltip(result)
+                    if parsed:
+                        reg_found, dt, val = parsed
+                        all_raw.append(result)
+                        hits += 1
+                        logger.debug(f"    [{region}] x={x} {dt} {reg_found}={val}")
 
-        options.add_argument('--no-sandbox')
-        options.add_argument('--disable-dev-shm-usage')
-        options.add_argument('--disable-gpu')
-        options.add_argument('--window-size=1920,1080')
+                        if reg_found == region:
+                            found_target.add(dt)
+                            # Early-exit: correct region, old date, already have new data
+                            if last_date and new_target_dates:
+                                try:
+                                    if datetime.strptime(dt, "%m/%d/%Y") <= last_date:
+                                        logger.debug(
+                                            f"    [{region}] early exit at x={x} "
+                                            f"(crossed into old dates after {len(new_target_dates)} new)"
+                                        )
+                                        break
+                                except ValueError:
+                                    pass
+                            # Track new dates for the early-exit trigger
+                            if last_date:
+                                try:
+                                    if datetime.strptime(dt, "%m/%d/%Y") > last_date:
+                                        new_target_dates.add(dt)
+                                except ValueError:
+                                    pass
 
-        # Configure download directory
-        prefs = {
-            'download.default_directory': config.DOWNLOADS_DIR.replace('/', '\\'),
-            'download.prompt_for_download': False,
-            'download.directory_upgrade': True,
-            'safebrowsing.enabled': True,
-        }
-        options.add_experimental_option('prefs', prefs)
+                        elif dt not in found_target:
+                            # Tooltip fired for wrong region — hunt ±30 px vertically
+                            # to find where the target region's marker actually fires.
+                            hunted = False
+                            for dy in range(1, 31):
+                                for sign in (1, -1):
+                                    test_y = y + dy * sign
+                                    if not (5 <= test_y < canvas_h - 5):
+                                        continue
+                                    page.mouse.move(abs_x, box['y'] + test_y)
+                                    page.wait_for_timeout(20)
+                                    retry = frame.evaluate(_POLL_JS)
+                                    if retry and retry not in region_seen:
+                                        region_seen.add(retry)
+                                        rparsed = self._parse_tooltip(retry)
+                                        if rparsed:
+                                            rreg, rdt, rval = rparsed
+                                            all_raw.append(retry)
+                                            hits += 1
+                                            logger.debug(f"    [{region}] HUNT x={x}"
+                                                         f" y={test_y} {rdt} {rreg}={rval}")
+                                            if rreg == region:
+                                                found_target.add(rdt)
+                                                if last_date:
+                                                    try:
+                                                        if datetime.strptime(rdt, "%m/%d/%Y") > last_date:
+                                                            new_target_dates.add(rdt)
+                                                    except ValueError:
+                                                        pass
+                                                hunted = True
+                                if hunted:
+                                    break
 
-        chrome_version = self.get_chrome_version_from_registry()
-
-        try:
-            if chrome_version:
-                self.driver = uc.Chrome(options=options, version_main=chrome_version)
-            else:
-                self.driver = uc.Chrome(options=options)
-
-            self.driver.set_page_load_timeout(config.WAIT_TIMEOUT * 2)
-            logger.info("Chrome driver initialized successfully")
-
-        except Exception as e:
-            logger.error(f"Failed to initialize Chrome driver: {e}")
-            raise
-
-    # =========================================================================
-    # BTS TABLEAU CHART SCRAPING
-    # =========================================================================
-
-    def _wait_for_tableau_load(self):
-        """Wait for the Tableau chart to fully load inside its iframe."""
-        from selenium.webdriver.common.by import By
-        from selenium.webdriver.support.ui import WebDriverWait
-        from selenium.webdriver.support import expected_conditions as EC
-
-        logger.info("Waiting for Tableau chart to load...")
-
-        wait = WebDriverWait(self.driver, config.WAIT_TIMEOUT)
-
-        try:
-            # The URL has #anchored-offshore so the browser navigates to
-            # that section on load. Wait for the page to settle.
-            time.sleep(config.PAGE_LOAD_DELAY)
-
-            # The page has 45 Tableau iframes. The viz_v1.js script populates
-            # iframe src attributes as they come into view. We need to ensure
-            # our target section is scrolled into view for its iframe to load.
-
-            # Step 1: Click the nav link to scroll to the chart section
-            logger.info("Clicking #anchored-offshore link to navigate to chart...")
-            try:
-                anchor_link = self.driver.find_element(
-                    By.CSS_SELECTOR, 'a[href="#anchored-offshore"]'
-                )
-                self.driver.execute_script("arguments[0].click();", anchor_link)
-            except Exception as e:
-                logger.warning(f"Could not click anchor link: {e}")
-
-            # Step 2: Wait and retry — Tableau JS needs time to set iframe src
-            tableau_iframe = None
-            for attempt in range(1, 7):
-                time.sleep(config.PAGE_LOAD_DELAY)
-                tableau_iframe = self._find_target_iframe(By)
-                if tableau_iframe:
-                    break
-                logger.info(f"  Attempt {attempt}/6: iframe not ready yet, waiting...")
-
-            if not tableau_iframe:
-                logger.error(f"Could not find iframe containing '{config.TABLEAU_IFRAME_KEYWORD}'")
-                return False
-
-            logger.info(f"Target iframe found: {tableau_iframe.get_attribute('src')[:120]}")
-
-            # Scroll the iframe into view so it's not covered by the BTS navbar
-            self.driver.execute_script(
-                "arguments[0].scrollIntoView({block: 'center'});", tableau_iframe
+            logger.info(
+                f"    {region}: {hits} tooltips, {len(new_target_dates)} new dates"
+                if last_date else f"    {region}: {hits} tooltips captured"
             )
-            time.sleep(1)
 
-            self.driver.switch_to.frame(tableau_iframe)
-            logger.info("Switched to Tableau iframe")
+        # Merge all three passes into {date: {region: value}}
+        data = {}
+        for text in all_raw:
+            parsed = self._parse_tooltip(text)
+            if parsed:
+                reg, dt, val = parsed
+                data.setdefault(dt, {})[reg] = val
 
-            # Wait for the download button to be present (indicates chart has loaded)
-            wait.until(EC.presence_of_element_located(
-                (By.CSS_SELECTOR, config.DOWNLOAD_BUTTON_SELECTOR)
-            ))
-            logger.info("Tableau download button detected - chart is loaded")
+        return data
 
-            # Extra delay for complete rendering
-            time.sleep(3)
+    # =========================================================================
+    # CSV OUTPUT (format expected by parser.parse_downloaded_csv)
+    # =========================================================================
 
-            return True
+    def _save_csv(self, data, path):
+        """Save scan results as UTF-16 tab-delimited file for the parser."""
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, 'w', encoding='utf-16', newline='') as f:
+            f.write("Scanned Data\r\nWeek\tTooltip\tIndicator\tValue\r\n")
+            for ds in sorted(data.keys(), key=lambda x: datetime.strptime(x, "%m/%d/%Y")):
+                for reg in ['East', 'West', 'Gulf']:
+                    f.write(f"{ds}\t{ds}\t{reg}\t{data[ds].get(reg, '')}\r\n")
 
-        except Exception as e:
-            logger.error(f"Timeout waiting for Tableau chart: {e}")
-            return False
+    # =========================================================================
+    # PUBLIC API
+    # =========================================================================
 
-    def _find_target_iframe(self, By):
-        """Search all iframes for the one matching TABLEAU_IFRAME_KEYWORD."""
-        iframes = self.driver.find_elements(By.TAG_NAME, 'iframe')
-        logger.info(f"Found {len(iframes)} iframes on page")
+    def fetch_chart_data(self, last_date=None):
+        """
+        Load the BTS Tableau chart and extract vessel counts via pixel-scan.
 
-        for iframe in iframes:
-            src = iframe.get_attribute('src') or ''
-            if config.TABLEAU_IFRAME_KEYWORD in src:
-                return iframe
+        Args:
+            last_date: datetime of the latest date already in master CSV.
+                       None → full historical scan from x=CHART_X_START_FULL.
+                       Provided → incremental scan from x=CHART_X_START_RECENT.
 
-        return None
+        Returns:
+            str          — path to the saved CSV file
+            "NO_NEW_DATA" — all captured dates are ≤ last_date
+            None         — scrape failed
+        """
+        x_end   = config.CHART_X_END
+        x_start = config.CHART_X_START_RECENT if last_date else config.CHART_X_START_FULL
+        logger.info(
+            f"fetch_chart_data: x={x_start}→{x_end} "
+            f"({'incremental' if last_date else 'full history'})"
+        )
 
-    def _click_download_csv(self):
-        """Navigate the Tableau download flow: Download -> Crosstab -> CSV -> Download."""
-        from selenium.webdriver.common.by import By
-        from selenium.webdriver.support.ui import WebDriverWait
-        from selenium.webdriver.support import expected_conditions as EC
+        data = None
 
-        wait = WebDriverWait(self.driver, config.WAIT_TIMEOUT)
+        with sync_playwright() as p:
+            browser, context = self._make_browser(p)
+            page = context.new_page()
 
-        try:
-            # Step 1: Click the Download button in the toolbar
-            logger.info("Clicking Download button...")
-            download_btn = wait.until(EC.presence_of_element_located(
-                (By.CSS_SELECTOR, config.DOWNLOAD_BUTTON_SELECTOR)
-            ))
-            self.driver.execute_script("arguments[0].click();", download_btn)
-            time.sleep(2)
+            try:
+                # ── Load page ─────────────────────────────────────────────
+                logger.info(f"Navigating → {config.BASE_URL}")
+                page.goto(config.BASE_URL, wait_until='domcontentloaded', timeout=60000)
+                page.wait_for_timeout(6000)
 
-            # Step 2: Click "Crosstab" from the flyout menu
-            logger.info("Clicking Crosstab option...")
-            crosstab_item = wait.until(EC.presence_of_element_located(
-                (By.CSS_SELECTOR, config.CROSSTAB_MENU_ITEM_SELECTOR)
-            ))
-            self.driver.execute_script("arguments[0].click();", crosstab_item)
-            time.sleep(3)
-
-            # Step 3: Wait for the Download Crosstab modal
-            logger.info("Waiting for Download Crosstab modal...")
-            wait.until(EC.presence_of_element_located(
-                (By.CSS_SELECTOR, config.EXPORT_BUTTON_SELECTOR)
-            ))
-
-            # Step 4: Click CSV radio button
-            logger.info("Selecting CSV format...")
-            csv_radio = wait.until(EC.presence_of_element_located(
-                (By.CSS_SELECTOR, config.CSV_RADIO_LABEL_SELECTOR)
-            ))
-            self.driver.execute_script("arguments[0].click();", csv_radio)
-            time.sleep(1)
-
-            # Step 5: Click the Download/Export button
-            logger.info("Clicking Export button...")
-            export_btn = wait.until(EC.presence_of_element_located(
-                (By.CSS_SELECTOR, config.EXPORT_BUTTON_SELECTOR)
-            ))
-            self.driver.execute_script("arguments[0].click();", export_btn)
-
-            logger.info("Download triggered, waiting for file...")
-            return True
-
-        except Exception as e:
-            logger.error(f"Error during download flow: {e}")
-            return False
-
-    def _wait_for_download(self, timeout=60):
-        """Wait for a CSV file to appear in the downloads directory."""
-        start_time = time.time()
-
-        while time.time() - start_time < timeout:
-            # Look for CSV files (not .crdownload partial files)
-            csv_files = glob.glob(os.path.join(config.DOWNLOADS_DIR, '*.csv'))
-            partial_files = glob.glob(os.path.join(config.DOWNLOADS_DIR, '*.crdownload'))
-
-            if csv_files and not partial_files:
-                # Return the most recent CSV file
-                latest = max(csv_files, key=os.path.getmtime)
-                logger.info(f"Download complete: {os.path.basename(latest)}")
-                return latest
-
-            time.sleep(1)
-
-        logger.error(f"Download timed out after {timeout} seconds")
-        return None
-
-    def fetch_chart_data(self):
-        """Main method: Navigate BTS Tableau and download CSV data."""
-        logger.info("=" * 70)
-        logger.info("Fetching chart data from BTS Tableau...")
-        logger.info(f"URL: {config.BASE_URL}")
-        logger.info("=" * 70)
-
-        try:
-            self.setup_driver()
-
-            # Navigate to the BTS page
-            logger.info(f"Navigating to: {config.BASE_URL}")
-            self.driver.get(config.BASE_URL)
-
-            # Wait for Tableau to load
-            if not self._wait_for_tableau_load():
-                logger.error("Failed to load Tableau chart")
-                return None
-
-            # Execute download flow
-            if not self._click_download_csv():
-                logger.error("Failed to complete download flow")
-                return None
-
-            # Wait for file download
-            csv_path = self._wait_for_download()
-            if not csv_path:
-                logger.error("No CSV file downloaded")
-                return None
-
-            return csv_path
-
-        except Exception as e:
-            logger.error(f"Error fetching chart data: {e}")
-            return None
-
-        finally:
-            if self.driver:
                 try:
-                    self.driver.quit()
-                    logger.info("Browser closed")
+                    page.click('a[href="#anchored-offshore"]', timeout=5000)
+                    page.wait_for_timeout(3000)
+                except PWTimeout:
+                    page.evaluate("window.location.hash='anchored-offshore'")
+                    page.wait_for_timeout(2000)
+
+                # ── Find iframe ───────────────────────────────────────────
+                logger.info("Searching for Tableau iframe ...")
+                frame = None
+                for _ in range(25):
+                    for f in page.frames:
+                        if config.TABLEAU_IFRAME_KEYWORD in f.url:
+                            frame = f
+                            logger.info(f"  Found: {f.url[:80]}")
+                            break
+                    if frame:
+                        break
+                    page.evaluate("window.scrollBy(0, 300)")
+                    page.wait_for_timeout(800)
+
+                if not frame:
+                    logger.error("Tableau iframe not found")
+                    return None
+
+                page.locator(f'iframe[src*="{config.TABLEAU_IFRAME_KEYWORD}"]').first \
+                    .scroll_into_view_if_needed()
+                logger.info("Waiting 15 s for Tableau to render ...")
+                page.wait_for_timeout(15000)
+
+                # ── Verify frame loaded ───────────────────────────────────
+                info = frame.evaluate("""() => ({
+                    denied:   document.body.innerText.includes('Access Denied'),
+                    canvases: document.querySelectorAll('canvas').length
+                })""")
+                if info.get('denied'):
+                    logger.error("Access Denied inside Tableau iframe")
+                    return None
+                logger.info(f"  Frame OK — {info['canvases']} canvas(es)")
+
+                # ── Locate canvas bounding box ────────────────────────────
+                canvas_el, box = None, None
+                for sel in ['.tab-tvView canvas', '.tabCanvas', 'canvas']:
+                    for el in reversed(frame.locator(sel).all()):
+                        b = el.bounding_box()
+                        if b and b['width'] > 200 and b['height'] > 100:
+                            canvas_el, box = el, b
+                            break
+                    if canvas_el:
+                        break
+
+                if not canvas_el:
+                    logger.error("Chart canvas not found in Tableau frame")
+                    return None
+
+                logger.info(
+                    f"Canvas: page_x={box['x']:.0f} page_y={box['y']:.0f} "
+                    f"w={box['width']:.0f} h={box['height']:.0f}"
+                )
+
+                # ── Enable legend highlight mode ───────────────────────────
+                logger.info("Enabling legend highlight mode ...")
+                canvas_el.hover()
+                page.wait_for_timeout(500)
+
+                try:
+                    frame.locator('.tabLegendPanel').first.hover(timeout=5000)
+                    page.wait_for_timeout(400)
+                except PWTimeout:
+                    pass
+
+                frame.evaluate("""() => {
+                    var c = document.querySelector('.tabLegendTitleControls');
+                    if (c) {
+                        c.style.opacity      = '1';
+                        c.style.pointerEvents= 'auto';
+                        c.style.visibility   = 'visible';
+                    }
+                }""")
+                page.wait_for_timeout(200)
+
+                try:
+                    btn = frame.locator('.tabLegendHighlighterButton').first
+                    btn.hover(timeout=3000)
+                    page.wait_for_timeout(200)
+                    btn.click(timeout=3000)
+                    page.wait_for_timeout(600)
+                    logger.info(f"  Highlight btn: aria-pressed={btn.get_attribute('aria-pressed')}")
+                except PWTimeout as e:
+                    logger.warning(f"  Highlight button not clickable: {e}")
+
+                # ── Three-pass pixel scan ─────────────────────────────────
+                data = self._pixel_scan(page, frame, box, x_start, x_end, last_date=last_date)
+
+            except Exception as e:
+                logger.error(f"Scrape error: {e}", exc_info=True)
+                return None
+            finally:
+                try:
+                    context.close()
+                    browser.close()
                 except Exception:
                     pass
+
+        if not data:
+            logger.warning("No data captured from chart")
+            return None
+
+        # ── Incremental filter ────────────────────────────────────────────
+        if last_date:
+            new_data = {
+                dt: vals for dt, vals in data.items()
+                if datetime.strptime(dt, "%m/%d/%Y") > last_date
+            }
+            if not new_data:
+                logger.info("All captured dates are already in master — no new data")
+                return "NO_NEW_DATA"
+            logger.info(f"Incremental: {len(new_data)} new date(s) beyond {last_date.date()}")
+            data = new_data
+
+        logger.info(f"Captured {len(data)} date(s) for downstream processing")
+
+        path = os.path.join(config.DOWNLOADS_DIR, 'Scanned_Chart_Data.csv')
+        self._save_csv(data, path)
+        logger.info(f"Saved → {path}")
+        return path
