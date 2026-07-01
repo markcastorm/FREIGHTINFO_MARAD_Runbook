@@ -88,9 +88,14 @@ class FREIGHTINFOScraper:
             try:
                 with open(config.WEEK_CACHE_FILE, 'r') as f:
                     data = json.load(f)
-                if str(datetime.now().year) in data:
+                # Require all three years to be present — this catches the case
+                # where the cache was built in a prior year and is now missing
+                # current+1 or current+2 (needed for late-year ISO week mapping).
+                yr = datetime.now().year
+                if all(str(yr + i) in data for i in range(3)):
                     logger.info("Using cached week mapping data")
                     return True
+                logger.info("Week mapping cache is stale — refreshing ...")
             except Exception:
                 pass
 
@@ -384,7 +389,7 @@ class FREIGHTINFOScraper:
             "NO_NEW_DATA" — all captured dates are ≤ last_date
             None         — scrape failed
         """
-        x_end   = config.CHART_X_END
+        x_end   = config.CHART_X_END   # overridden below with dynamic canvas width
         x_start = config.CHART_X_START_RECENT if last_date else config.CHART_X_START_FULL
         logger.info(
             f"fetch_chart_data: x={x_start}→{x_end} "
@@ -458,9 +463,22 @@ class FREIGHTINFOScraper:
                     logger.error("Chart canvas not found in Tableau frame")
                     return None
 
+                # Read the canvas's internal pixel width (not CSS width).
+                # This becomes x_end for the scan so we always reach the true
+                # rightmost data point regardless of chart size changes.
+                canvas_px_w = frame.evaluate("""() => {
+                    var best = null, bestArea = 0;
+                    document.querySelectorAll('canvas').forEach(function(c) {
+                        var a = c.width * c.height;
+                        if (a > bestArea) { bestArea = a; best = c; }
+                    });
+                    return best ? best.width : 0;
+                }""")
+                x_end = (canvas_px_w - 5) if canvas_px_w > 200 else config.CHART_X_END
                 logger.info(
                     f"Canvas: page_x={box['x']:.0f} page_y={box['y']:.0f} "
-                    f"w={box['width']:.0f} h={box['height']:.0f}"
+                    f"css_w={box['width']:.0f} h={box['height']:.0f} "
+                    f"px_w={canvas_px_w} scan_to=x={x_end}"
                 )
 
                 # ── Enable legend highlight mode ───────────────────────────
