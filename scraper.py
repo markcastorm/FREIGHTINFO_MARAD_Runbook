@@ -218,23 +218,50 @@ class FREIGHTINFOScraper:
         for region in ['East', 'West', 'Gulf']:
             logger.info(f"  Region pass: {region}")
 
-            try:
-                item = frame.locator('.tabLegendItem').filter(has_text=region).first
-                item.hover(timeout=5000)
-                page.wait_for_timeout(300)
-                item.click(timeout=5000)
-                page.wait_for_timeout(1500)
-            except PWTimeout as e:
-                logger.warning(f"  Could not select legend item '{region}': {e}")
+            # Select this region in the legend — Playwright click first, JS fallback.
+            # Headless Chromium can time out on hover/click for iframe elements even
+            # when they are visible; the JS click bypasses coordinate translation.
+            item = frame.locator('.tabLegendItem').filter(has_text=region).first
+            selected = False
+            for method in ('playwright', 'js'):
+                try:
+                    if method == 'playwright':
+                        item.scroll_into_view_if_needed(timeout=3000)
+                        page.wait_for_timeout(200)
+                        item.click(timeout=5000)
+                    else:
+                        frame.evaluate("""
+                            (region) => {
+                                for (var el of document.querySelectorAll('.tabLegendItem')) {
+                                    if (el.textContent.includes(region)) { el.click(); break; }
+                                }
+                            }
+                        """, region)
+                    page.wait_for_timeout(1500)
+                    selected = True
+                    break
+                except PWTimeout:
+                    pass
+            if not selected:
+                logger.warning(f"  Could not select legend item '{region}' — skipping pass")
                 continue
+            logger.debug(f"  Legend '{region}' selected")
 
             region_seen = set()
-            found_target = set()    # dates where we captured the correct target region
-            new_target_dates = set()  # subset of found_target that are after last_date
+            found_target = set()      # dates where we captured the correct target region
+            new_target_dates = set()  # subset that are strictly after last_date
             hits = 0
             canvas_h = int(box['height'])
+            exit_early = False        # set from inside hunt to break the outer x loop
 
             for x in range(x_end, x_start - 1, -1):
+                if exit_early:
+                    logger.debug(
+                        f"    [{region}] early exit at x={x} "
+                        f"(old target date found in hunt, {len(new_target_dates)} new collected)"
+                    )
+                    break
+
                 pixel = frame.evaluate(_FIND_LINE_JS, x)
                 if not pixel:
                     continue
@@ -257,22 +284,18 @@ class FREIGHTINFOScraper:
 
                         if reg_found == region:
                             found_target.add(dt)
-                            # Early-exit: correct region, old date, already have new data
-                            if last_date and new_target_dates:
-                                try:
-                                    if datetime.strptime(dt, "%m/%d/%Y") <= last_date:
-                                        logger.debug(
-                                            f"    [{region}] early exit at x={x} "
-                                            f"(crossed into old dates after {len(new_target_dates)} new)"
-                                        )
-                                        break
-                                except ValueError:
-                                    pass
-                            # Track new dates for the early-exit trigger
                             if last_date:
                                 try:
-                                    if datetime.strptime(dt, "%m/%d/%Y") > last_date:
+                                    dt_obj = datetime.strptime(dt, "%m/%d/%Y")
+                                    if dt_obj > last_date:
                                         new_target_dates.add(dt)
+                                    elif new_target_dates:
+                                        logger.debug(
+                                            f"    [{region}] early exit at x={x} "
+                                            f"(crossed into old dates after "
+                                            f"{len(new_target_dates)} new)"
+                                        )
+                                        break
                                 except ValueError:
                                     pass
 
@@ -301,12 +324,18 @@ class FREIGHTINFOScraper:
                                                 found_target.add(rdt)
                                                 if last_date:
                                                     try:
-                                                        if datetime.strptime(rdt, "%m/%d/%Y") > last_date:
+                                                        rdt_obj = datetime.strptime(rdt, "%m/%d/%Y")
+                                                        if rdt_obj > last_date:
                                                             new_target_dates.add(rdt)
+                                                        elif new_target_dates:
+                                                            # Old target date found in hunt
+                                                            # after collecting new data —
+                                                            # signal the outer loop to exit
+                                                            exit_early = True
                                                     except ValueError:
                                                         pass
                                                 hunted = True
-                                if hunted:
+                                if hunted or exit_early:
                                     break
 
             logger.info(
@@ -445,6 +474,7 @@ class FREIGHTINFOScraper:
                 except PWTimeout:
                     pass
 
+                # Force the controls visible so the highlight button is reachable
                 frame.evaluate("""() => {
                     var c = document.querySelector('.tabLegendTitleControls');
                     if (c) {
@@ -455,15 +485,32 @@ class FREIGHTINFOScraper:
                 }""")
                 page.wait_for_timeout(200)
 
-                try:
-                    btn = frame.locator('.tabLegendHighlighterButton').first
-                    btn.hover(timeout=3000)
-                    page.wait_for_timeout(200)
-                    btn.click(timeout=3000)
-                    page.wait_for_timeout(600)
-                    logger.info(f"  Highlight btn: aria-pressed={btn.get_attribute('aria-pressed')}")
-                except PWTimeout as e:
-                    logger.warning(f"  Highlight button not clickable: {e}")
+                # Activate highlight mode.
+                # In headless Chromium, Playwright's hover can time out due to
+                # iframe coordinate translation issues even when the element IS
+                # visible. Fall back to a direct JS click which bypasses that.
+                btn = frame.locator('.tabLegendHighlighterButton').first
+                activated = False
+                for method in ('playwright', 'js'):
+                    try:
+                        if method == 'playwright':
+                            btn.scroll_into_view_if_needed(timeout=3000)
+                            page.wait_for_timeout(200)
+                            btn.click(timeout=5000)
+                        else:
+                            frame.evaluate(
+                                "document.querySelector('.tabLegendHighlighterButton')?.click()"
+                            )
+                        page.wait_for_timeout(800)
+                        if btn.get_attribute('aria-pressed') == 'true':
+                            activated = True
+                            break
+                    except PWTimeout:
+                        pass
+                logger.info(
+                    f"  Highlight btn: aria-pressed={btn.get_attribute('aria-pressed')}"
+                    f" ({'OK' if activated else 'FAILED — continuing without highlight'})"
+                )
 
                 # ── Three-pass pixel scan ─────────────────────────────────
                 data = self._pixel_scan(page, frame, box, x_start, x_end, last_date=last_date)
